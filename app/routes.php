@@ -29,3 +29,51 @@ Route::post('login',array('as'=>'login', 'uses'=>'UserController@validate'));
 
 //loging a user out
 Route::get('logout',array('as'=>'logout', 'uses'=>'UserController@logout'));
+
+
+///profomer invoice route
+
+Route::get('proformaInvoice', function()
+{
+    return View::make('proformaInvoice.index');
+});
+
+
+///invoice route
+
+Route::get('invoice', function()
+{
+    return View::make('invoice.index');
+});
+
+
+///purchasingOrder route
+
+Route::get('purchasingOrder', function()
+{
+    return View::make('purchasingOrder.index');
+});
+
+
+///deliveryNote route
+
+Route::get('deliveryNote', function()
+{
+    return View::make('deliveryNote.index');
+});
+
+
+///orderForm route
+
+Route::get('orderForm', function()
+{
+    return View::make('orderForm.index');
+});
+
+
+///orderForm route
+
+Route::get('requisition', function()
+{
+    return View::make('requisition.index');
+});
