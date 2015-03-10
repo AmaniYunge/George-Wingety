@@ -49,6 +49,9 @@
                     <span aria-hidden="true" <i class="fa fa-list"></i></span>Invoice Management<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li>
+                        <a href="{{ url('client') }}">Clients</a>
+                    </li>
+                    <li>
                         <a href="{{ url('proformaInvoice') }}">Proforma Invoice</a>
                     </li>
                     <li>

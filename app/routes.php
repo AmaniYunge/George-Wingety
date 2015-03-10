@@ -71,9 +71,17 @@ Route::get('orderForm', function()
 });
 
 
-///orderForm route
+///requisition route
 
 Route::get('requisition', function()
 {
     return View::make('requisition.index');
+});
+
+
+///client route
+
+Route::get('client', function()
+{
+    return View::make('client.index');
 });

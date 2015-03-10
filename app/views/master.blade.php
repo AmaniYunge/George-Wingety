@@ -116,6 +116,8 @@ Author:  Amani Yunge
     </div>
 </div>
 
+<script src="../javascripts/jquery-1.10.2.min.js "></script>
+<script src="../javascripts/jquery-ui.js"></script>
 <script src="../javascripts/bootstrap-switch.min.js "></script>
 <script src="../javascripts/bootstrap-timepicker.js "></script>
 <script src="../javascripts/custom.js "></script>
