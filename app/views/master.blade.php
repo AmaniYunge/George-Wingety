@@ -52,7 +52,7 @@ Author:  Amani Yunge
     {{ HTML::script('javascripts/jquery.dataTables.min.js') }}
     {{ HTML::script('javascripts/jquery.easy-pie-chart.js') }}
     {{ HTML::script('javascripts/jquery.fancybox.pack.js') }}
-    {{ HTML::script('javascripts/jquery.inputmask.min.js') }}
+    {{--{{ HTML::script('javascripts/jquery.inputmask.min.js') }}--}}
 {{--{{ HTML::script('javascripts/jquery.isotope.min.js') }}--}}
     {{ HTML::script('javascripts/jquery.mousewheel.js') }}
     {{ HTML::script('javascripts/jquery.nestable.js') }}
@@ -114,7 +114,7 @@ Author:  Amani Yunge
     <!--Basic Scripts-->
     {{--<script src="../javascripts/jquery-2.0.3.min.js "></script>--}}
     <script src="../javascripts/bootstrap.min.js "></script>
-    <script src="../javascripts/respond.js "></script>
+    {{--<script src="../javascripts/respond.js "></script>--}}
 
     <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
     {{--<script src="../javascripts/main.js "></script>--}}

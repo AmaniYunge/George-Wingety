@@ -87,6 +87,7 @@ Route::get('client', function()
 });
 
 Route::any('clients', array('uses' => 'ClientController@index'));
+Route::post('client/add', array('uses' => 'ClientController@store'));
 Route::get('client/list', array('uses' => 'ClientController@lists'));
 Route::get('client/create', array('uses' => 'ClientController@create'));
 Route::get('client/edit/{id}', array('uses' => 'ClientController@edit'));

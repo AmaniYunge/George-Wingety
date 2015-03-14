@@ -36,7 +36,7 @@ class ClientController extends \BaseController {
      *
      * @return Response
      */
-    public function store($id)
+    public function store()
     {
         $client = Client::create(array(
             "attention_name"=> Input::get("attention_name"),
@@ -47,7 +47,7 @@ class ClientController extends \BaseController {
             "tin_no"        => Input::get("tin_no"),
             "vat_no"        => Input::get("vat_no"),
             "status"        => Input::get("status"),
-            "country"       => Input::get("country"),
+//            "country"       => Input::get("country"),
 
         ));
 

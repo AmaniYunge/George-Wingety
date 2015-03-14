@@ -9,7 +9,7 @@ border-top: 1px solid #ffffff;
 <div class="container-fluid main-content">
     <div class="row">
         <div class="col-lg-6">
-            <form action="xeditable.html" class="form-horizontal" id="frm" method="get">
+            {{--<form action="xeditable.html" class="form-horizontal" id="frm" method="get">--}}
                 <div class="form-group" style="margin-bottom:5px">
                     <label class="control-label pull-left" style="text-align:left; margin-right:15px;">
                     Mode
@@ -23,7 +23,7 @@ border-top: 1px solid #ffffff;
                     &nbsp;&nbsp;back
                     </a>
                 </div>
-            </form>
+            {{--</form>--}}
         </div>
         <div class="col-lg-6">
             <div style="float: right;">
@@ -37,63 +37,65 @@ border-top: 1px solid #ffffff;
             <div class="widget-container fluid-height clearfix">
                 <div class="widget-content padded">
                 <table class="table table-responsive">
-                <form class="form-inline">
+                <form class="form-inline" id="clientForm" method="POST" action="clients">
                 <tr>
                   <td>
                   <div class="form-group">
-                     <label for="exampleInputName2">Name</label>
-                     <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                     <label for="attention_name">Attention Name</label>
+                     <input type="text" class="form-control" id="attention_name" name="attention_name" placeholder="Attention Name">
                   </div>
                   </td>
                   <td>
                   <div class="form-group">
-                     <label for="exampleInputName2">Name</label>
-                     <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                     <label for="campany_name">Company Name</label>
+                     <input type="text" class="form-control" id="campany_name" name="campany_name" placeholder="Company Name">
                   </div>
                   </td>
                   <td>
                   <div class="form-group">
-                     <label for="exampleInputName2">Name</label>
-                     <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                     <label for="address">Address</label>
+                     <input type="text" class="form-control" id="address" name="address" placeholder="Address">
                   </div>
                   </td>
                   <td>
                   <div class="form-group">
-                     <label for="exampleInputName2">Name</label>
-                     <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-                  </div>
-                  </td>
-
-                </tr> <tr>
-                  <td>
-                  <div class="form-group">
-                     <label for="exampleInputName2">Name</label>
-                     <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-                  </div>
-                  </td>
-                  <td>
-                  <div class="form-group">
-                     <label for="exampleInputName2">Name</label>
-                     <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-                  </div>
-                  </td>
-                  <td>
-                  <div class="form-group">
-                     <label for="exampleInputName2">Name</label>
-                     <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-                  </div>
-                  </td>
-                  <td>
-                  <div class="form-group">
-                     <label for="exampleInputName2">Name</label>
-                     <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+                     <label for="email">Email</label>
+                     <input type="text" class="form-control" id="email" name="email" placeholder="Email">
                   </div>
                   </td>
 
                 </tr>
-                <tr><td colspan="4"><a class="btn btn-success">Add</a></td></tr>
+                 <tr>
+                  <td>
+                  <div class="form-group">
+                     <label for="phone_no">Phone</label>
+                     <input type="text" class="form-control" id="phone_no" name="phone_no" placeholder="Phone">
+                  </div>
+                  </td>
+                  <td>
+                  <div class="form-group">
+                     <label for="tin_no">TIN</label>
+                     <input type="text" class="form-control" id="tin_no" name="tin_no" placeholder="TIN">
+                  </div>
+                  </td>
+                  <td>
+                  <div class="form-group">
+                     <label for="vat_no">VAT No.</label>
+                     <input type="text" class="form-control" id="vat_no" name="vat_no" placeholder="VAT No.">
+                  </div>
+                  </td>
+                  <td>
+                  <div class="form-group">
+                     <label for="exampleInputName2">Status</label>
+                     <input type="text" class="form-control" id="status" name="status" placeholder="Status">
+                  </div>
+                  </td>
+
+                </tr>
+                <tr><td colspan="4"><button class="btn btn-success" id="add-client-button" type="button">Add</button></td></tr>
                 </form>
                 </table>
+                <div id="status"></div>
                 </div>
             </div>
         </div>
@@ -105,12 +107,16 @@ $(document).ready(function(){
 var modeId = "addMode";
 var backId = "backButton";
 var disableId = "enable";
-
+var addButtonId = "add-client-button";
+var statusId= "status";
+var formId = "clientForm";
+var apiUrl = '<?php echo url("client/add");?>';
 var isDisabled = false;
 var isMultMode = false;
 
 $("#"+modeId).bind("change",function(){
-    if(this.val()=="single"){
+    if($("#"+modeId).val()=="single"){
+    alert()
     isMultMode = false;
     }else{
     isMultMode = true;
@@ -122,11 +128,37 @@ $("#"+backId).bind("click",function(){
 $("#"+disableId).bind("click",function(){
     if(!isDisabled){
     $(this).removeClass("btn-default").addClass("btn-success").text("Enable");
-    isDisabled = true;
+
+        $('input[type=text]').prop('disabled', true);
+        $('a#'+addButtonId).attr('disabled','disabled');
+   isDisabled = true;
     }else{
     $(this).removeClass("btn-success").addClass("btn-default").text("Disable");
+    $('input[type=text]').prop('disabled', false);
+    $('a#'+addButtonId).removeAttr('disabled');
     isDisabled = false;
     }
 });
+
+
+$('button#'+addButtonId).bind("click",function(){
+        var formData = $( ":input" ).serialize();
+        if(!isDisabled){
+
+        $.post( apiUrl, formData , function(data, status){
+
+               if(!isMultMode){
+                  $("#"+statusId).html(data);
+                  $( "form#clientForm" ).empty();
+               }else{
+
+               }
+
+        });
+
+        }
+});
+
+
 });
 </script>
