@@ -92,7 +92,7 @@ border-top: 1px solid #ffffff;
                   </td>
 
                 </tr>
-                <tr><td colspan="4"><button class="btn btn-success" id="add-client-button" type="button">Add</button></td></tr>
+                <tr><td colspan="4"><button class="btn btn-success pull-left" id="add-client-button" type="button">Add</button></td></tr>
                 </form>
                 </table>
                 <div id="status"></div>

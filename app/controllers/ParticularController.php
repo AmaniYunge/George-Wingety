@@ -12,7 +12,7 @@ class ParticularController extends \BaseController {
     {
         if($id==null){
             $particulars = Particulars::all();
-            return $particulars->toJson();
+            return $particulars;
 
         }
 

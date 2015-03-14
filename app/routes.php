@@ -114,3 +114,14 @@ Route::get('orderForm/create', array('uses' => 'OrderFormController@create'));
 Route::get('orderForm/edit/{id}', array('uses' => 'OrderFormController@edit'));
 
 Route::any('orderForm/{id}', array('uses' => 'OrderFormController@show'));
+
+
+//particulars routes
+
+Route::any('particulars', array('uses' => 'ParticularController@index'));
+Route::post('particular/add', array('uses' => 'ParticularController@store'));
+Route::get('particular/list', array('uses' => 'ParticularController@lists'));
+Route::get('particular/create', array('uses' => 'ParticularController@create'));
+Route::get('particular/edit/{id}', array('uses' => 'ParticularController@edit'));
+
+Route::any('particular/{id}', array('uses' => 'ParticularController@show'));

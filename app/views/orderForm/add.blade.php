@@ -69,13 +69,13 @@ border-top: 1px solid #ffffff;
                   <td colspan="4">
 
                     <div class="row"><p class="pull-left" style="bolder;text-decoration: underline;">Add Particulars</p></div>
-                    <div class="row well" id="particular_conttainer">
+                    <div class="row well" id="particular_container">
                             <i class="fa fa-spin fa-spinner fa-3x"></i>
                     </div>
                   </td>
 
                 </tr>
-                <tr><td colspan="4"><button class="btn btn-success" id="add-client-button" type="button">Add</button></td></tr>
+                <tr><td colspan="4"><button class="btn btn-success pull-left" id="add-client-button" type="button">Add</button></td></tr>
                 </form>
                 </table>
                 <div id="status"></div>
@@ -94,6 +94,7 @@ var addButtonId = "add-client-button";
 var statusId= "status";
 var formId = "orderForm";
 var particularContainer = "particular_container";
+
 
 var apiUrl = '<?php echo url("orderForm/add");?>';
 var listUrl = '<?php url("orderForm/list"); ?>';
@@ -126,6 +127,48 @@ $("#"+disableId).bind("click",function(){
     isDisabled = false;
     }
 });
+
+
+
+/// load particulars
+
+
+$.get( particularUrl, function( data ) {
+var table = "<table class='table table-responsive'>";
+table+="<tbody>";
+    var tdCounter = 0;
+     table += "<tr>";
+    $.each(data,function(dataIndex,dataValue){
+
+    if(tdCounter>2){
+    table += "</tr>";
+    table += "<tr>";
+    table += "<td><label class='checkbox pull-left'><input type='checkbox' class='"+takeEmptySpace(dataValue.particular_code)+"' name='particular_id'><span>&nbsp;&nbsp;"+dataValue.particular_code+"</span></label></td><td><input class='quantity' id='"+takeEmptySpace(dataValue.particular_code)+"' type='text' name='"+takeEmptySpace(dataValue.particular_code)+"' placeholder='Quantity' /></td>";
+    tdCounter = 0;
+    }else{
+    table += "<td><label class='checkbox pull-left'><input type='checkbox' class='"+takeEmptySpace(dataValue.particular_code)+"' name='particular_id'><span>&nbsp;&nbsp;"+dataValue.particular_code+"</span></label></td><td><input class='quantity' id='"+takeEmptySpace(dataValue.particular_code)+"' type='text' name='"+takeEmptySpace(dataValue.particular_code)+"' placeholder='Quantity' /></td>";
+    tdCounter++
+    }
+
+
+    });
+    table += "</tr>";
+table+="</tbody>";
+table+="</table>";
+    $("#"+particularContainer).html(table);
+    $(".quantity").hide();
+
+    $("input[type=checkbox]").bind("click",function(){
+            var checkClass = $(this).attr("class");
+            if($("input[type=checkbox][class="+checkClass+"]").prop('checked')){
+                $("input[id="+checkClass+"]").show();
+            }else{
+                $("input[id="+checkClass+"]").hide();
+            }
+
+    });
+});
+
 $('button#'+addButtonId).bind("click",function(){
         var formData = $( ":input" ).serialize();
         if(!isDisabled){
@@ -144,15 +187,9 @@ $('button#'+addButtonId).bind("click",function(){
         }
 });
 
-
-/// load particulars
-
-
-$.get( particularUrl, function( data ) {
-console.log(data);
 });
 
-});
-
-
+var takeEmptySpace = function(a){
+return a.replace( / /ig, "-" );
+}
 </script>
