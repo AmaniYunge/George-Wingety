@@ -51,7 +51,8 @@
         var urlList          = '<?php echo url("clients")?>';
         var urlCreate        = '<?php echo url("client/create")?>';
         $("#add-row").bind("click",function(){
-            $("#listHere").load(urlCreate);
+            $("#listHere").load(urlCreate)
+
         });
        });
    </script>

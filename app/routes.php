@@ -92,4 +92,15 @@ Route::get('client/list', array('uses' => 'ClientController@lists'));
 Route::get('client/create', array('uses' => 'ClientController@create'));
 Route::get('client/edit/{id}', array('uses' => 'ClientController@edit'));
 
-Route::any('client/{id}', array('uses' => 'ClientController@show'));;
+Route::any('client/{id}', array('uses' => 'ClientController@show'));
+
+
+
+
+Route::any('invoices', array('uses' => 'InvoiceController@index'));
+Route::post('invoice/add', array('uses' => 'InvoiceController@store'));
+Route::get('invoice/list', array('uses' => 'InvoiceController@lists'));
+Route::get('invoice/create', array('uses' => 'InvoiceController@create'));
+Route::get('invoice/edit/{id}', array('uses' => 'InvoiceController@edit'));
+
+Route::any('invoice/{id}', array('uses' => 'InvoiceController@show'));;

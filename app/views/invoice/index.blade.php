@@ -74,7 +74,7 @@
                 <i class="fa fa-users"></i>INVOICES
             </div>
             <div class="widget-content padded text-center">
-               <div class="widget-content padded clearfix">
+               <div class="widget-content padded clearfix" id="listHere">
                @include("invoice.list")
                </div>
             </div>

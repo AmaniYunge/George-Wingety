@@ -111,19 +111,20 @@ var addButtonId = "add-client-button";
 var statusId= "status";
 var formId = "clientForm";
 var apiUrl = '<?php echo url("client/add");?>';
+var listUrl = '<?php url("client/list"); ?>';
 var isDisabled = false;
 var isMultMode = false;
 
 $("#"+modeId).bind("change",function(){
     if($("#"+modeId).val()=="single"){
-    alert()
     isMultMode = false;
     }else{
     isMultMode = true;
     }
 });
 $("#"+backId).bind("click",function(){
-    $("#listHere").load("client/list");
+//    $("#listHere").load("client/list");
+    window.location.href = listUrl;
 });
 $("#"+disableId).bind("click",function(){
     if(!isDisabled){
@@ -139,8 +140,6 @@ $("#"+disableId).bind("click",function(){
     isDisabled = false;
     }
 });
-
-
 $('button#'+addButtonId).bind("click",function(){
         var formData = $( ":input" ).serialize();
         if(!isDisabled){
@@ -158,7 +157,5 @@ $('button#'+addButtonId).bind("click",function(){
 
         }
 });
-
-
 });
 </script>

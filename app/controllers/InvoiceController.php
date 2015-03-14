@@ -2,15 +2,20 @@
 
 class InvoiceController extends \BaseController {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-    public function index()
+    public $restful = true;
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
+    public function index($id = null)
     {
+        if($id==null){
+            $invoice = Invoice::all();
+            return $invoice->toJson();
 
-        return View::make('invoice.index');
+        }
+
     }
 
 
@@ -20,10 +25,9 @@ class InvoiceController extends \BaseController {
      * @param  int  $id
      * @return Response
      */
-    public function create($id)
+    public function create()
     {
-        $invoice1 = Invoice::find($id);
-        Return View::make('invoice.add',compact("invoice1"));
+        Return View::make('invoice.add');
     }
 
     /**
@@ -44,6 +48,20 @@ class InvoiceController extends \BaseController {
         return "<h3 class='text-success'> Invoice Registered Successful </h3>";
 
     }
+
+
+    /**
+     * Display the specified resource.
+     *
+     *
+     * @return Response
+     */
+    public function lists()
+    {
+
+        return View::make('invoice.list');
+    }
+
 
     /**
      * Display the specified resource.
