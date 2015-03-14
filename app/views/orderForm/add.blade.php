@@ -69,7 +69,7 @@ border-top: 1px solid #ffffff;
                   <td colspan="4">
 
                     <div class="row"><p class="pull-left" style="bolder;text-decoration: underline;">Add Particulars</p></div>
-                    <div class="row well" id="particular_container">
+                    <div class="row well" id="particular_container" style=" height:300px; overflow: auto;" >
                             <i class="fa fa-spin fa-spinner fa-3x"></i>
                     </div>
                   </td>
@@ -102,39 +102,13 @@ var particularUrl = '<?php echo url("particulars"); ?>';
 var isDisabled = false;
 var isMultMode = false;
 
-$("#"+modeId).bind("change",function(){
-    if($("#"+modeId).val()=="single"){
-    isMultMode = false;
-    }else{
-    isMultMode = true;
-    }
-});
-$("#"+backId).bind("click",function(){
 
-    window.location.href = listUrl;
-});
-$("#"+disableId).bind("click",function(){
-    if(!isDisabled){
-    $(this).removeClass("btn-default").addClass("btn-success").text("Enable");
-
-        $('input[type=text]').prop('disabled', true);
-        $('a#'+addButtonId).attr('disabled','disabled');
-   isDisabled = true;
-    }else{
-    $(this).removeClass("btn-success").addClass("btn-default").text("Disable");
-    $('input[type=text]').prop('disabled', false);
-    $('a#'+addButtonId).removeAttr('disabled');
-    isDisabled = false;
-    }
-});
 
 
 
 /// load particulars
-
-
 $.get( particularUrl, function( data ) {
-var table = "<table class='table table-responsive'>";
+var table = "<table class='table table-responsive' >";
 table+="<tbody>";
     var tdCounter = 0;
      table += "<tr>";
@@ -165,23 +139,54 @@ table+="</table>";
             }else{
                 $("input[id="+checkClass+"]").hide();
             }
-
     });
 });
 
+
+$("#"+modeId).bind("change",function(){
+    if($("#"+modeId).val()=="single"){
+    isMultMode = false;
+    }else{
+    isMultMode = true;
+    }
+});
+$("#"+backId).bind("click",function(){
+
+    window.location.href = listUrl;
+});
+$("#"+disableId).bind("click",function(){
+    if(!isDisabled){
+    $(this).removeClass("btn-default").addClass("btn-success").text("Enable");
+
+        $('input[type=text]').prop('disabled', true);
+        $('input[type=checkbox]').prop('disabled', true);
+        $('a#'+addButtonId).attr('disabled','disabled');
+   isDisabled = true;
+    }else{
+    $(this).removeClass("btn-success").addClass("btn-default").text("Disable");
+    $('input[type=text]').prop('disabled', false);
+    $('input[type=checkbox]').prop('disabled', false);
+    $('a#'+addButtonId).removeAttr('disabled');
+    isDisabled = false;
+    }
+});
+
+// submit button
 $('button#'+addButtonId).bind("click",function(){
         var formData = $( ":input" ).serialize();
+        console.log(formData);
         if(!isDisabled){
 
         $.post( apiUrl, formData , function(data, status){
 
                if(!isMultMode){
-                  $("#"+statusId).html(data);
-                  $( "form#clientForm" ).empty();
+               $('input[type=text]').val("");
+               $('input[type=checkbox]').prop('checked', false);
+               $(".quantity").hide();
+               $("#"+statusId).html(data);
                }else{
 
                }
-
         });
 
         }
@@ -189,6 +194,8 @@ $('button#'+addButtonId).bind("click",function(){
 
 });
 
+
+// replace empty string
 var takeEmptySpace = function(a){
 return a.replace( / /ig, "-" );
 }

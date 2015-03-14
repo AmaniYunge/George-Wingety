@@ -34,15 +34,28 @@ class OrderFormController extends \BaseController {
      *
      * @return Response
      */
-    public function store($id)
+    public function store()
     {
-        $order                     = OrderForm::create(array(
-            "particular_id"        => Input::get("particular_id"),
+        $order  = OrderForm::create(array(
+            "formNumber"           => Input::get("formNumber"),
             "client_id"            => Input::get("client_id"),
             "bill_to"              => Input::get("bill_to"),
             "ship_to"              => Input::get("ship_to"),
         ));
+        $orderFormId = $order->id;
 
+        $particulars = Particulars::all();
+        foreach($particulars as $indexP=>$valueP){
+
+
+                if($_POST[str_replace(' ', '-', $valueP->particular_code)] != ""){
+                    DB::table('orderForm_particular')->insert(
+                        array('orderForm_id' => $orderFormId, 'particular_id' => $valueP->id, 'quantity' => $_POST[str_replace(' ', '-', $valueP->particular_code)],'created_at'=>date('Y-m-d H:i:s'))
+                    );
+
+                }
+
+        }
         return "<h3 class='text-success'> Order Form Registered Successful </h3>";
 
     }
