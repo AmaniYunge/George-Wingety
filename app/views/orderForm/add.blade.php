@@ -195,6 +195,7 @@ $('button#'+addButtonId).bind("click",function(){
 });
 
 
+
 // replace empty string
 var takeEmptySpace = function(a){
 return a.replace( / /ig, "-" );
