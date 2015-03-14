@@ -2992,6 +2992,7 @@ function editRow ( oTable, nRow )
 {
   var aData = oTable.fnGetData(nRow);
   var jqTds = $('>td', nRow);
+    console.log(jqTds);
   jqTds[0].innerHTML = '<input type="text" value="'+aData[0]+'">';
   jqTds[1].innerHTML = '<input type="text" value="'+aData[1]+'">';
   jqTds[2].innerHTML = '<input type="text" value="'+aData[2]+'">';

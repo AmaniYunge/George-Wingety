@@ -1,16 +1,20 @@
 <?php
 
 class ClientController extends \BaseController {
-
+    public $restful = true;
     /**
      * Display a listing of the resource.
      *
      * @return Response
      */
-    public function index()
+    public function index($id = null)
     {
+        if($id==null){
+            $clients = Client::all();
+            return $clients->toJson();
 
-        return View::make('client.index');
+        }
+
     }
 
 
@@ -20,10 +24,10 @@ class ClientController extends \BaseController {
      * @param  int  $id
      * @return Response
      */
-    public function create($id)
+    public function create()
     {
-        $client1 = Client::find($id);
-        Return View::make('client.add',compact("client1"));
+
+        Return View::make('client.add');
     }
 
 
@@ -57,10 +61,22 @@ class ClientController extends \BaseController {
      *
      * @return Response
      */
-    public function show()
+    public function lists()
     {
 
-        return View::make("client.list");
+        return View::make('client.list');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     *
+     * @return Response
+     */
+    public function show($id)
+    {
+            $client = Client::find($id);
+            return Response::json($client);
     }
     /**
      * Display the specified resource.

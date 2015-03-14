@@ -14,27 +14,42 @@ function editRow ( oTable, nRow )
 {
   var aData = oTable.fnGetData(nRow);
   var jqTds = $('>td', nRow);
-  jqTds[0].innerHTML = '<input type="text" value="'+aData[0]+'">';
-  jqTds[1].innerHTML = '<input type="text" value="'+aData[1]+'">';
-  jqTds[2].innerHTML = '<input type="text" value="'+aData[2]+'">';
-  jqTds[3].innerHTML = '<input type="text" value="'+aData[3]+'">';
-  jqTds[4].innerHTML = '<input type="text" value="'+aData[4]+'">';
-  jqTds[5].innerHTML = '<a class="edit-row" href="javascript:void(0)">Save</a>';
+  var editableTds =   jqTds.length-2;
+    for(var tdCount = 0;tdCount<editableTds;tdCount++){
+        jqTds[tdCount].innerHTML = '<input type="text" value="'+aData[tdCount]+'">';
+    }
+  jqTds[editableTds].innerHTML = '<a class="edit-row" href="javascript:void(0)">Save</a>';
+
 }
 
 function saveRow ( oTable, nRow )
 {
+
+    var aData = oTable.fnGetData(nRow);console.log(aData);
   var jqInputs = $('input', nRow);
-  oTable.fnUpdate( jqInputs[0].value, nRow, 0, false );
-  oTable.fnUpdate( jqInputs[1].value, nRow, 1, false );
-  oTable.fnUpdate( jqInputs[2].value, nRow, 2, false );
-  oTable.fnUpdate( jqInputs[3].value, nRow, 3, false );
-  oTable.fnUpdate( jqInputs[4].value, nRow, 4, false );
-  oTable.fnUpdate( '<a class="edit-row" href="javascript:void(0)">Edit</a>', nRow, 5, false );
+    var texFieldCount = jqInputs.length;
+    for(var tdCount =0;tdCount<texFieldCount;tdCount++){
+        oTable.fnUpdate( jqInputs[tdCount].value, nRow, tdCount, false );
+    }
+
+  oTable.fnUpdate( '<a class="edit-row" href="javascript:void(0)">Edit</a>', nRow, texFieldCount, false );
   oTable.fnDraw();
 }
 
 $(document).ready(function() {
+
+    //var Client = currentInstance();
+    //var Invoice = currentInstance();
+    //var Profoma = currentInstance();
+    //var User = currentInstance();
+    //Client.ListFromDatabase("clients",function(data){
+    //    console.log(data);
+    //});
+
+
+
+
+
   var oTable = $("#datatable-editable").dataTable({
     "sPaginationType": "full_numbers",
     aoColumnDefs: [
@@ -46,15 +61,20 @@ $(document).ready(function() {
   });
   var nEditing = null;
 
-  $('#add-row').click( function (e) {
-    e.preventDefault();
-
-    var aiNew = oTable.fnAddData( [ '', '', '', '', '',
-      '<a class="edit-row" href="javascript:void(0)">Edit</a>', '<a class="delete-row" href="javascript:void(0)">Delete</a>' ] );
-    var nRow = oTable.fnGetNodes( aiNew[0] );
-    editRow( oTable, nRow );
-    nEditing = nRow;
-  } );
+  //$('#add-row').click( function (e) {
+  //  e.preventDefault();
+  //    var columns = $("#datatable-editable tbody tr:first td").length-2;
+  //    var inputArray = new Array();
+  //    for(var tdCount = 0;tdCount<columns;tdCount++){
+  //        inputArray.push('');
+  //    }
+  //    inputArray.push('<a class="edit-row" href="javascript:void(0)">Edit</a>');
+  //    inputArray.push('<a class="delete-row" href="javascript:void(0)">Delete</a>');
+  //  var aiNew = oTable.fnAddData(inputArray );
+  //  var nRow = oTable.fnGetNodes( aiNew[0] );
+  //  editRow( oTable, nRow );
+  //  nEditing = nRow;
+  //} );
 
   $('#datatable-editable').on('click', 'a.delete-row', function (e) {
     e.preventDefault();

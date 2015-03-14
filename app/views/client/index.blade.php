@@ -74,7 +74,7 @@
                 <i class="fa fa-users"></i>CLIENTS
             </div>
             <div class="widget-content padded text-center">
-               <div class="widget-content padded clearfix">
+               <div class="widget-content padded clearfix" id="listHere">
                @include("client.list")
                </div>
             </div>
@@ -83,4 +83,6 @@
 </div>
 
 </div>
+
+
 @stop

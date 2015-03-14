@@ -85,3 +85,10 @@ Route::get('client', function()
 {
     return View::make('client.index');
 });
+
+Route::any('clients', array('uses' => 'ClientController@index'));
+Route::get('client/list', array('uses' => 'ClientController@lists'));
+Route::get('client/create', array('uses' => 'ClientController@create'));
+Route::get('client/edit/{id}', array('uses' => 'ClientController@edit'));
+
+Route::any('client/{id}', array('uses' => 'ClientController@show'));;
