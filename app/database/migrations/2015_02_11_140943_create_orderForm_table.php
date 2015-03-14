@@ -12,11 +12,11 @@ class CreateOrderFormTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('orderForm', function(Blueprint $table)
+		Schema::create('orderForms', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('particular_id');
-			$table->string('client_id');
+			$table->string('formNumber');
+			$table->integer('client_id');
 			$table->string('bill_to');
 			$table->string('ship_to');
 			$table->timestamps();

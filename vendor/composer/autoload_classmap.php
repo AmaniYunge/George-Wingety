@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'BaseController' => $baseDir . '/app/controllers/BaseController.php',
+    'Bincard' => $baseDir . '/app/models/Bincard.php',
     'BincardController' => $baseDir . '/app/controllers/BincardController.php',
     'Boris\\Boris' => $vendorDir . '/d11wtq/boris/lib/Boris/Boris.php',
     'Boris\\CLIOptionsHandler' => $vendorDir . '/d11wtq/boris/lib/Boris/CLIOptionsHandler.php',
@@ -37,6 +38,7 @@ return array(
     'CreateCountriesTable' => $baseDir . '/app/database/migrations/2015_02_14_065212_create_countries_table.php',
     'CreateDeliveryNoteTable' => $baseDir . '/app/database/migrations/2015_02_11_140846_create_deliveryNote_table.php',
     'CreateInvoiceTable' => $baseDir . '/app/database/migrations/2015_02_11_140723_create_invoice_table.php',
+    'CreateOrderFormParticularTable' => $baseDir . '/app/database/migrations/2015_03_14_192024_create_orderForm_particular_table.php',
     'CreateOrderFormTable' => $baseDir . '/app/database/migrations/2015_02_11_140943_create_orderForm_table.php',
     'CreateParticularsTable' => $baseDir . '/app/database/migrations/2015_02_11_141213_create_particulars_table.php',
     'CreateProformaInvoiceTable' => $baseDir . '/app/database/migrations/2015_02_11_140809_create_proformaInvoice_table.php',
@@ -56,7 +58,8 @@ return array(
     'Crypt_TripleDES' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/TripleDES.php',
     'Crypt_Twofish' => $vendorDir . '/phpseclib/phpseclib/phpseclib/Crypt/Twofish.php',
     'DatabaseSeeder' => $baseDir . '/app/database/seeds/DatabaseSeeder.php',
-    'DelivryNoteController' => $baseDir . '/app/controllers/DeliveryNoteController.php',
+    'DeliveryNote' => $baseDir . '/app/models/DeliveryNote.php',
+    'DeliveryNoteController' => $baseDir . '/app/controllers/DeliveryNoteController.php',
     'File_ANSI' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ANSI.php',
     'File_ASN1' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ASN1.php',
     'File_ASN1_Element' => $vendorDir . '/phpseclib/phpseclib/phpseclib/File/ASN1.php',
@@ -995,6 +998,7 @@ return array(
     'SessionHandlerInterface' => $vendorDir . '/symfony/http-foundation/Symfony/Component/HttpFoundation/Resources/stubs/SessionHandlerInterface.php',
     'Stack\\Builder' => $vendorDir . '/stack/builder/src/Stack/Builder.php',
     'Stack\\StackedHttpKernel' => $vendorDir . '/stack/builder/src/Stack/StackedHttpKernel.php',
+    'Store' => $baseDir . '/app/models/Store.php',
     'StoreController' => $baseDir . '/app/controllers/StoreController.php',
     'Symfony\\Component\\BrowserKit\\Client' => $vendorDir . '/symfony/browser-kit/Symfony/Component/BrowserKit/Client.php',
     'Symfony\\Component\\BrowserKit\\Cookie' => $vendorDir . '/symfony/browser-kit/Symfony/Component/BrowserKit/Cookie.php',

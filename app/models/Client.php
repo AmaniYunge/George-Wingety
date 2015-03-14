@@ -11,7 +11,11 @@ class Client extends Eloquent {
 
     protected  $guarded = array('id');
 
-    public function countries(){
+    public function getCountry(){
         return $this->belongsTo('Country', 'country', 'id');
+    }
+
+    public function getOrderForms(){
+        return $this->hasMany('OrderForm', 'client_id');
     }
 }

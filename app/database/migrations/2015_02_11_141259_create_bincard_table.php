@@ -16,7 +16,7 @@ class CreateBincardTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('bincard_name');
-			$table->string('particular_id');
+			$table->integer('particular_id');
 			$table->timestamps();
 		});
 	}

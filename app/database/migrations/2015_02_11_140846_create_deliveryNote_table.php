@@ -15,7 +15,7 @@ class CreateDeliveryNoteTable extends Migration {
 		Schema::create('deliveryNote', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('particular_id');
+			$table->integer('particular_id');
 			$table->string('deliveryNote_no');
 			$table->string('order_no');
 			$table->string('attention_name');

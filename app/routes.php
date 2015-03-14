@@ -95,7 +95,7 @@ Route::get('client/edit/{id}', array('uses' => 'ClientController@edit'));
 Route::any('client/{id}', array('uses' => 'ClientController@show'));
 
 
-
+//invoice routes
 
 Route::any('invoices', array('uses' => 'InvoiceController@index'));
 Route::post('invoice/add', array('uses' => 'InvoiceController@store'));
@@ -103,4 +103,14 @@ Route::get('invoice/list', array('uses' => 'InvoiceController@lists'));
 Route::get('invoice/create', array('uses' => 'InvoiceController@create'));
 Route::get('invoice/edit/{id}', array('uses' => 'InvoiceController@edit'));
 
-Route::any('invoice/{id}', array('uses' => 'InvoiceController@show'));;
+Route::any('invoice/{id}', array('uses' => 'InvoiceController@show'));
+
+//orderForm routes
+
+Route::any('orderForms', array('uses' => 'OrderFormController@index'));
+Route::post('orderForm/add', array('uses' => 'OrderFormController@store'));
+Route::get('orderForm/list', array('uses' => 'OrderFormController@lists'));
+Route::get('orderForm/create', array('uses' => 'OrderFormController@create'));
+Route::get('orderForm/edit/{id}', array('uses' => 'OrderFormController@edit'));
+
+Route::any('orderForm/{id}', array('uses' => 'OrderFormController@show'));

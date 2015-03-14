@@ -20,8 +20,8 @@ class CreateParticularsTable extends Migration {
 			$table->string('gross_weight');
 			$table->string('net_weight');
 			$table->string('unit_price');
-			$table->string('quantity');
-			$table->string('bincard_id');
+			$table->integer('quantity');
+			$table->integer('bincard_id');
 			$table->timestamps();
 		});
 	}

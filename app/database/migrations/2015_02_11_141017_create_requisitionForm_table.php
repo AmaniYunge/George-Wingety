@@ -18,7 +18,7 @@ class CreateRequisitionFormTable extends Migration {
 			$table->string('vendor');
 			$table->string('vendor_no');
 			$table->string('address');
-			$table->string('particular_id');
+			$table->integer('particular_id');
 			$table->timestamps();
 		});
 	}

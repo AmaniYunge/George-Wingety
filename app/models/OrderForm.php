@@ -7,13 +7,13 @@ class OrderForm extends Eloquent {
      *
      * @var string
      */
-    protected $table = 'orderForm';
+    protected $table = 'orderForms';
 
     protected  $guarded = array('id');
-    public function particulars(){
-        return $this->hasMany('Particulars', 'orderForm_id', 'id');
+    public function getParticulars(){
+        return $this->$this->belongsToMany('Particulars');
     }
-    public function client(){
+    public function getClient(){
         return $this->belongsTo('Client', 'orderForm_id', 'id');
     }
 

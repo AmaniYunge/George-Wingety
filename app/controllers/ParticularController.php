@@ -2,26 +2,34 @@
 
 class ParticularController extends \BaseController {
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-		//
-	}
+    public $restful = true;
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
+    public function index($id = null)
+    {
+        if($id==null){
+            $particulars = Particulars::all();
+            return $particulars->toJson();
+
+        }
+
+    }
 
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
+
+    /**
+     * Show the form for creating a new resource.
+     * @param  int  $id
+     * @return Response
+     */
+    public function create()
+    {
+
+        Return View::make('client.add');
+    }
 
 
 	/**
@@ -45,6 +53,18 @@ class ParticularController extends \BaseController {
 	{
 		//
 	}
+
+    /**
+     * Display the specified resource.
+     *
+     *
+     * @return Response
+     */
+    public function lists()
+    {
+
+        return View::make('client.list');
+    }
 
 
 	/**

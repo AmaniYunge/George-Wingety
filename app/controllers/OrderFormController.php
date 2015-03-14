@@ -2,17 +2,21 @@
 
 class OrderFormController extends \BaseController {
 
+    public $restful = true;
     /**
      * Display a listing of the resource.
      *
      * @return Response
      */
-    public function index()
+    public function index($id = null)
     {
+        if($id==null){
+            $orderForm = OrderForm::all();
+            return $orderForm->toJson();
 
-        return View::make('orderForm.index');
+        }
+
     }
-
 
 
     /**
@@ -20,10 +24,9 @@ class OrderFormController extends \BaseController {
      * @param  int  $id
      * @return Response
      */
-    public function create($id)
+    public function create()
     {
-        $order1 =  OrderForm::find($id);
-        Return View::make('orderForm.add',compact("order1"));
+        Return View::make('orderForm.add');
     }
 
     /**
@@ -43,6 +46,19 @@ class OrderFormController extends \BaseController {
         return "<h3 class='text-success'> Order Form Registered Successful </h3>";
 
     }
+
+    /**
+     * Display the specified resource.
+     *
+     *
+     * @return Response
+     */
+    public function lists()
+    {
+
+        return View::make('orderForm.list');
+    }
+
 
     /**
      * Display the specified resource.

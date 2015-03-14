@@ -15,8 +15,8 @@ class CreatePurchasingOrderTable extends Migration {
 		Schema::create('purchasingOrder', function(Blueprint $table)
 		{
 			$table->increments('id');
-            $table->string('particular_id');
-            $table->string('client_id');
+            $table->integer('particular_id');
+            $table->integer('client_id');
 			$table->string('your_ref_no');
 			$table->string('our_ref_no');
 			$table->string('purchasing_from');
