@@ -11,7 +11,7 @@ class OrderForm extends Eloquent {
 
     protected  $guarded = array('id');
     public function getParticulars(){
-        return $this->$this->belongsToMany('Particulars');
+        return $this->$this->hasMany('Particulars');
     }
     public function getClient(){
         return $this->belongsTo('Client', 'orderForm_id', 'id');

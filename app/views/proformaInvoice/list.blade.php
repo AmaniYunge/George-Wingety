@@ -7,7 +7,7 @@
                                          <div class="col-lg-12">
                                            <div class="widget-container fluid-height clearfix">
                                              <div class="heading">
-                                               <a class="btn btn-sm btn-primary-outline pull-right" href="datatables-editable.html#" id="add-row"><i class="fa fa-plus"></i>Add row</a>
+                                               <a class="btn btn-sm btn-primary-outline pull-right"  id="add-row"><i class="fa fa-plus"></i>Add row</a>
                                              </div>
                                              <div class="widget-content padded clearfix">
                                <table class="table table-bordered table-striped" id="datatable-editable">

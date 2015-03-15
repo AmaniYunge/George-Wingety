@@ -72,6 +72,19 @@ class OrderFormController extends \BaseController {
         return View::make('orderForm.list');
     }
 
+    /**
+     * Display the specified resource.
+     *
+     *
+     * @return Response
+     */
+    public function particulars($id)
+    {
+
+        $particulars = OrderForm::find($id)->getParticulars();
+        return $particulars;
+    }
+
 
     /**
      * Display the specified resource.

@@ -10,7 +10,7 @@
             <div class="col-md-2">
                 <div class="number">
                     <i class="fa fa-list "></i>
-                    86
+                    {{ ProformaInvoice::all()->count() }}
                 </div>
                 <div class="text">
                     Proforma Invoice
@@ -19,7 +19,7 @@
             <div class="col-md-2">
                 <div class="number">
                     <i class="fa fa-list"></i>
-                    613
+                    {{ Invoice::all()->count() }}
                 </div>
                 <div class="text">
                     Invoice
@@ -28,7 +28,7 @@
             <div class="col-md-2">
                 <div class="number">
                     <i class="fa fa-list"></i>
-                    86
+                    {{ PurchasingOrder::all()->count() }}
                 </div>
                 <div class="text">
                    Purchasing Order
@@ -37,7 +37,7 @@
             <div class="col-md-2">
                 <div class="number">
                     <i class="fa fa-list"></i>
-                    924
+                    {{ DeliveryNote::all()->count() }}
                 </div>
                 <div class="text">
                    Delivery Notes
@@ -46,7 +46,7 @@
             <div class="col-md-2">
                 <div class="number">
                     <i class="fa fa-list"></i>
-                    325
+                    {{ OrderForm::all()->count() }}
                 </div>
                 <div class="text">
                    Order Form
@@ -55,7 +55,7 @@
             <div class="col-md-2">
                 <div class="number">
                   <i class="fa fa-list"></i>
-                    325
+                   {{ RequisitionForm::all()->count() }}
                 </div>
                 <div class="text">
                    Requisition

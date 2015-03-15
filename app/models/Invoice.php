@@ -7,7 +7,7 @@ class Invoice extends Eloquent {
      *
      * @var string
      */
-    protected $table = 'invoice';
+    protected $table = 'invoices';
 
     protected  $guarded = array('id');
     public function proformaInvoice(){

@@ -113,6 +113,8 @@ Route::get('orderForm/list', array('uses' => 'OrderFormController@lists'));
 Route::get('orderForm/create', array('uses' => 'OrderFormController@create'));
 Route::get('orderForm/edit/{id}', array('uses' => 'OrderFormController@edit'));
 
+Route::get('order/particular/{id}', array('uses' => 'OrderFormController@particulars'));
+
 Route::any('orderForm/{id}', array('uses' => 'OrderFormController@show'));
 
 

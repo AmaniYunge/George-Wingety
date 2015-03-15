@@ -35,10 +35,9 @@ class InvoiceController extends \BaseController {
      *
      * @return Response
      */
-    public function store($id)
+    public function store()
     {
         $invoice = Invoice::create(array(
-            "particular_id"       => Input::get("particular_id"),
             "proformaInvoice_id"  => Input::get("proformaInvoice_id"),
             "client_id"           => Input::get("client_id"),
             "invoice_no"          => Input::get("invoice_no"),

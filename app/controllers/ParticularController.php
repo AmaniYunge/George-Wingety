@@ -51,7 +51,11 @@ class ParticularController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+        if($id!=null){
+            $particular = Particulars::find($id);
+            return $particular;
+
+        }
 	}
 
     /**
