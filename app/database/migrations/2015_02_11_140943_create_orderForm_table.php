@@ -12,7 +12,7 @@ class CreateOrderFormTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('orderForms', function(Blueprint $table)
+		Schema::create('orderforms', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('formNumber');
@@ -30,7 +30,7 @@ class CreateOrderFormTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('orderForm');
+		Schema::drop('orderform');
 	}
 
 }

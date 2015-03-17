@@ -12,11 +12,10 @@ class CreateProformaInvoiceTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('proformaInvoice', function(Blueprint $table)
+		Schema::create('proformainvoices', function(Blueprint $table)
 		{
             $table->increments('id');
-            $table->integer('particular_id');
-            $table->string('invoice_no');
+            $table->string('proforma_number');
             $table->integer('client_id');
             $table->string('provider_name');
             $table->timestamps();
@@ -30,7 +29,7 @@ class CreateProformaInvoiceTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('proformaInvoice');
+		Schema::drop('proformaInvoices');
 	}
 
 }

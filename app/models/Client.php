@@ -7,7 +7,7 @@ class Client extends Eloquent {
      *
      * @var string
      */
-    protected $table = 'client';
+    protected $table = 'clients';
 
     protected  $guarded = array('id');
 
@@ -16,6 +16,10 @@ class Client extends Eloquent {
     }
 
     public function getOrderForms(){
+        return $this->hasMany('OrderForm', 'client_id');
+    }
+
+    public function getProformaInvoice(){
         return $this->hasMany('OrderForm', 'client_id');
     }
 }

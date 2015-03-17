@@ -7,11 +7,11 @@ class RequisitionForm extends Eloquent {
      *
      * @var string
      */
-    protected $table = 'requisitionForm';
+    protected $table = 'requisitionforms';
 
     protected  $guarded = array('id');
     public function particulars(){
-        return $this->hasMany('Particulars', 'requisitionForm_id', 'id');
+        return $this->hasMany('Particular', 'requisitionForm_id', 'id');
     }
     public function client(){
         return $this->belongsTo('Client', 'requisitionForm_id', 'id');

@@ -1,6 +1,6 @@
 <?php
 
-class Particulars extends Eloquent {
+class Particular extends Eloquent {
 
     /**
      * The database table used by the model.
@@ -10,14 +10,14 @@ class Particulars extends Eloquent {
     protected $table = 'particulars';
 
     protected  $guarded = array('id');
-//    public function proformaInvoice(){
-//        return $this->belongsTo('ProformaInvoice', 'particulars_id', 'id');
-//    }
+    public function proformaInvoice(){
+        return $this->hasMany('ProformaInvoice');
+    }
 //    public function invoice(){
 //        return $this->belongs('Invoice', 'particulars_id', 'id');
 //    }
     public function getOrderForm(){
-        return $this->belongsTo('OrderForm');
+        return $this->belongsToMany('OrderForm');
     }
 
 //    public function purchasingForm(){

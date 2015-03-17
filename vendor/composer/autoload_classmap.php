@@ -41,6 +41,7 @@ return array(
     'CreateOrderFormParticularTable' => $baseDir . '/app/database/migrations/2015_03_14_192024_create_orderForm_particular_table.php',
     'CreateOrderFormTable' => $baseDir . '/app/database/migrations/2015_02_11_140943_create_orderForm_table.php',
     'CreateParticularsTable' => $baseDir . '/app/database/migrations/2015_02_11_141213_create_particulars_table.php',
+    'CreateProformaInvoiceParticularsTable' => $baseDir . '/app/database/migrations/2015_03_17_081334_create_proformaInvoice_particulars_table.php',
     'CreateProformaInvoiceTable' => $baseDir . '/app/database/migrations/2015_02_11_140809_create_proformaInvoice_table.php',
     'CreatePurchasingOrderTable' => $baseDir . '/app/database/migrations/2015_02_11_141126_create_purchasingOrder_table.php',
     'CreateRequisitionFormTable' => $baseDir . '/app/database/migrations/2015_02_11_141017_create_requisitionForm_table.php',

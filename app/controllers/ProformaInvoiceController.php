@@ -1,28 +1,28 @@
 <?php
 
 class ProformaInvoiceController extends \BaseController {
-
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-
-    public function index()
+    public $restful = true;
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
+    public function index($id = null)
     {
+        if($id==null) {
+            $proformaInvoices = ProformaInvoice::all();
+            return $proformaInvoices->toJson();
 
-        return View::make('proformaInvoice.index');
-
-}
+        }
+    }
     /**
      * Show the form for creating a new resource.
      * @param  int  $id
      * @return Response
      */
-    public function create($id)
+    public function create()
     {
-        $pinvoice = ProformaInvoice::find($id);
-        Return View::make('proformaInvoice.add',compact("pinvoice"));
+        Return View::make('proformaInvoice.add');
     }
 
 

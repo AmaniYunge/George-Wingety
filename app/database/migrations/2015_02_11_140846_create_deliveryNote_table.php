@@ -12,11 +12,11 @@ class CreateDeliveryNoteTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('deliveryNote', function(Blueprint $table)
+		Schema::create('deliverynotes', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->integer('particular_id');
-			$table->string('deliveryNote_no');
+			$table->string('deliverynote_no');
 			$table->string('order_no');
 			$table->string('attention_name');
 			$table->string('bill_to');
@@ -32,7 +32,7 @@ class CreateDeliveryNoteTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('deliveryNote');
+		Schema::drop('deliverynote');
 	}
 
 }

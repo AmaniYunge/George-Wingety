@@ -12,7 +12,7 @@ class CreateRequisitionFormTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('requisitionForm', function(Blueprint $table)
+		Schema::create('requisitionforms', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('vendor');

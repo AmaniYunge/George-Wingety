@@ -97,6 +97,9 @@ class OrderFormController extends \BaseController {
 
         return View::make("orderForm.list");
     }
+
+
+
     /**
      * Display the specified resource.
      *
@@ -105,9 +108,12 @@ class OrderFormController extends \BaseController {
      */
     public function showinfo($id)
     {
-        $order = OrderForm::find($id);
-
-        return View::make("orderForm.info",compact("orderForm"));
+        $order = OrderForm::find($id)
+            ->join('orderform_particular', 'orderform_particular.orderform_id', '=', 'orderforms.id')
+            ->join('particulars', 'particulars.id', '=', 'orderform_particular.particular_id')
+            ->where('orderform_particular.orderform_id','=',$id)
+            ->get();
+        return $order;
     }
 
 

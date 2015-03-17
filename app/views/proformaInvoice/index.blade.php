@@ -75,7 +75,7 @@
                 <i class="fa fa-users"></i>PROFORMA INVOICES
             </div>
             <div class="widget-content padded text-center">
-               <div class="widget-content padded clearfix">
+               <div class="widget-content padded clearfix" id="listHere">
                @include("proformaInvoice.list")
                </div>
             </div>

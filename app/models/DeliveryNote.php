@@ -7,11 +7,11 @@ class DeliveryNote extends Eloquent {
      *
      * @var string
      */
-    protected $table = 'deliveryNote';
+    protected $table = 'deliverynotes';
 
     protected  $guarded = array('id');
     public function particulars(){
-        return $this->hasMany('Particulars', 'deliveryNote_id', 'id');
+        return $this->hasMany('Particulars', 'deliverynote_id', 'id');
     }
 
 }

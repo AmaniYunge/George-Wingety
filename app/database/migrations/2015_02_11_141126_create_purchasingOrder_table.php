@@ -12,7 +12,7 @@ class CreatePurchasingOrderTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('purchasingOrder', function(Blueprint $table)
+		Schema::create('purchasingorders', function(Blueprint $table)
 		{
 			$table->increments('id');
             $table->integer('particular_id');
@@ -32,7 +32,7 @@ class CreatePurchasingOrderTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('purchasingOrder');
+		Schema::drop('purchasingorders');
 	}
 
 }

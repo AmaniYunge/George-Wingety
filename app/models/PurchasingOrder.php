@@ -7,14 +7,14 @@ class PurchasingOrder extends Eloquent {
      *
      * @var string
      */
-    protected $table = 'purchasingOrder';
+    protected $table = 'purchasingorders';
 
     protected  $guarded = array('id');
     public function particulars(){
-        return $this->hasMany('Particulars', 'purchasingOrder_id', 'id');
+        return $this->hasMany('Particular', 'purchasingorder_id', 'id');
     }
     public function client(){
-        return $this->belongsTo('Client', 'purchasingOrder_id', 'id');
+        return $this->belongsTo('Client', 'purchasingorder_id', 'id');
     }
 
 

@@ -12,7 +12,7 @@ class CreateStoreTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('store', function(Blueprint $table)
+		Schema::create('stores', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('bincard_id');
@@ -27,7 +27,7 @@ class CreateStoreTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('store');
+		Schema::drop('stores');
 	}
 
 }

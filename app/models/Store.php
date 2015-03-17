@@ -15,7 +15,7 @@ class Store extends Eloquent {
         return $this->belongsTo('Bincard', 'store_id', 'id');
     }
     public function particulars(){
-        return $this->hasMany('Particulars', 'proformaInvoice_id', 'id');
+        return $this->hasMany('Particular', 'proformainvoice_id', 'id');
     }
 
 

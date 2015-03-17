@@ -16,7 +16,7 @@ class CreateInvoiceTable extends Migration {
 		{
 			$table->increments('id');
             $table->integer('particular_id');
-            $table->integer('proformaInvoice_id');
+            $table->integer('proformainvoice_id');
 			$table->integer('client_id');
             $table->string('invoice_no');
             $table->string('provider_name');

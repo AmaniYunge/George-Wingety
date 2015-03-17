@@ -12,7 +12,7 @@ class CreateBincardTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('bincard', function(Blueprint $table)
+		Schema::create('bincards', function(Blueprint $table)
 		{
 			$table->increments('id');
 			$table->string('bincard_name');
@@ -28,7 +28,7 @@ class CreateBincardTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('bincard');
+		Schema::drop('bincards');
 	}
 
 }

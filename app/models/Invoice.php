@@ -14,7 +14,7 @@ class Invoice extends Eloquent {
         return $this->hasMany('ProformaInvoice', 'invoice_id', 'id');
     }
     public function particulars(){
-        return $this->hasMany('Particulars', 'invoice_id', 'id');
+        return $this->hasMany('Particular', 'invoice_id', 'id');
     }
     public function client(){
         return $this->belongsTo('Client', 'invoice_id', 'id');

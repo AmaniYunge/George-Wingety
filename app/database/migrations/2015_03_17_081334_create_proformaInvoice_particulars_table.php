@@ -3,7 +3,8 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrderFormParticularTable extends Migration {
+class CreateProformaInvoiceParticularsTable extends Migration {
+
 
     /**
      * Run the migrations.
@@ -12,12 +13,12 @@ class CreateOrderFormParticularTable extends Migration {
      */
     public function up()
     {
-        Schema::create('orderform_particular', function(Blueprint $table)
+        Schema::create('proformainvoice_particular', function(Blueprint $table)
         {
             $table->increments('id');
-            $table->integer('orderform_id');
+            $table->integer('proformainvoice_id');
             $table->integer('particular_id');
-            $table->integer('quantity_ordered');
+            $table->integer('quantity');
             $table->timestamps();
         });
     }
@@ -29,7 +30,7 @@ class CreateOrderFormParticularTable extends Migration {
      */
     public function down()
     {
-        Schema::drop('orderform_particular');
+        Schema::drop('proformainvoice_particular');
     }
 
 }
