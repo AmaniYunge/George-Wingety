@@ -9,7 +9,7 @@
         <div class="widget-container stats-container">
             <div class="col-md-2">
                 <div class="number">
-                    <i class="fa fa-list "></i>
+                    <i class="fa fa-file "></i>
                     {{ ProformaInvoice::all()->count() }}
                 </div>
                 <div class="text">
@@ -18,7 +18,7 @@
             </div>
             <div class="col-md-2">
                 <div class="number">
-                    <i class="fa fa-list"></i>
+                    <i class="fa fa-file-text-o"></i>
                     {{ Invoice::all()->count() }}
                 </div>
                 <div class="text">
@@ -27,7 +27,7 @@
             </div>
             <div class="col-md-2">
                 <div class="number">
-                    <i class="fa fa-list"></i>
+                    <i class="fa fa-shopping-cart"></i>
                     {{ PurchasingOrder::all()->count() }}
                 </div>
                 <div class="text">
@@ -36,7 +36,7 @@
             </div>
             <div class="col-md-2">
                 <div class="number">
-                    <i class="fa fa-list"></i>
+                    <i class="fa fa-suitcase"></i>
                     {{ DeliveryNote::all()->count() }}
                 </div>
                 <div class="text">
@@ -45,7 +45,7 @@
             </div>
             <div class="col-md-2">
                 <div class="number">
-                    <i class="fa fa-list"></i>
+                    <i class="fa fa-bookmark"></i>
                     {{ OrderForm::all()->count() }}
                 </div>
                 <div class="text">
@@ -54,7 +54,7 @@
             </div>
             <div class="col-md-2">
                 <div class="number">
-                  <i class="fa fa-list"></i>
+                  <i class="fa fa-phone-square"></i>
                    {{ RequisitionForm::all()->count() }}
                 </div>
                 <div class="text">
@@ -65,7 +65,6 @@
     </div>
 </div>
 <!-- End Statistics -->
-
 
 <div class="row">
     <!-- Area Charts:Morris -->

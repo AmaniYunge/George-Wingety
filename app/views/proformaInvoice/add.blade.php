@@ -144,10 +144,9 @@ if(data.length >= 1){
         table += "<th>Total Price</th>";
         table += "</tr>";
         $.each(data,function(dataIndex,dataValue){
-        console.log(dataValue);
 
         table += "<tr style='text-align: left;' id='"+dataValue.id+"' >";
-        table += "<td><label class='checkbox ' title='"+window['message']+"'><input type='checkbox'  class='"+dataValue.id+"' checked='yes' name='particular_id'><span>&nbsp;&nbsp;</span>  </label></td><td>"+dataValue.description+"</td><td>"+dataValue.quantity_ordered+"</td><td>"+dataValue.unit_price+"</td><td>"+parseInt(dataValue.quantity_ordered)*parseInt(dataValue.unit_price)+"</td>";
+        table += "<td><label class='checkbox ' title='"+window['message']+"'><input type='checkbox'  class='"+dataValue.id+"' checked='yes' name='particular_id'><span><a ><i class='fa fa-check btn-success' title='add'></i></a>&nbsp;&nbsp;</span>  </label></td><td>"+dataValue.description+"</td><td>"+dataValue.quantity_ordered+"</td><td>"+dataValue.unit_price+"</td><td>"+parseInt(dataValue.quantity_ordered)*parseInt(dataValue.unit_price)+"</td>";
 
         table += "</tr>";
         window['total'] += parseInt(dataValue.quantity_ordered)*parseInt(dataValue.unit_price);
@@ -170,7 +169,8 @@ if(data.length >= 1){
                     $(this).parent("label").attr('title','Add to proforma invoice');
                     window['total']-=parseInt($("tr#"+checkClass+" td:last").text());
                     $("#comulative_price").text(window['total']);
-                    $(this).prop('disabled',true);
+                    console.log($("input."+checkClass+""));
+                    $("input."+checkClass+"").css({"display":"none"});
                     $("tr#"+checkClass).css({"background-color":"#cfcfcf"});
 
                 }
