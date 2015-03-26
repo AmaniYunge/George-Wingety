@@ -9,8 +9,8 @@
         <div class="widget-container stats-container">
             <div class="col-md-2">
                 <div class="number">
-                    <i class="fa fa-list "></i>
-                    86
+                    <i class="fa fa-file "></i>
+                    {{ ProformaInvoice::all()->count() }}
                 </div>
                 <div class="text">
                     Proforma Invoice
@@ -18,8 +18,8 @@
             </div>
             <div class="col-md-2">
                 <div class="number">
-                    <i class="fa fa-list"></i>
-                    613
+                    <i class="fa fa-file-text-o"></i>
+                   {{ Invoice::all()->count() }}
                 </div>
                 <div class="text">
                     Invoice
@@ -27,8 +27,8 @@
             </div>
             <div class="col-md-2">
                 <div class="number">
-                    <i class="fa fa-list"></i>
-                    86
+                    <i class="fa fa-shopping-cart"></i>
+                       {{ PurchasingOrder::all()->count() }}
                 </div>
                 <div class="text">
                    Purchasing Order
@@ -36,8 +36,8 @@
             </div>
             <div class="col-md-2">
                 <div class="number">
-                    <i class="fa fa-list"></i>
-                    924
+                    <i class="fa fa-suitcase"></i>
+                    {{ DeliveryNote::all()->count() }}
                 </div>
                 <div class="text">
                    Delivery Notes
@@ -45,8 +45,8 @@
             </div>
             <div class="col-md-2">
                 <div class="number">
-                    <i class="fa fa-list"></i>
-                    325
+                    <i class="fa fa-bookmark"></i>
+                   {{ OrderForm::all()->count() }}
                 </div>
                 <div class="text">
                    Order Form
@@ -54,8 +54,8 @@
             </div>
             <div class="col-md-2">
                 <div class="number">
-                  <i class="fa fa-list"></i>
-                    325
+                  <i class="fa fa-phone-square"></i>
+                    {{ RequisitionForm::all()->count() }}
                 </div>
                 <div class="text">
                    Requisition

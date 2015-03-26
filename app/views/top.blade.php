@@ -4,7 +4,7 @@
         <ul class="nav navbar-nav pull-right">
 
             <li class="dropdown user hidden-xs"><a data-toggle="dropdown" class="dropdown-toggle" href="{{ url('home') }}#">
-                    <img width="34" height="34" src="img/avatar-male.jpg" />George CASMIR<b class="caret"></b></a>
+                    <img width="34" height="34" src="" />George CASMIR<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="{{ url('home') }}#">
                             <i class="fa fa-user"></i>My Account</a>
@@ -19,7 +19,7 @@
             </li>
         </ul>
     </div>
-    <button class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="logo" href="index.html">WINGETY</a>
+    <button class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="logo" href="index.html">GEORGE WINGETY LTD</a>
     <form class="navbar-form form-inline col-lg-2 hidden-xs">
         <input class="form-control" placeholder="Search" type="text">
     </form>
@@ -46,25 +46,25 @@
                 </ul>
             </li>
             <li class="dropdown"><a data-toggle="dropdown" href="{{ url('home') }}#">
-                    <span aria-hidden="true" <i class="fa fa-list"></i></span>Invoice Management<b class="caret"></b></a>
+                    <span aria-hidden="true" <i class="fa fa-list"></i></span> Data Management<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li>
                         <a href="{{ url('client') }}">Clients</a>
                     </li>
                     <li>
-                        <a href="{{ url('proformaInvoice') }}">Proforma Invoice</a>
-                    </li>
-                    <li>
-                        <a href="{{ url('invoice') }}">Invoice</a>
-                    </li>
-                    <li>
-                        <a href="{{ url('deliveryNote') }}">Delivery Note</a>
-                    </li>
-                    <li>
                         <a href="{{ url('orderForm') }}">Order Form</a>
                     </li>
                     <li>
-                        <a href="{{ url('purchasingOrder') }}">Purchasing Order</a>
+                      <a href="{{ url('proformaInvoice') }}">Proforma Invoice</a>
+                    </li>
+                    <li>
+                         <a href="{{ url('purchasingOrder') }}">Purchasing Order</a>
+                    </li>
+                    <li>
+                         <a href="{{ url('invoice') }}">Invoice</a>
+                    </li>
+                    <li>
+                        <a href="{{ url('deliveryNote') }}">Delivery Note</a>
                     </li>
                     <li>
                         <a href="{{ url('requisition') }}">Requisition</a>

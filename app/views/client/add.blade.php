@@ -95,7 +95,7 @@ border-top: 1px solid #ffffff;
                 <tr><td colspan="4"><button class="btn btn-success pull-left" id="add-client-button" type="button">Add</button></td></tr>
                 </form>
                 </table>
-                <div id="status"></div>
+                <div id="statusId"></div>
                 </div>
             </div>
         </div>
@@ -104,52 +104,64 @@ border-top: 1px solid #ffffff;
 
 <script>
 $(document).ready(function(){
-var modeId = "addMode";
-var backId = "backButton";
-var disableId = "enable";
-var addButtonId = "add-client-button";
-var statusId= "status";
-var formId = "clientForm";
-var apiUrl = '<?php echo url("client/add");?>';
-var listUrl = '<?php url("client/list"); ?>';
-var isDisabled = false;
-var isMultMode = false;
+            var modeId = "addMode";
+            var backId = "backButton";
+            var disableId = "enable";
+            var addButtonId = "add-client-button";
+            var statusId = "statusId";
+            var formId = "clientForm";
+            var apiUrl = '<?php echo url("client/add");?>';
+            var listUrl = '<?php url("client/list"); ?>';
+            var isDisabled = false;
+            var isMultMode = false;
 
-$("#"+modeId).bind("change",function(){
-    if($("#"+modeId).val()=="single"){
-    isMultMode = false;
-    }else{
-    isMultMode = true;
-    }
-});
-$("#"+backId).bind("click",function(){
-//    $("#listHere").load("client/list");
-    window.location.href = listUrl;
-});
-$("#"+disableId).bind("click",function(){
-    if(!isDisabled){
-    $(this).removeClass("btn-default").addClass("btn-success").text("Enable");
+    $("#"+modeId).bind("change",function(){
+        if($("#"+modeId).val()=="single"){
+        isMultMode = false;
+        }else{
+        isMultMode = true;
+        }
+    });
+    $("#"+backId).bind("click",function(){
+    //    $("#listHere").load("client/list");
+        window.location.href = listUrl;
+    });
+    $("#"+disableId).bind("click",function(){
+        if(!isDisabled){
+        $(this).removeClass("btn-default").addClass("btn-success").text("Enable");
 
-        $('input[type=text]').prop('disabled', true);
-        $('a#'+addButtonId).attr('disabled','disabled');
-   isDisabled = true;
-    }else{
-    $(this).removeClass("btn-success").addClass("btn-default").text("Disable");
-    $('input[type=text]').prop('disabled', false);
-    $('a#'+addButtonId).removeAttr('disabled');
-    isDisabled = false;
-    }
-});
+            $('input[type=text]').prop('disabled', true);
+            $('a#'+addButtonId).attr('disabled','disabled');
+       isDisabled = true;
+        }else{
+        $(this).removeClass("btn-success").addClass("btn-default").text("Disable");
+        $('input[type=text]').prop('disabled', false);
+        $('a#'+addButtonId).removeAttr('disabled');
+        isDisabled = false;
+        }
+    });
 $('button#'+addButtonId).bind("click",function(){
         var formData = $( ":input" ).serialize();
         if(!isDisabled){
-
         $.post( apiUrl, formData , function(data, status){
 
+
+
                if(!isMultMode){
-                  $("#"+statusId).html(data);
-                  $( "form#clientForm" ).empty();
+                    $("#"+statusId).html(data);
+                        setTimeout(function(){
+                        $("#"+statusId).html("");
+                        $("#"+backId).trigger("click");
+                    } , 1000);
                }else{
+                    $.each($("input[type=text]"),function(){
+                     $(this).val("");
+                  });
+
+                   $("#"+statusId).html(data);
+                        setTimeout(function(){
+                        $("#"+statusId).html("");
+                   } , 1000);
 
                }
 
