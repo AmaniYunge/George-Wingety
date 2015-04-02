@@ -1,10 +1,19 @@
 <!-- End Navigation -->
 <style>
+.doubleClick {
+    cursor: pointer;
+}
+
+.doubleClick :hover {
+    color: #007DA0;
+}
 .table thead>tr>th, .table tbody>tr>th, .table tfoot>tr>th, .table thead>tr>td, .table tbody>tr>td, .table tfoot>tr>td {
 padding: 8px;
 line-height: 1.428571429;
 vertical-align: top;
 border-top: 1px solid #ffffff;
+
+
 </style>
 <div class="container-fluid main-content">
     <div class="row">
@@ -86,119 +95,202 @@ border-top: 1px solid #ffffff;
 
 <script>
 $(document).ready(function(){
-var modeId = "addMode";
-var backId = "backButton";
-var disableId = "enable";
-var addButtonId = "add-client-button";
-var particularContainer = "particular";
-var statusId= "status";
-var formId = "clientForm";
-var apiUrl = '<?php echo url("proforma/add");?>';
-var listUrl = '<?php url("proforma/list"); ?>';
-var isDisabled = false;
-var isMultMode = false;
-window['message'] = "Remove from proforma invoice";
-$("#"+modeId).bind("change",function(){
-    if($("#"+modeId).val()=="single"){
-    isMultMode = false;
-    }else{
-    isMultMode = true;
-    }
-});
-$("#"+backId).bind("click",function(){
-//    $("#listHere").load("client/list");
-    window.location.href = listUrl;
-});
-$("#"+disableId).bind("click",function(){
-    if(!isDisabled){
-    $(this).removeClass("btn-default").addClass("btn-success").text("Enable");
-
-        $('input[type=text]').prop('disabled', true);
-        $('a#'+addButtonId).attr('disabled','disabled');
-   isDisabled = true;
-    }else{
-    $(this).removeClass("btn-success").addClass("btn-default").text("Disable");
-    $('input[type=text]').prop('disabled', false);
-    $('a#'+addButtonId).removeAttr('disabled');
-    isDisabled = false;
-    }
-});
-
-
-$("select#order_form").bind("change",function(){
-window['total'] = 0;
-var orderFormUrl = '<?php echo url("orderForm/showinfo")?>/'+$(this).val();
-console.log(orderFormUrl);
-$.get( orderFormUrl, function( data ) {
-
-if(data.length >= 1){
-
-    var table = "<table class='table table-responsive' >";
-    table+="<tbody>";
-        var tdCounter = 0;
-        table += "<tr >";
-        table += "<th>Status</th>";
-        table += "<th>Particular</th>";
-        table += "<th>Quantity</th>";
-        table += "<th>Unit Price</th>";
-        table += "<th>Total Price</th>";
-        table += "</tr>";
-        $.each(data,function(dataIndex,dataValue){
-
-        table += "<tr style='text-align: left;' id='"+dataValue.id+"' >";
-        table += "<td><label class='checkbox ' title='"+window['message']+"'><input type='checkbox'  class='"+dataValue.id+"' checked='yes' name='particular_id'><span><a ><i class='fa fa-check btn-success' title='add'></i></a>&nbsp;&nbsp;</span>  </label></td><td>"+dataValue.description+"</td><td>"+dataValue.quantity_ordered+"</td><td>"+dataValue.unit_price+"</td><td>"+parseInt(dataValue.quantity_ordered)*parseInt(dataValue.unit_price)+"</td>";
-
-        table += "</tr>";
-        window['total'] += parseInt(dataValue.quantity_ordered)*parseInt(dataValue.unit_price);
-        });
-    table += "<tr style='border-bottom: 1px solid #000000!important;'>";
-    table += "<td colspan='4' style='text-align: left;font-weight: bolder'>Total Price</td>";
-    table += "<td>:&nbsp;<span id='comulative_price'>"+window['total']+"</span></td>";
-    table += "</tr>";
-    table+="</tbody>";
-    table+="</table>";
-        $("#"+particularContainer).html(table);
-
-        $("input[type=checkbox]").bind("click",function(){
-
-                var checkClass = $(this).attr("class");
-                if($("input[type=checkbox][class="+checkClass+"]").prop('checked')){
-                    $(this).prop('disabled',false);
+            var modeId = "addMode";
+            var backId = "backButton";
+            var disableId = "enable";
+            var addButtonId = "add-client-button";
+            var particularContainer = "particular";
+            var statusId= "status";
+            var formId = "clientForm";
+            var apiUrl = '<?php echo url("proforma/add");?>';
+            var listUrl = '<?php url("proforma/list"); ?>';
+            var isDisabled = false;
+            var isMultMode = false;
+            window['message'] = "Remove from proforma invoice";
+            $("#"+modeId).bind("change",function(){
+                if($("#"+modeId).val()=="single"){
+                isMultMode = false;
                 }else{
+                isMultMode = true;
+                }
+            });
+            $("#"+backId).bind("click",function(){
+            //    $("#listHere").load("client/list");
+                window.location.href = listUrl;
+            });
 
-                    $(this).parent("label").attr('title','Add to proforma invoice');
-                    window['total']-=parseInt($("tr#"+checkClass+" td:last").text());
-                    $("#comulative_price").text(window['total']);
-                    console.log($("input."+checkClass+""));
-                    $("input."+checkClass+"").css({"display":"none"});
-                    $("tr#"+checkClass).css({"background-color":"#cfcfcf"});
+            $("#"+disableId).bind("click",function(){
+                if(!isDisabled){
+                $(this).removeClass("btn-default").addClass("btn-success").text("Enable");
+
+                    $('input[type=text]').prop('disabled', true);
+                    $('a#'+addButtonId).attr('disabled','disabled');
+               isDisabled = true;
+                }else{
+                $(this).removeClass("btn-success").addClass("btn-default").text("Disable");
+                $('input[type=text]').prop('disabled', false);
+                $('a#'+addButtonId).removeAttr('disabled');
+                isDisabled = false;
+                }
+            });
+
+
+            $("select#order_form").bind("change",function(){
+            window['total'] = 0;
+            var orderFormUrl = '<?php echo url("orderForm/showinfo")?>/'+$(this).val();
+            console.log(orderFormUrl);
+            $.get( orderFormUrl, function( data ) {
+
+            if(data.length >= 1){
+
+                var table = "<table class='table table-responsive' >";
+                table+="<tbody>";
+                    var tdCounter = 0;
+                    table += "<tr >";
+                    table += "<th>Status</th>";
+                    table += "<th>Particular</th>";
+                    table += "<th>Quantity</th>";
+                    table += "<th>Unit Price</th>";
+                    table += "<th>Total Price</th>";
+                    table += "</tr>";
+                    $.each(data,function(dataIndex,dataValue){
+
+                    table += "<tr style='text-align: left;' id='"+dataValue.id+"' >";
+                    table += "<td><label class='checkbox ' title='"+window['message']+"'><input type='checkbox'  class='"+dataValue.id+"' checked='yes' name='particular_id'><span></span>  </label></td><td>"+dataValue.description+"</td><td class='doubleClick' title='Double click to alter quantity'>"+dataValue.quantity_ordered+"</td><td class='doubleClick' title='Double click to alter unit price'>"+dataValue.unit_price+"</td><td>"+parseInt(dataValue.quantity_ordered)*parseInt(dataValue.unit_price)+"</td>";
+
+                    table += "</tr>";
+                    window['total'] += parseInt(dataValue.quantity_ordered)*parseInt(dataValue.unit_price);
+                    });
+                table += "<tr style='border-bottom: 1px solid #000000!important;'>";
+                table += "<td colspan='4' style='text-align: left;font-weight: bolder'>Total Price</td>";
+                table += "<td>:&nbsp;<span id='comulative_price'>"+window['total']+"</span></td>";
+                table += "</tr>";
+                table+="</tbody>";
+                table+="</table>";
+                    $("#"+particularContainer).html(table);
+
+                    $("input[type=checkbox]").bind("click",function(){
+
+                            var checkClass = $(this).attr("class");
+                            if($("input[type=checkbox][class="+checkClass+"]").prop('checked')){
+                                 $(this).prop('disabled',false);
+                                 $(this).parent("label").attr('title','Add to proforma invoice');
+                                   window['total']+=parseInt($("tr#"+checkClass+" td:last").text());
+                                   $("#comulative_price").text(window['total']);
+                                   console.log($("input."+checkClass+""));
+                                   $("input."+checkClass+"").css({"display":"none"});
+                                   $("tr#"+checkClass).css({"background-color":"#ffffff"});
+                            }else{
+
+                                $(this).parent("label").attr('title','Add to proforma invoice');
+                                    if(window['total']>0){
+                                        window['total']-=parseInt($("tr#"+checkClass+" td:last").text());
+                                    }else{
+                                    window['total']=0;
+                                    }
+                                $("#comulative_price").html(window['total']);
+                                $("input."+checkClass+"").css({"display":"none"});
+                                $("tr#"+checkClass).css({"background-color":"#cfcfcf"});
+                            }
+                    });
+                if(!isDisabled){
+                    $("table tr").each(function(){
+
+                      $(this).find("td:nth-child(3)").bind('dblclick',function(event) {
+
+                      var self = $(this);
+                      var selfTotal = self.next("td").next("td");
+                      var existingValue = self.text();
+                      var newValue = 0;
+                      var inputBox = "<input id='quantityInput' class='form-control' name='quantity' />";
+                      self.html(inputBox);
+                      $('html').on('click',function() {
+                      alert(self.find("input#quantityInput").val());
+                      //Hide the menus if visible
+                      if(!isNaN(self.find("input#quantityInput").val())&&self.find("input#quantityInput").val()!==""){
+
+                      newValue = self.find("input#quantityInput").val();
+                      console.log("New Value valid :"+newValue);
+                        self.text(newValue);
+                         window['total'] += parseInt(newValue)*parseInt(self.next("td").text())-parseInt(selfTotal.text());
+                        selfTotal.text(parseInt(newValue)*parseInt(self.next("td").text()));
+                        $("#comulative_price").text(window['total']);
+                      }
+
+
+//                      if(isNaN(self.find("input#quantityInput").val())||self.find("input#quantityInput").val()===""||self.find("input#quantityInput").val()==null){
+//
+//                      newValue = existingValue;
+//                      console.log("New Value Invalid :"+newValue);
+//
+//                      }
+
+
+                      });
+                      self.click(function(event){
+                            event.stopPropagation();
+                        });
+
+                      });
+
+                       $(this).find("td:nth-child(4)").bind('dblclick',function(event) {
+
+                                            var self = $(this);
+                                            var selfTotal = self.next("td");
+                                            var existingValue = self.text();
+                                            var newValue = 0;
+                                            var inputBox = "<input id='unitpriceInput' class='form-control' name='unitprice' />";
+                                            self.html(inputBox);
+                                            $('html').on('click',function() {
+
+                                            //Hide the menus if visible
+                                            if(!isNaN(self.find("input#unitpriceInput").val())&&self.find("input#unitpriceInput").val()!==""){
+
+                                            newValue = self.find("input#unitpriceInput").val();
+                                            console.log("New Value valid :"+newValue+" Multiple:"+self.prev("td").text());
+                                              self.text(newValue);
+                                               window['total'] += parseInt(newValue)*parseInt(self.prev("td").text())-parseInt(selfTotal.text());
+                                              selfTotal.text(parseInt(newValue)*parseInt(self.prev("td").text()));
+                                              $("#comulative_price").text(window['total']);
+                                            }
+
+                                            });
+                                            self.click(function(event){
+                                                  event.stopPropagation();
+                                              });
+
+                                            });
+
+
+                      });
+
+                   }
+//                    });
+
+
+            }else{
+                $("#"+particularContainer).html('<div>No Particulars</div>');
+            }
+
+            });
+            });
+
+        $('button#'+addButtonId).bind("click",function(){
+                var formData = $( ":input" ).serialize();
+                if(!isDisabled){
+
+        //        $.post( apiUrl, formData , function(data, status){
+        //
+        //               if(!isMultMode){
+        //                  $("#"+statusId).html(data);
+        //                  $( "form#clientForm" ).empty();
+        //               }else{
+        //
+        //               }
+        //
+        //        });
 
                 }
         });
-
-}else{
-    $("#"+particularContainer).html('<div>No Particulars</div>');
-}
-
-});
-});
-
-$('button#'+addButtonId).bind("click",function(){
-        var formData = $( ":input" ).serialize();
-        if(!isDisabled){
-
-//        $.post( apiUrl, formData , function(data, status){
-//
-//               if(!isMultMode){
-//                  $("#"+statusId).html(data);
-//                  $( "form#clientForm" ).empty();
-//               }else{
-//
-//               }
-//
-//        });
-
-        }
-});
 });
 </script>
