@@ -106,6 +106,8 @@ $(document).ready(function(){
             var listUrl = '<?php url("proforma/list"); ?>';
             var isDisabled = false;
             var isMultMode = false;
+            var vatArray = new Array();
+            window.currentVat = 0;
             window['message'] = "Remove from proforma invoice";
             $("#"+modeId).bind("change",function(){
                 if($("#"+modeId).val()=="single"){
@@ -156,12 +158,14 @@ $(document).ready(function(){
                     table += "<th>Grand Total</th>";
                     table += "</tr>";
                     $.each(data,function(dataIndex,dataValue){
-
-                    table += "<tr style='text-align: center;' id='"+dataValue.id+"' >";
-                    table += "<td><label class='checkbox ' title='"+window['message']+"'><input type='checkbox'  class='"+dataValue.id+"' checked='yes' name='particular_id'><span></span>  </label></td><td style='text-align: left!important;'>"+dataValue.description+"</td><td style='text-align: center;' class='doubleClick' title='Double click to alter quantity'>"+dataValue.quantity_ordered+"</td><td class='doubleClick' title='Double click to alter unit price'>"+dataValue.unit_price+"</td><td><label class='checkbox ' title='"+window['message']+"'><input type='checkbox' style='width:50px;text-align: center;' class=''  name='vat_id'><span></span>  </label></td><td><input  style='width:50px;text-align: center;' type='text' class='discount' id='' /></td><td>"+parseFloat(dataValue.quantity_ordered)*parseFloat(dataValue.unit_price)+"</td>";
+                    var withVat = getValueWithVat(getProduct(dataValue.quantity_ordered,dataValue.unit_price),dataValue.vat);
+                     table += "<tr style='text-align: center;' id='"+dataValue.id+"' >";
+                    table += "<td><label class='checkbox ' title='"+window['message']+"'><input type='checkbox' roleplayed='state' class='"+dataValue.id+"' checked='yes' name='particular_id'><span></span>  </label></td><td style='text-align: left!important;'>"+dataValue.description+"</td><td style='text-align: center;' class='doubleClick' title='Double click to alter quantity'>"+dataValue.quantity_ordered+"</td><td class='doubleClick' title='Double click to alter unit price'>"+dataValue.unit_price+"</td><td><label class='checkbox ' title='"+window['message']+"'><input type='checkbox' roleplayed='vat' checked='yes' style='width:50px;text-align: center;' class='' value='"+dataValue.id+"' name='vat_id'><span></span>  </label></td><td><input  style='width:50px;text-align: center;' type='text' class='discount' id='' /></td><td>"+withVat+"</td>";
 
                     table += "</tr>";
-                    window['total'] += parseFloat(dataValue.quantity_ordered)*parseFloat(dataValue.unit_price);
+
+                    window['total'] += withVat;
+                    vatArray.push({id :dataValue.id,vat:dataValue.vat});
                     });
                 table += "<tr style='border-bottom: 1px solid #000000!important;border-top:1px solid #cfcfcf!important;'>";
                 table += "<td colspan='5' style='text-align: left;font-weight: bolder'>Total Price</td>";
@@ -173,7 +177,7 @@ $(document).ready(function(){
                 table+="</table>";
                     $("#"+particularContainer).html(table);
 
-                    $("input[type=checkbox]").bind("click",function(){
+                    $("input[type=checkbox][roleplayed=state]").bind("click",function(){
 
                             var checkClass = $(this).attr("class");
                             if($("input[type=checkbox][class="+checkClass+"]").prop('checked')){
@@ -201,6 +205,56 @@ $(document).ready(function(){
 
 
                     });
+
+                    // handle vat check box
+                    $("input[type=checkbox][roleplayed=vat]").bind("click",function(){
+                            var self = $(this);
+                            var checkVat = self.attr("value");
+//                            console.log(vatArray);
+                            $.each(vatArray,function(index,value){
+                            if(value.id===checkVat){
+//                            console.log($("tr#"+checkVat).html());
+                                if(self.prop('checked')){
+                                  var OgVal = getValueWithVat($("tr#"+checkVat).find("td:nth-child(7)").text(),value.vat);
+                                  $("tr#"+checkVat).find("td:nth-child(7)").text(OgVal);
+                                  $("#particular table tr:last-child td:nth-child(2) input").trigger('focusout');
+                                }
+
+                                if(!self.prop('checked')){
+                                  var OgVal = getOrigValue($("tr#"+checkVat).find("td:nth-child(7)").text(),value.vat);
+                                  $("tr#"+checkVat).find("td:nth-child(7)").text(OgVal);
+                                  $("#particular table tr:last-child td:nth-child(2) input").trigger('focusout');
+//                                  alert(OgVal);
+                                }
+                            }
+                            });
+
+
+//                            if($("input[type=checkbox][class="+checkClass+"]").prop('checked')){
+//                                 $(this).prop('disabled',false);
+//                                 $(this).parent("label").attr('title','Add to proforma invoice');
+//                                   window['total']+=parseFloat($("tr#"+checkClass+" td:last").text());
+//                                   $(".comulative_price").text(window['total']);
+//                                   console.log($("input."+checkClass+""));
+//                                   $("input."+checkClass+"").css({"display":"none"});
+//                                   $("tr#"+checkClass).css({"background-color":"#ffffff"});
+//                                   $("#particular table tr:last-child td:nth-child(2) input").trigger('focusout');
+//                            }else{
+//
+//                                $(this).parent("label").attr('title','Add to proforma invoice');
+//                                    if(window['total']>0){
+//                                        window['total']-=parseFloat($("tr#"+checkClass+" td:last").text());
+//                                    }else{
+//                                    window['total']=0;
+//                                    }
+//                                $(".comulative_price").text(window['total']);
+//                                $("input."+checkClass+"").css({"display":"none"});
+//                                $("tr#"+checkClass).css({"background-color":"#cfcfcf"});
+////                                $("#particular table tr:last-child td:nth-child(2) input").trigger('focusout');
+//                            }
+
+
+                    });
                 if(!isDisabled){
                     $("#particular table tr").each(function(){
 
@@ -217,10 +271,9 @@ $(document).ready(function(){
                       if(!isNaN(self.find("input#quantityInput").val())&&self.find("input#quantityInput").val()!==""){
 
                       newValue = self.find("input#quantityInput").val();
-                      console.log("New Value valid :"+newValue);
                         self.text(newValue);
-                         window['total'] += parseFloat(newValue)*parseFloat(self.next("td").text())-parseFloat(selfTotal.text());
-                        selfTotal.text(parseFloat(newValue)*parseFloat(self.next("td").text()));
+                         window['total'] += getProduct(newValue,self.next("td").text())-parseFloat(selfTotal.text());
+                        selfTotal.text(getProduct(newValue,self.next("td").text()));
                         $(".comulative_price").text(window['total']);
 
                       }
@@ -266,7 +319,7 @@ $(document).ready(function(){
 
                             disc = 0;
                             var effectiveValue = oldEffective;
-                            effectiveValue = oldEffective-((disc/100)*oldEffective);
+                            effectiveValue = getValueAfterDiscount(oldEffective,disc);//oldEffective-((disc/100)*oldEffective);
                             if(effectiveValue>=0){}else{effectiveValue = 0;}
                             if(comulativeTotal<=0){comulativeTotal += parseFloat($(this).parent("td").prev("td").prev("td").text());}else{}
                              var totalGrand = (comulativeTotal-oldEffective)+effectiveValue;
@@ -275,7 +328,8 @@ $(document).ready(function(){
 
                             disc = $(this).val();
                             var effectiveValue = oldEffective;
-                            effectiveValue = oldEffective-((disc/100)*oldEffective);
+//                            effectiveValue = oldEffective-((disc/100)*oldEffective);
+                              effectiveValue = getValueAfterDiscount(oldEffective,disc);
                             if(effectiveValue>=0){}else{effectiveValue = 0;}
                             if(comulativeTotal<=0){comulativeTotal += parseFloat($(this).parent("td").prev("td").prev("td").text());}else{}
                              var totalGrand = (comulativeTotal-oldEffective)+effectiveValue;
@@ -347,5 +401,25 @@ $(document).ready(function(){
 
                 }
         });
+
+
+        function getOrigValue(valueWithVat,vatInPercent){
+        var numerator = getProduct(100,valueWithVat);
+        var denominator = 100+parseFloat(vatInPercent);
+        return  numerator/denominator;
+        }
+
+        function getValueWithVat(origValue,vatInPercent){
+        return parseFloat(origValue)+(getProduct(origValue,vatInPercent)/100);
+        }
+
+        function getProduct(a,b){
+        return parseFloat(a)*parseFloat(b);
+        }
+
+        function getValueAfterDiscount(orginal,discInpercent){
+//        effectiveValue = oldEffective-((disc/100)*oldEffective);
+        return orginal - getProduct(getProduct(discInpercent,0.01),orginal);
+        }
 });
 </script>
