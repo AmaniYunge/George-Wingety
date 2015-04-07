@@ -11,7 +11,7 @@ class ParticularController extends \BaseController {
     public function index($id = null)
     {
         if($id==null){
-            $particulars = Particulars::all();
+            $particulars = Particular::all();
             return $particulars;
 
         }
@@ -52,7 +52,7 @@ class ParticularController extends \BaseController {
 	public function show($id)
 	{
         if($id!=null){
-            $particular = Particulars::find($id);
+            $particular = Particular::find($id);
             return $particular;
 
         }

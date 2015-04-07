@@ -138,12 +138,11 @@ $(document).ready(function(){
             $("select#order_form").bind("change",function(){
             window['total'] = 0;
             var orderFormUrl = '<?php echo url("orderForm/showinfo")?>/'+$(this).val();
-            console.log(orderFormUrl);
             $.get( orderFormUrl, function( data ) {
 
             if(data.length >= 1){
 
-                var table = "<table class='table table-responsive' >";
+                var table = "<table class='table table-responsive table-bordered' >";
                 table+="<tbody>";
                     var tdCounter = 0;
                     table += "<tr >";
@@ -151,19 +150,24 @@ $(document).ready(function(){
                     table += "<th>Particular</th>";
                     table += "<th>Quantity</th>";
                     table += "<th>Unit Price</th>";
+                    table += "<th>V.A.T</th>";
+                    table += "<th>Disc (%)</th>";
                     table += "<th>Total Price</th>";
+                    table += "<th>Grand Total</th>";
                     table += "</tr>";
                     $.each(data,function(dataIndex,dataValue){
 
-                    table += "<tr style='text-align: left;' id='"+dataValue.id+"' >";
-                    table += "<td><label class='checkbox ' title='"+window['message']+"'><input type='checkbox'  class='"+dataValue.id+"' checked='yes' name='particular_id'><span></span>  </label></td><td>"+dataValue.description+"</td><td class='doubleClick' title='Double click to alter quantity'>"+dataValue.quantity_ordered+"</td><td class='doubleClick' title='Double click to alter unit price'>"+dataValue.unit_price+"</td><td>"+parseInt(dataValue.quantity_ordered)*parseInt(dataValue.unit_price)+"</td>";
+                    table += "<tr style='text-align: center;' id='"+dataValue.id+"' >";
+                    table += "<td><label class='checkbox ' title='"+window['message']+"'><input type='checkbox'  class='"+dataValue.id+"' checked='yes' name='particular_id'><span></span>  </label></td><td style='text-align: left!important;'>"+dataValue.description+"</td><td style='text-align: center;' class='doubleClick' title='Double click to alter quantity'>"+dataValue.quantity_ordered+"</td><td class='doubleClick' title='Double click to alter unit price'>"+dataValue.unit_price+"</td><td><label class='checkbox ' title='"+window['message']+"'><input type='checkbox' style='width:50px;text-align: center;' class=''  name='vat_id'><span></span>  </label></td><td><input  style='width:50px;text-align: center;' type='text' class='discount' id='' /></td><td>"+parseFloat(dataValue.quantity_ordered)*parseFloat(dataValue.unit_price)+"</td>";
 
                     table += "</tr>";
-                    window['total'] += parseInt(dataValue.quantity_ordered)*parseInt(dataValue.unit_price);
+                    window['total'] += parseFloat(dataValue.quantity_ordered)*parseFloat(dataValue.unit_price);
                     });
-                table += "<tr style='border-bottom: 1px solid #000000!important;'>";
-                table += "<td colspan='4' style='text-align: left;font-weight: bolder'>Total Price</td>";
-                table += "<td>:&nbsp;<span id='comulative_price'>"+window['total']+"</span></td>";
+                table += "<tr style='border-bottom: 1px solid #000000!important;border-top:1px solid #cfcfcf!important;'>";
+                table += "<td colspan='5' style='text-align: left;font-weight: bolder'>Total Price</td>";
+                table += "<td><input style='width:50px;text-align: center;' type='text' class='discount_' id='' /></td>";
+                table += "<td>&nbsp;<span id='' class='comulative_price'>"+window['total']+"</span></td>";
+                table += "<td>Tsh:&nbsp;<span id='comulative_price' class='comulative_price'>"+window['total']+"</span></td>";
                 table += "</tr>";
                 table+="</tbody>";
                 table+="</table>";
@@ -175,56 +179,51 @@ $(document).ready(function(){
                             if($("input[type=checkbox][class="+checkClass+"]").prop('checked')){
                                  $(this).prop('disabled',false);
                                  $(this).parent("label").attr('title','Add to proforma invoice');
-                                   window['total']+=parseInt($("tr#"+checkClass+" td:last").text());
-                                   $("#comulative_price").text(window['total']);
+                                   window['total']+=parseFloat($("tr#"+checkClass+" td:last").text());
+                                   $(".comulative_price").text(window['total']);
                                    console.log($("input."+checkClass+""));
                                    $("input."+checkClass+"").css({"display":"none"});
                                    $("tr#"+checkClass).css({"background-color":"#ffffff"});
+                                   $("#particular table tr:last-child td:nth-child(2) input").trigger('focusout');
                             }else{
 
                                 $(this).parent("label").attr('title','Add to proforma invoice');
                                     if(window['total']>0){
-                                        window['total']-=parseInt($("tr#"+checkClass+" td:last").text());
+                                        window['total']-=parseFloat($("tr#"+checkClass+" td:last").text());
                                     }else{
                                     window['total']=0;
                                     }
-                                $("#comulative_price").html(window['total']);
+                                $(".comulative_price").text(window['total']);
                                 $("input."+checkClass+"").css({"display":"none"});
                                 $("tr#"+checkClass).css({"background-color":"#cfcfcf"});
+//                                $("#particular table tr:last-child td:nth-child(2) input").trigger('focusout');
                             }
+
+
                     });
                 if(!isDisabled){
-                    $("table tr").each(function(){
+                    $("#particular table tr").each(function(){
 
                       $(this).find("td:nth-child(3)").bind('dblclick',function(event) {
 
                       var self = $(this);
-                      var selfTotal = self.next("td").next("td");
+                      var selfTotal = self.parent("tr").find("td:nth-child(7)");
                       var existingValue = self.text();
                       var newValue = 0;
-                      var inputBox = "<input id='quantityInput' class='form-control' name='quantity' />";
+                      var inputBox = "<input id='quantityInput' style='width:50px;text-align: center;' name='quantity' />";
                       self.html(inputBox);
                       $('html').on('click',function() {
-                      alert(self.find("input#quantityInput").val());
                       //Hide the menus if visible
                       if(!isNaN(self.find("input#quantityInput").val())&&self.find("input#quantityInput").val()!==""){
 
                       newValue = self.find("input#quantityInput").val();
                       console.log("New Value valid :"+newValue);
                         self.text(newValue);
-                         window['total'] += parseInt(newValue)*parseInt(self.next("td").text())-parseInt(selfTotal.text());
-                        selfTotal.text(parseInt(newValue)*parseInt(self.next("td").text()));
-                        $("#comulative_price").text(window['total']);
+                         window['total'] += parseFloat(newValue)*parseFloat(self.next("td").text())-parseFloat(selfTotal.text());
+                        selfTotal.text(parseFloat(newValue)*parseFloat(self.next("td").text()));
+                        $(".comulative_price").text(window['total']);
+
                       }
-
-
-//                      if(isNaN(self.find("input#quantityInput").val())||self.find("input#quantityInput").val()===""||self.find("input#quantityInput").val()==null){
-//
-//                      newValue = existingValue;
-//                      console.log("New Value Invalid :"+newValue);
-//
-//                      }
-
 
                       });
                       self.click(function(event){
@@ -233,41 +232,97 @@ $(document).ready(function(){
 
                       });
 
-                       $(this).find("td:nth-child(4)").bind('dblclick',function(event) {
-
-                                            var self = $(this);
-                                            var selfTotal = self.next("td");
-                                            var existingValue = self.text();
-                                            var newValue = 0;
-                                            var inputBox = "<input id='unitpriceInput' class='form-control' name='unitprice' />";
-                                            self.html(inputBox);
-                                            $('html').on('click',function() {
-
-                                            //Hide the menus if visible
-                                            if(!isNaN(self.find("input#unitpriceInput").val())&&self.find("input#unitpriceInput").val()!==""){
-
-                                            newValue = self.find("input#unitpriceInput").val();
-                                            console.log("New Value valid :"+newValue+" Multiple:"+self.prev("td").text());
-                                              self.text(newValue);
-                                               window['total'] += parseInt(newValue)*parseInt(self.prev("td").text())-parseInt(selfTotal.text());
-                                              selfTotal.text(parseInt(newValue)*parseInt(self.prev("td").text()));
-                                              $("#comulative_price").text(window['total']);
-                                            }
-
-                                            });
-                                            self.click(function(event){
-                                                  event.stopPropagation();
-                                              });
-
-                                            });
+                    });
 
 
+                    ///// pass through all table rows except the lasst row
+                    $("#particular table tr:not(:last-child,:first-child)").each(function(){
+
+                        /// handle discount validation rules
+                      $(this).find("td:nth-child(6) input.discount").bind('focusin',function(event){
+
+                        $("#particular table tr:last-child td:nth-child(2) input").attr("disabled",true);
                       });
+
+
+                      $(this).find("td:nth-child(6) input.discount").bind('focusout',function(event){
+                           var checker = 0;
+                           var disc = 0;
+                           var comulativeTotal = parseFloat($("#particular table tr:last td:nth-child(3) .comulative_price").text());
+                           var oldEffective = $(this).parent("td").prev("td").prev("td").prev("td").text()*$(this).parent("td").prev("td").prev("td").text();
+
+                         $("#particular table tr:not(:last-child,:first-child)").each(function(){
+                             if($(this).find("td:nth-child(6) input").val()!==""){
+                             checker++;
+                             }
+                         });
+
+
+
+                         if($(this).val()===""&&checker<=0){
+                            $("#particular table tr:last-child td:nth-child(2) input").attr("disabled",false);
+//                            comulativeTotal += parseFloat($(this).parent("td").prev("td").prev("td").text());
+//                            var totalGrand = comulativeTotal;
+
+                            disc = 0;
+                            var effectiveValue = oldEffective;
+                            effectiveValue = oldEffective-((disc/100)*oldEffective);
+                            if(effectiveValue>=0){}else{effectiveValue = 0;}
+                            if(comulativeTotal<=0){comulativeTotal += parseFloat($(this).parent("td").prev("td").prev("td").text());}else{}
+                             var totalGrand = (comulativeTotal-oldEffective)+effectiveValue;
+
+                            }else{
+
+                            disc = $(this).val();
+                            var effectiveValue = oldEffective;
+                            effectiveValue = oldEffective-((disc/100)*oldEffective);
+                            if(effectiveValue>=0){}else{effectiveValue = 0;}
+                            if(comulativeTotal<=0){comulativeTotal += parseFloat($(this).parent("td").prev("td").prev("td").text());}else{}
+                             var totalGrand = (comulativeTotal-oldEffective)+effectiveValue;
+
+
+                        }
+
+                            $(this).parent("td").next("td").text(effectiveValue);
+                            $(".comulative_price").text(totalGrand);
+                            console.log(totalGrand);
+                      });
+
+
+                    });
+
+                    $("#particular table tr:last-child td:nth-child(2) input").bind('focusin',function(){
+                         $("#particular table tr:not(:last-child,:first-child)").each(function(){
+                         $(this).find("td:nth-child(6) input.discount").attr("disabled",true);
+                         });
+                    });
+
+                    // handle last text field focus in and out
+                    $("#particular table tr:last-child td:nth-child(2) input").bind('focusout',function(){
+                        var refreshTotal = 0;
+                        if($(this).val()===""){
+                             $("#particular table tr:not(:last-child,:first-child)").each(function(){
+                             $(this).find("td:nth-child(6) input.discount").attr("disabled",false);
+                             refreshTotal +=parseFloat($(this).find("td:nth-child(7)").text());
+                             });
+
+                            $(".comulative_price").text(refreshTotal);
+
+                        }else{
+
+                            $("#particular table tr:not(:last-child,:first-child)").each(function(){
+                             $(this).find("td:nth-child(6) input.discount").attr("disabled",true);
+                             refreshTotal +=parseFloat($(this).find("td:nth-child(7)").text());
+                             });
+                               var effectiveSum = refreshTotal - refreshTotal*parseFloat($(this).val())/100;
+                            $(".comulative_price").text(effectiveSum);
+
+
+                        }
+                    });
 
                    }
 //                    });
-
-
             }else{
                 $("#"+particularContainer).html('<div>No Particulars</div>');
             }
