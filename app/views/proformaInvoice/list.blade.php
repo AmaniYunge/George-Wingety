@@ -31,9 +31,9 @@
                                   </thead>
                                      <tbody>
                                         @foreach( ProformaInvoice::all() as $proforma)
-                                           <tr>
+                                           <tr id="{{ $proforma->id }}">
 
-                                           <td id="{{ $proforma->id }}">{{$proforma->proforma_number}}</td>
+                                           <td >{{$proforma->proforma_number}}</td>
                                            <td>{{ Client::find($proforma->client_id)['attention_name'] }}</td>
                                            <td>{{$proforma->provider_name}}</td>
                                            <td><a class="particular" href='#'  title="Preview"><i class="fa fa-list"></i></a></td>
@@ -61,9 +61,9 @@
            });
 
            $(".particular").bind("click",function(){
-           var partId = $(this).attr("id").split("_")[0];
-            var particularUrl = '<?php echo  url("order/particular")?>/'+partId;
-
+           var partId = $(this).parent("td").parent("tr").attr("id");
+            var particularUrl = '<?php echo  url("proforma/preview")?>/'+partId;
+             $("#listHere").load(particularUrl);
 
 
 //            $.get( particularUrl, function( data ) {

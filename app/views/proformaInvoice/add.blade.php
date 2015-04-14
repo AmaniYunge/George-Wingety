@@ -15,6 +15,7 @@ border-top: 1px solid #ffffff;
 
 
 </style>
+
 <div class="container-fluid main-content">
     <div class="row">
         <div class="col-lg-6">
@@ -51,20 +52,28 @@ border-top: 1px solid #ffffff;
                   <td>
                   <div class="form-group">
                      <label for="proforma_number">Proforma No.</label>
-                     <input type="btn" class="form-control" style="font-weight: bolder" value="abcd" disabled>
-                     <input type="hidden"  id="proforma_number" name="proforma_number" value="abcd" >
+                     <input type="btn" class="form-control proforma_number"  style="font-weight: bolder" value="" disabled>
+                     <input type="hidden"  id="proforma_number" class="proforma_number" name="proforma_number" value="" >
                   </div>
                   </td>
                   <td>
                   <div class="form-group">
-                     <label for="campany_name">Client Name.</label>
-                     <input type="text" class="form-control" id="campany_name" name="campany_name" placeholder="Company Name">
+                     <label for="client_id">Client Name.</label>
+                     <select class="form-control" id="client_id" name="client_id">
+                     <option value="client"  selected disabled>-- select client --</option>
+                     @foreach(Client::all() as $client)
+                     <option value="{{ $client->id }}">{{ $client->attention_name }}</option>
+                     @endforeach
+                     </select>
                   </div>
                   </td>
                   <td>
                   <div class="form-group">
-                     <label for="address">Provider </label>
-                     <input type="text" class="form-control" id="address" name="address" placeholder="Address">
+                     <label for="provider_name">Provider</label>
+                     <input type="text" class="form-control"  disabled value="George CASMIR" placeholder="Provider">
+                     {{--{{ Auth::user()->full_name }}--}}
+                     <input type="hidden" class="form-control" id="provider_name" name="provider_name"  value="George CASMIR" placeholder="Provider">
+                     {{--{{ Auth::user()->id }}--}}
                   </div>
                   </td>
                 </tr>
@@ -73,10 +82,8 @@ border-top: 1px solid #ffffff;
                   <div class="form-group">
                      <label for="order_form">Select Order Form</label>
                      <select  class="form-control" id="order_form" name="order_form" >
-                      <option value=" " selected disabled>-- Select order form --</option>
-                     @foreach(OrderForm::all() as $orderForms)
-                      <option value="{{ $orderForms->id }}">{{ $orderForms->formNumber }}</option>
-                     @endforeach
+                      <option value="order" selected disabled>-- Select order form --</option>
+
                      </select>
                   </div>
                   </td>
@@ -95,6 +102,7 @@ border-top: 1px solid #ffffff;
 
 <script>
 $(document).ready(function(){
+
             var modeId = "addMode";
             var backId = "backButton";
             var disableId = "enable";
@@ -109,6 +117,8 @@ $(document).ready(function(){
             var vatArray = new Array();
             window.currentVat = 0;
             window['message'] = "Remove from proforma invoice";
+
+
             $("#"+modeId).bind("change",function(){
                 if($("#"+modeId).val()=="single"){
                 isMultMode = false;
@@ -120,7 +130,6 @@ $(document).ready(function(){
             //    $("#listHere").load("client/list");
                 window.location.href = listUrl;
             });
-
             $("#"+disableId).bind("click",function(){
                 if(!isDisabled){
                 $(this).removeClass("btn-default").addClass("btn-success").text("Enable");
@@ -135,8 +144,10 @@ $(document).ready(function(){
                 isDisabled = false;
                 }
             });
-
-
+            $("select#client_id").bind("change",function(){
+            var singleOrderFormUrl  = '<?php echo url("orderForm/for_client")?>/'+$(this).val();
+            loadOrderForms(singleOrderFormUrl,"order_form");
+            })
             $("select#order_form").bind("change",function(){
             window['total'] = 0;
             var orderFormUrl = '<?php echo url("orderForm/showinfo")?>/'+$(this).val();
@@ -200,7 +211,6 @@ $(document).ready(function(){
                                 $(".comulative_price").text(window['total']);
                                 $("input."+checkClass+"").css({"display":"none"});
                                 $("tr#"+checkClass).css({"background-color":"#cfcfcf"});
-//                                $("#particular table tr:last-child td:nth-child(2) input").trigger('focusout');
                             }
 
 
@@ -210,10 +220,8 @@ $(document).ready(function(){
                     $("input[type=checkbox][roleplayed=vat]").bind("click",function(){
                             var self = $(this);
                             var checkVat = self.attr("value");
-//                            console.log(vatArray);
                             $.each(vatArray,function(index,value){
                             if(value.id===checkVat){
-//                            console.log($("tr#"+checkVat).html());
                                 if(self.prop('checked')){
                                   var OgVal = getValueWithVat($("tr#"+checkVat).find("td:nth-child(7)").text(),value.vat);
                                   $("tr#"+checkVat).find("td:nth-child(7)").text(OgVal);
@@ -224,34 +232,12 @@ $(document).ready(function(){
                                   var OgVal = getOrigValue($("tr#"+checkVat).find("td:nth-child(7)").text(),value.vat);
                                   $("tr#"+checkVat).find("td:nth-child(7)").text(OgVal);
                                   $("#particular table tr:last-child td:nth-child(2) input").trigger('focusout');
-//                                  alert(OgVal);
+
                                 }
                             }
                             });
 
 
-//                            if($("input[type=checkbox][class="+checkClass+"]").prop('checked')){
-//                                 $(this).prop('disabled',false);
-//                                 $(this).parent("label").attr('title','Add to proforma invoice');
-//                                   window['total']+=parseFloat($("tr#"+checkClass+" td:last").text());
-//                                   $(".comulative_price").text(window['total']);
-//                                   console.log($("input."+checkClass+""));
-//                                   $("input."+checkClass+"").css({"display":"none"});
-//                                   $("tr#"+checkClass).css({"background-color":"#ffffff"});
-//                                   $("#particular table tr:last-child td:nth-child(2) input").trigger('focusout');
-//                            }else{
-//
-//                                $(this).parent("label").attr('title','Add to proforma invoice');
-//                                    if(window['total']>0){
-//                                        window['total']-=parseFloat($("tr#"+checkClass+" td:last").text());
-//                                    }else{
-//                                    window['total']=0;
-//                                    }
-//                                $(".comulative_price").text(window['total']);
-//                                $("input."+checkClass+"").css({"display":"none"});
-//                                $("tr#"+checkClass).css({"background-color":"#cfcfcf"});
-////                                $("#particular table tr:last-child td:nth-child(2) input").trigger('focusout');
-//                            }
 
 
                     });
@@ -383,21 +369,44 @@ $(document).ready(function(){
 
             });
             });
-
-        $('button#'+addButtonId).bind("click",function(){
+            $('button#'+addButtonId).bind("click",function(){
                 var formData = $( ":input" ).serialize();
+                var disc     = 0;
+                var vat      = null;
                 if(!isDisabled){
+                  var particulars = new Array();
+                   $("#particular table tr:not(:last-child,:first-child)").each(function(){
+                   if($(this).find("td:first input").prop("checked")){
+                   var id          =  $(this).find("td:first input").attr("class");
+                   var quantity    =  $(this).find("td:nth-child(3)").text();
+                   var unitPrice   =  $(this).find("td:nth-child(4)").text();
+                   var total       =  $(this).find("td:nth-child(7)").text();
 
-        //        $.post( apiUrl, formData , function(data, status){
-        //
-        //               if(!isMultMode){
-        //                  $("#"+statusId).html(data);
-        //                  $( "form#clientForm" ).empty();
-        //               }else{
-        //
-        //               }
-        //
-        //        });
+                   if($(this).find("td:nth-child(5) input").prop("checked")){vat = $(this).find("td:nth-child(5) input").val();}else{}
+                   if($(this).find("td:nth-child(6) input").val()==""){}else{disc = $(this).find("td:nth-child(6) input").val();}
+
+                   particulars.push({id:id,quantity:quantity,unitPrice:unitPrice,vat:vat,total:total,disc:disc});
+
+                   }
+
+
+                   });
+                   formData = formData+"&particulars="+JSON.stringify(particulars);
+                $.post( apiUrl, formData , function(data, status){
+
+
+                       if(!isMultMode){
+                          $("#"+backId).trigger("click");
+                       }else{
+                       $("select#order_form").val("order");
+                       $("select#client_id").val("client");
+                       $("input.proforma_number").val(createProformaNumber());
+                       $("#"+particularContainer).html("");
+                          $("#"+statusId).html(data);
+                          $( "form#clientForm" ).empty();
+                       }
+
+                });
 
                 }
         });
@@ -421,5 +430,22 @@ $(document).ready(function(){
 //        effectiveValue = oldEffective-((disc/100)*oldEffective);
         return orginal - getProduct(getProduct(discInpercent,0.01),orginal);
         }
+        function createProformaNumber(){
+        var proformaNumber = "PF-GW-";
+        var now = new Date();
+        var stamp=(now.getTime()+"").substr( (now.getTime()+"").length-5, (now.getTime()+"").length );
+        proformaNumber = proformaNumber+stamp+"-"+now.getHours()+now.getDay()+now. getUTCMonth()+"-"+now.getYear();
+        return proformaNumber;
+        }
+        function loadOrderForms(singleOrderFormUrl,divId){
+        $.get( singleOrderFormUrl, function( data ) {
+        var option = "<option value='order' selected disabled>-- Select order form --</option>";
+         $.each(data,function(index,value){
+         option+="<option value='"+value.id+"'>"+value.formNumber+"</option>";
+         });
+            $("#"+divId).html(option);
+        })
+        }
+        $("input.proforma_number").val(createProformaNumber());
 });
 </script>

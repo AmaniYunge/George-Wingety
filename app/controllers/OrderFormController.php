@@ -44,13 +44,13 @@ class OrderFormController extends \BaseController {
         ));
         $orderFormId = $order->id;
 
-        $particulars = Particulars::all();
+        $particulars = Particular::all();
         foreach($particulars as $indexP=>$valueP){
 
 
                 if($_POST[str_replace(' ', '-', $valueP->particular_code)] != ""){
-                    DB::table('orderForm_particular')->insert(
-                        array('orderForm_id' => $orderFormId, 'particular_id' => $valueP->id, 'quantity' => $_POST[str_replace(' ', '-', $valueP->particular_code)],'created_at'=>date('Y-m-d H:i:s'))
+                    DB::table('orderform_particular')->insert(
+                        array('orderForm_id' => $orderFormId, 'particular_id' => $valueP->id, 'quantity_ordered' => $_POST[str_replace(' ', '-', $valueP->particular_code)],'created_at'=>date('Y-m-d H:i:s'))
                     );
 
                 }
@@ -113,6 +113,18 @@ class OrderFormController extends \BaseController {
             ->join('particulars', 'particulars.id', '=', 'orderform_particular.particular_id')
             ->where('orderform_particular.orderform_id','=',$id)
             ->get();
+        return $order;
+    }
+    /**
+     * Display the specified resource.
+     *
+     * @param int $id
+     * @return Response
+     */
+    public function ofForClient($id)
+    {
+
+        $order = DB::select( DB::raw("SELECT * FROM orderforms WHERE orderforms.client_id = '$id' AND id NOT IN (SELECT orderform_id FROM proformainvoices)"));
         return $order;
     }
 

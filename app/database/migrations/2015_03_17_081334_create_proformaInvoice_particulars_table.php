@@ -13,13 +13,18 @@ class CreateProformaInvoiceParticularsTable extends Migration {
      */
     public function up()
     {
-        Schema::create('proformainvoice_particular', function(Blueprint $table)
+        Schema::create('particular_proforma_invoice', function(Blueprint $table)
         {
             $table->increments('id');
-            $table->integer('proformainvoice_id');
+            $table->integer('proforma_invoice_id');
             $table->integer('particular_id');
             $table->integer('quantity');
+            $table->integer('unitPrice');
+            $table->integer('vat');
+            $table->integer('total');
+            $table->integer('dis');
             $table->timestamps();
+
         });
     }
 
@@ -30,7 +35,7 @@ class CreateProformaInvoiceParticularsTable extends Migration {
      */
     public function down()
     {
-        Schema::drop('proformainvoice_particular');
+        Schema::drop('particular_proforma_invoice');
     }
 
 }

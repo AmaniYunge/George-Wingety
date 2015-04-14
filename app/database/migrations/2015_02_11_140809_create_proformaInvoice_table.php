@@ -15,8 +15,9 @@ class CreateProformaInvoiceTable extends Migration {
 		Schema::create('proformainvoices', function(Blueprint $table)
 		{
             $table->increments('id');
-            $table->string('proforma_number');
             $table->integer('client_id');
+            $table->integer('orderform_id');
+            $table->string('proforma_number');
             $table->string('provider_name');
             $table->timestamps();
 		});

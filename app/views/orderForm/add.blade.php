@@ -42,13 +42,19 @@ border-top: 1px solid #ffffff;
                   <td>
                   <div class="form-group">
                      <label for="formNumber">Form Number</label>
-                     <input type="text" class="form-control" id="formNumber" name="formNumber" placeholder="Form Number">
+                     <input type="text" class="form-control formNumber" disabled>
+                     <input type="hidden" class="form-control formNumber" id="formNumber" name="formNumber" placeholder="Form Number">
                   </div>
                   </td>
                   <td>
                   <div class="form-group">
                      <label for="client_id">Client</label>
-                     <input type="text" class="form-control" id="client_id" name="client_id" placeholder="Client">
+                     <select class="form-control" id="client_id" name="client_id">
+                                          <option value="client"  selected disabled>-- select client --</option>
+                                          @foreach(Client::all() as $client)
+                                          <option value="{{ $client->id }}">{{ $client->attention_name }}</option>
+                                          @endforeach
+                                          </select>
                   </div>
                   </td>
                   <td>
@@ -101,8 +107,13 @@ var listUrl = '<?php url("orderForm/list"); ?>';
 var particularUrl = '<?php echo url("particulars"); ?>';
 var isDisabled = false;
 var isMultMode = false;
+$("input.formNumber").val(createOrderFormNumber());
 
-
+$("select#client_id").bind("change",function(){
+ var sentTo = $("select#client_id option[value='"+$(this).val()+"'").text();
+ $("#bill_to").val(sentTo);
+ $("#ship_to").val(sentTo);
+});
 
 
 
@@ -179,14 +190,17 @@ $('button#'+addButtonId).bind("click",function(){
 
         $.post( apiUrl, formData , function(data, status){
 
-               if(!isMultMode){
-               $('input[type=text]').val("");
-               $('input[type=checkbox]').prop('checked', false);
-               $(".quantity").hide();
-               $("#"+statusId).html(data);
-               }else{
+                       if(!isMultMode){
+                          $("#"+backId).trigger("click");
+                       }else{
+                       $('input[type=text]').val("");
+                       $('input[type=checkbox]').prop('checked', false);
+                       $(".quantity").hide();
+                       $("#"+statusId).html(data);
+                       $("input.formNumber").val(createOrderFormNumber());
+                       }
 
-               }
+
         });
 
         }
@@ -200,4 +214,14 @@ $('button#'+addButtonId).bind("click",function(){
 var takeEmptySpace = function(a){
 return a.replace( / /ig, "-" );
 }
+
+function createOrderFormNumber(){
+        var proformaNumber = "OF-GW-";
+        var now = new Date();
+        var stamp=(now.getTime()+"").substr( (now.getTime()+"").length-5, (now.getTime()+"").length );
+        proformaNumber = proformaNumber+stamp+"-"+now.getHours()+now.getDay()+now. getUTCMonth()+"-"+now.getYear();
+        return proformaNumber;
+        }
+        $("input.proforma_number").val(createOrderFormNumber());
+
 </script>

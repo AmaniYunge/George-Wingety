@@ -112,6 +112,7 @@ Route::post('orderForm/add', array('uses' => 'OrderFormController@store'));
 Route::get('orderForm/list', array('uses' => 'OrderFormController@lists'));
 Route::get('orderForm/show/{id}', array('uses' => 'OrderFormController@show'));
 Route::get('orderForm/showinfo/{id}', array('uses' => 'OrderFormController@showinfo'));
+Route::get('orderForm/for_client/{id}', array('uses' => 'OrderFormController@ofForClient'));
 Route::get('orderForm/create', array('uses' => 'OrderFormController@create'));
 Route::get('orderForm/edit/{id}', array('uses' => 'OrderFormController@edit'));
 
@@ -127,6 +128,7 @@ Route::post('proforma/add', array('uses' => 'ProformaInvoiceController@store'));
 Route::get('proforma/list', array('uses' => 'ProformaInvoiceController@lists'));
 Route::get('proforma/create', array('uses' => 'ProformaInvoiceController@create'));
 Route::get('proformas/edit/{id}', array('uses' => 'ProformaInvoiceController@edit'));
+Route::get('proforma/preview/{id}', array('uses' => 'ProformaInvoiceController@preview'));
 
 Route::any('proformas/{id}', array('uses' => 'ProformaInvoiceController@show'));
 

@@ -31,15 +31,30 @@ class ProformaInvoiceController extends \BaseController {
      *
      * @return Response
      */
-    public function store($id)
+    public function store()
     {
+
         $proformaInvoice = ProformaInvoice::create(array(
-            "particular_id"       => Input::get("particular_id"),
-            "invoice_no"          => Input::get("invoice_no"),
-            "client_id"           => Input::get("client_id"),
-            "provider_name"       => Input::get("provider_name"),
+            "proforma_number"       => Input::get("proforma_number"),
+            "client_id"             => Input::get("client_id"),
+            "orderform_id"          => Input::get("order_form"),
+            "provider_name"         => Input::get("provider_name"),
         ));
 
+        foreach(json_decode(Input::get("particulars"), true) as $particular){
+
+            $profParticular = ProformaInvoiceParticular::create(array(
+                "proforma_invoice_id"      => $proformaInvoice->id,
+                "particular_id"            => $particular['id'],
+                "quantity"                 => $particular['quantity'],
+                "unitPrice"                => $particular['unitPrice'],
+                "vat"                      => $particular['vat'],
+                "total"                    => $particular['total'],
+                "dis"                      => $particular['disc']
+            ));
+
+
+        }
         return "<h3 class='text-success'> Proforma Invoice Registered Successful </h3>";
 
     }
@@ -54,6 +69,18 @@ class ProformaInvoiceController extends \BaseController {
     {
 
         return View::make("proformaInvoice.list");
+    }
+    /**
+     * Display the specified resource.
+     *
+     *
+     * @return Response
+     */
+    public function preview($id)
+    {
+
+        $proforma = ProformaInvoice::find($id);
+        return View::make("proformaInvoice.preview",compact("proforma"));
     }
     /**
      * Display the specified resource.

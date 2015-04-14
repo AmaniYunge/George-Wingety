@@ -15,7 +15,10 @@ class ProformaInvoice extends Eloquent {
 //        return $this->belongsTo('Invoice', 'proformaInvoice_id', 'id');
 //    }
     public function getParticulars(){
-        return $this->hasMany('Particular');
+        return $this->belongsToMany('Particular');
+    }
+    public function getPIParticulars(){
+        return $this->belongsToMany('ProformaInvoiceParticular');
     }
     public function getClient(){
         return $this->belongsTo('Client', 'proformainvoice_id', 'id');
