@@ -115,6 +115,7 @@ Route::get('orderForm/showinfo/{id}', array('uses' => 'OrderFormController@showi
 Route::get('orderForm/for_client/{id}', array('uses' => 'OrderFormController@ofForClient'));
 Route::get('orderForm/create', array('uses' => 'OrderFormController@create'));
 Route::get('orderForm/edit/{id}', array('uses' => 'OrderFormController@edit'));
+Route::get('orderForm/delete/{id}', array('uses' => 'OrderFormController@destroy'));
 
 Route::get('order/particular/{id}', array('uses' => 'OrderFormController@particulars'));
 

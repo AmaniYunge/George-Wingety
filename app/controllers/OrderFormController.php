@@ -172,6 +172,7 @@ class OrderFormController extends \BaseController {
      */
     public function destroy($id)
     {
+        DB::delete(DB::raw("DELETE FROM orderform_particular WHERE orderform_id='$id' "));
         $order = OrderForm::find($id);
         $order->delete();
 
