@@ -89,7 +89,7 @@
 
            $(".particular").bind("click",function(){
            var partId = $(this).attr("id").split("_")[0];
-            var particularUrl = '<?php echo  url("order/particular")?>/'+partId;
+            var particularUrl = '<?php echo  url("orderForm/showinfo")?>/'+partId;
 
 
 
@@ -97,27 +97,46 @@
               var modalContent =' <div class="col-lg-12">';
                             modalContent +='<div class="widget-container fluid-height">';
                             modalContent +='<div class="heading">';
-                            modalContent +='<i class="fa fa-toggle-down"></i>Particulars For Order Form Number '+$("td#"+partId).html();
+                            modalContent +='<i class="fa fa-toggle-down"></i>Order Form Particulars   <b> No: '+$("td#"+partId).html()+'</b>';
                             modalContent +='</div>';
                             modalContent +='<div class="widget-content">';
                             modalContent +='<div class="panel-group" id="accordion">';
-
+            var counter = 0;
             $.each(data,function(indexData,valueData){
-                          console.log(data);
+                          console.log(valueData);
+                          counter++;
                             modalContent +='<div class="panel">';
                             modalContent +='<div class="panel-heading">';
                             modalContent +='<div class="panel-title">';
-                            modalContent +='<a class="accordion-toggle collapsed" data-parent="#accordion" data-toggle="collapse" href="components.html#collapseThree">';
+                            modalContent +='<a style="text-align:left;" class="accordion-toggle collapsed" data-parent="#accordion" data-toggle="collapse" href="components.html#'+valueData.id+'">';
                             modalContent +='<div class="caret pull-right"></div>';
-                            modalContent +='3. Summary and Quiz</a>';
+                            modalContent +=counter+'.&nbsp;'+valueData.description+'</a>';
                             modalContent +='</div>';
                             modalContent +='</div>';
-                            modalContent +='<div class="panel-collapse collapse" id="collapseThree">';
+                            modalContent +='<div class="panel-collapse collapse" id="'+valueData.id+'">';
                             modalContent +='<div class="panel-body">';
                             modalContent +='<h2>';
-                            modalContent +='Summary and Quiz';
+                            modalContent +='Order Details';
                             modalContent +='</h2>';
-                            modalContent +='Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven\'t heard of them accusamus labore sustain able.';
+                            modalContent +='<table class="table table-responsive table-stripped table-condensed">';
+                            modalContent +='<tbody>';
+                            modalContent +='<tr>';
+                            modalContent +='<th>Stock </th><td>'+valueData.quantity+'</td>';
+                            modalContent +='</tr>';
+                            modalContent +='<tr>';
+                            modalContent +='<th>Quantity Ordered </th><td>'+valueData.quantity_ordered+'</td>';
+                            modalContent +='</tr>';
+                            modalContent +='<tr>';
+                            modalContent +='<th>Unit Price </th><td>'+valueData.unit_price+' /=</td>';
+                            modalContent +='</tr>';
+                            modalContent +='<tr>';
+                            modalContent +='<th>V.A.T </th><td>'+valueData.vat+'%</td>';
+                            modalContent +='</tr>';
+                            modalContent +='<tr>';
+                            modalContent +='<th>Total Price </th><td><a style="border-bottom: 3px double;color:#0c0c0c;">'+totalPrice(valueData.unit_price,valueData.quantity_ordered,valueData.vat)+' /=</a></td>';
+                            modalContent +='</tr>';
+                            modalContent +='</tbody>';
+                            modalContent +='</table>';
                             modalContent +='</div>';
                             modalContent +='</div>';
                             modalContent +='</div>';
@@ -136,5 +155,10 @@
 
            });
    });
+
+
+   var totalPrice = function (unit_price,quantity_ordered,vat){
+   return ((parseFloat(vat)/100)*parseFloat(unit_price)+parseFloat(unit_price))*parseFloat(quantity_ordered);
+   }
    </script>
                            

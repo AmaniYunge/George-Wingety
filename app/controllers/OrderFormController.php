@@ -81,7 +81,7 @@ class OrderFormController extends \BaseController {
     public function particulars($id)
     {
 
-        $particulars = OrderForm::find($id)->getParticulars();
+        $particulars = OrderForm::find($id)->Particular()->get();
         return $particulars;
     }
 
