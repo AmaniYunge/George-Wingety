@@ -32,8 +32,9 @@
              <td>{{$client->tin_no}}</td>
              <td>{{$client->vat_no}}</td>
              <td>{{$client->status}}</td>
-             <td><a class='edit-row' href='client'>Edit</a></td>
-             <td><a class='delete-row' href='client'>Delete</a></td>
+             <td><a class='action_client' id="edit_{{ $client->id }}" href='#'>Edit</a></br></td>
+             <td><a class='action_client' id="delete_{{ $client->id }}" href='#'>Delete</a></br></td>
+
 
              </tr>
             @endforeach
@@ -54,5 +55,37 @@
             $("#listHere").load(urlCreate)
 
         });
+
+
+           $(".action_client").bind("click",function(){
+                   var actedId = $(this).attr("id");
+                   var actionArray = $(this).attr("id").split("_");
+                   if(actionArray[0] == "edit"){
+                   }
+                   if(actionArray[0] == "delete"){
+                    $("#"+actedId).parent("td").append("<a id='comfirm_delete' class='btn btn-xs btn-danger' title='comfirm delete action'>comfirm?</a><a id='deny_delete' class='btn btn-xs btn-success' title='deny delete action'>No</a>");
+                    $("#"+actedId).hide();
+                    $("#comfirm_delete").bind("click",function(){
+                            console.log(actionArray[1]);
+                            var deleteUrl = '<?php echo  url("client/delete/")?>/'+actionArray[1];
+                            console.log(deleteUrl);
+                            $.get( deleteUrl, function( data ){
+                            $("#messageBody").html('<div class="alert alert-success alert-dismissable" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="false">&times;</span></button><strong>Congratulations!</strong> Deleted Successfully.</div>');
+
+                            $("#"+actedId).parent("td").parent("tr").remove();
+
+                            });
+                    });
+                    $("#deny_delete").bind("click",function(){
+                       $("#comfirm_delete").remove();
+                       $("#deny_delete").remove();
+                       $("#"+actedId).show();
+                    });
+                   }
+                   });
+
+
+
+
        });
    </script>

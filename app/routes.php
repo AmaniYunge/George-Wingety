@@ -91,6 +91,7 @@ Route::post('client/add', array('uses' => 'ClientController@store'));
 Route::get('client/list', array('uses' => 'ClientController@lists'));
 Route::get('client/create', array('uses' => 'ClientController@create'));
 Route::get('client/edit/{id}', array('uses' => 'ClientController@edit'));
+Route::get('client/delete/{id}', array('uses' => 'ClientController@destroy'));
 
 Route::any('client/{id}', array('uses' => 'ClientController@show'));
 
@@ -129,6 +130,7 @@ Route::post('proforma/add', array('uses' => 'ProformaInvoiceController@store'));
 Route::get('proforma/list', array('uses' => 'ProformaInvoiceController@lists'));
 Route::get('proforma/create', array('uses' => 'ProformaInvoiceController@create'));
 Route::get('proformas/edit/{id}', array('uses' => 'ProformaInvoiceController@edit'));
+Route::get('proforma/delete/{id}', array('uses' => 'ProformaInvoiceController@destroy'));
 Route::get('proforma/preview/{id}', array('uses' => 'ProformaInvoiceController@preview'));
 
 Route::any('proformas/{id}', array('uses' => 'ProformaInvoiceController@show'));

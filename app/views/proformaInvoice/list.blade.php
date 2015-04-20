@@ -37,8 +37,8 @@
                                            <td>{{ Client::find($proforma->client_id)['attention_name'] }}</td>
                                            <td>{{$proforma->provider_name}}</td>
                                            <td><a class="particular" href='#'  title="Preview"><i class="fa fa-list"></i></a></td>
-                                           <td><a class='edit-row' href='client'>Edit</a></td>
-                                           <td><a class='delete-row' href='client'>Delete</a></td>
+                                           <td><a class='action_proforma' id="edit_{{ $proforma->id }}" href='#'>Edit</a></br></td>
+                                           <td><a class='action_proforma' id="delete_{{ $proforma->id }}" href='#'>Delete</a></br></td>
                                            </tr>
                                         @endforeach
                                      </tbody>
@@ -62,11 +62,9 @@
 
            $(".particular").bind("click",function(){
            var partId = $(this).parent("td").parent("tr").attr("id");
-            var particularUrl = '<?php echo  url("proforma/preview")?>/'+partId;
+           var particularUrl = '<?php echo  url("proforma/preview")?>/'+partId;
              $("#listHere").load(particularUrl);
-
-
-//            $.get( particularUrl, function( data ) {
+             //            $.get( particularUrl, function( data ) {
 //              var modalContent =' <div class="col-lg-12">';
 //                            modalContent +='<div class="widget-container fluid-height">';
 //                            modalContent +='<div class="heading">';
@@ -104,9 +102,39 @@
 //                    $(".modal-body").html(modalContent)
 //
 //            });
-
-
-
            });
+
+
+
+           $(".action_proforma").bind("click",function(){
+                   var actedId = $(this).attr("id");
+                   var actionArray = $(this).attr("id").split("_");
+                   if(actionArray[0] == "edit"){
+                   }
+                   if(actionArray[0] == "delete"){
+                    $("#"+actedId).parent("td").append("<a id='comfirm_delete' class='btn btn-xs btn-danger' title='comfirm delete action'>comfirm?</a><a id='deny_delete' class='btn btn-xs btn-success' title='deny delete action'>No</a>");
+                    $("#"+actedId).hide();
+                    $("#comfirm_delete").bind("click",function(){
+                            console.log(actionArray[1]);
+                            var deleteUrl = '<?php echo  url("proforma/delete/")?>/'+actionArray[1];
+                            console.log(deleteUrl);
+                            $.get( deleteUrl, function( data ){
+                            $("#messageBody").html('<div class="alert alert-success alert-dismissable" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="false">&times;</span></button><strong>Congratulations!</strong> Deleted Successfully.</div>');
+
+                            $("#"+actedId).parent("td").parent("tr").remove();
+
+                            });
+                    });
+                    $("#deny_delete").bind("click",function(){
+                       $("#comfirm_delete").remove();
+                       $("#deny_delete").remove();
+                       $("#"+actedId).show();
+                    });
+                   }
+                   });
+
+
+
+
    });
    </script>
