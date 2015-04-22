@@ -71,8 +71,8 @@ $(document).ready(function(){
             var addButtonId = "add-client-button";
             var statusId = "statusId";
             var formId = "clientForm";
-            var apiUrl = '<?php echo url("client/add");?>';
-            var listUrl = '<?php url("client/list"); ?>';
+            var apiUrl = '<?php echo url("bincard/add");?>';
+            var listUrl = '<?php url("bincard/list"); ?>';
             var isDisabled = false;
             var isMultMode = false;
 

@@ -168,6 +168,7 @@ Route::post('bincard/add', array('uses' => 'BincardController@store'));
 Route::get('bincard/list', array('uses' => 'BincardController@lists'));
 Route::get('bincard/create', array('uses' => 'BincardController@create'));
 Route::get('bincard/edit/{id}', array('uses' => 'BincardController@edit'));
+Route::get('bincard/delete/{id}', array('uses' => 'BincardController@destroy'));
 
 Route::any('bincard/{id}', array('uses' => 'BincardController@show'));
 

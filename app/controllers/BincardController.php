@@ -34,11 +34,11 @@ class BincardController extends \BaseController {
      *
      * @return Response
      */
-    public function store($id)
+    public function store()
     {
         $bincard = Bincard::create(array(
             "bincard_name"        => Input::get("bincard_name"),
-            "particular_id"       => Input::get("particular_id"),
+            "code"       => Input::get("code"),
         ));
 
         return "<h3 class='text-success'> Bincard Registered Successful </h3>";
