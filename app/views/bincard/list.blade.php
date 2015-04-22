@@ -53,9 +53,7 @@
                     $("#"+actedId).parent("td").append("<a id='comfirm_delete' class='btn btn-xs btn-danger' title='comfirm delete action'>comfirm?</a><a id='deny_delete' class='btn btn-xs btn-success' title='deny delete action'>No</a>");
                     $("#"+actedId).hide();
                     $("#comfirm_delete").bind("click",function(){
-                            console.log(actionArray[1]);
                             var deleteUrl = '<?php echo  url("bincard/delete/")?>/'+actionArray[1];
-                            console.log(deleteUrl);
                             $.get( deleteUrl, function( data ){
                             $("#messageBody").html('<div class="alert alert-success alert-dismissable" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="false">&times;</span></button><strong>Congratulations!</strong> Deleted Successfully.</div>');
 

@@ -41,14 +41,14 @@ border-top: 1px solid #ffffff;
                 <tr>
                   <td>
                   <div class="form-group">
-                     <label for="attention_name">Code</label>
-                     <input type="text" class="form-control" id="attention_name" name="attention_name" placeholder="Attention Name">
+                     <label for="code">Code</label>
+                     <input type="text" class="form-control" id="code" name="code" placeholder="Code">
                   </div>
                   </td>
                   <td>
                   <div class="form-group">
-                     <label for="campany_name">Bincard Name</label>
-                     <input type="text" class="form-control" id="campany_name" name="campany_name" placeholder="Company Name">
+                     <label for="bincard_name">Bincard Name</label>
+                     <input type="text" class="form-control" id="bincard_name" name="bincard_name" placeholder="Bin Name">
                   </div>
                   </td>
 
