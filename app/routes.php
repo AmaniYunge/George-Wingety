@@ -157,6 +157,7 @@ Route::post('particular/add', array('uses' => 'ParticularController@store'));
 Route::get('particular/list', array('uses' => 'ParticularController@lists'));
 Route::get('particular/create', array('uses' => 'ParticularController@create'));
 Route::get('particular/edit/{id}', array('uses' => 'ParticularController@edit'));
+Route::get('particular/delete/{id}', array('uses' => 'ParticularController@destroy'));
 
 Route::any('particular/{id}', array('uses' => 'ParticularController@show'));
 

@@ -115,7 +115,8 @@ class ParticularController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+        $partcular= Particular::find($id);
+        $partcular->delete();
 	}
 
 
