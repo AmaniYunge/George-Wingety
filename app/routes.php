@@ -86,6 +86,20 @@ Route::get('client', function()
     return View::make('client.index');
 });
 
+///particluar route
+
+Route::get('particular', function()
+{
+    return View::make('particular.index');
+});
+
+///bincard route
+
+Route::get('bincard', function()
+{
+    return View::make('bincard.index');
+});
+
 Route::any('clients', array('uses' => 'ClientController@index'));
 Route::post('client/add', array('uses' => 'ClientController@store'));
 Route::get('client/list', array('uses' => 'ClientController@lists'));

@@ -8,11 +8,11 @@
     <div class="col-md-12">
         <div class="widget-container fluid-height">
             <div class="heading">
-                <i class="fa fa-users"></i>REQUISITION
+                <i class="fa fa-users"></i>BIN CARD
             </div>
             <div class="widget-content padded text-center">
-               <div class="widget-content padded clearfix">
-               @include("requisition.list")
+               <div class="widget-content padded clearfix" id="listHere">
+               @include("bincard.list")
                </div>
             </div>
         </div>
@@ -20,4 +20,6 @@
 </div>
 
 </div>
+
+
 @stop

@@ -49,7 +49,13 @@
                     <span aria-hidden="true" <i class="fa fa-list"></i></span> Data Management<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="{{ url('client') }}">Clients</a>
+                        <a href="{{ url('bincard') }}">Bin Card</a>
+                    </li>
+                   <li>
+                        <a href="{{ url('particular') }}">Particulars</a>
+                    </li>
+                    <li>
+                      <a href="{{ url('client') }}">Clients</a>
                     </li>
                     <li>
                         <a href="{{ url('orderForm') }}">Order Form</a>
