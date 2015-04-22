@@ -41,53 +41,59 @@ border-top: 1px solid #ffffff;
                 <tr>
                   <td>
                   <div class="form-group">
-                     <label for="attention_name">Attention Name</label>
-                     <input type="text" class="form-control" id="attention_name" name="attention_name" placeholder="Attention Name">
+                     <label for="particular_code">Code</label>
+                     <input type="text" class="form-control" id="particular_code" name="particular_code" placeholder="Code">
                   </div>
                   </td>
                   <td>
                   <div class="form-group">
-                     <label for="campany_name">Company Name</label>
-                     <input type="text" class="form-control" id="campany_name" name="campany_name" placeholder="Company Name">
+                     <label for="description">Description/Name</label>
+                     <input type="text" class="form-control" id="description" name="description" placeholder="Description/Name">
                   </div>
                   </td>
                   <td>
                   <div class="form-group">
-                     <label for="address">Address</label>
-                     <input type="text" class="form-control" id="address" name="address" placeholder="Address">
+                     <label for="net_weight">Net Weight</label>
+                     <input type="text" class="form-control" id="net_weight" name="net_weight" placeholder="Net Weight">
                   </div>
                   </td>
                   <td>
-                  <div class="form-group">
-                     <label for="email">Email</label>
-                     <input type="text" class="form-control" id="email" name="email" placeholder="Email">
-                  </div>
+                   <div class="form-group">
+                                       <label for="gross_weight">Gross Weight</label>
+                                       <input type="text" class="form-control" id="gross_weight" name="gross_weight" placeholder="Gross Weight">
+                                    </div>
                   </td>
 
                 </tr>
                  <tr>
                   <td>
                   <div class="form-group">
-                     <label for="phone_no">Phone</label>
-                     <input type="text" class="form-control" id="phone_no" name="phone_no" placeholder="Phone">
+                     <label for="bincard_id">Bin card</label>
+                     <select class="form-control" id="bincard_id" name="bincard_id">
+                     <option selected disabled>-- Bin card --</option>
+                     @foreach(Bincard::all() as $bin)
+                     <option value="{{ $bin->id }}">{{ $bin->bincard_name }}</option>
+                     @endforeach
+                     </select>
                   </div>
                   </td>
                   <td>
                   <div class="form-group">
-                     <label for="tin_no">TIN</label>
-                     <input type="text" class="form-control" id="tin_no" name="tin_no" placeholder="TIN">
+                     <label for="unit_price">Unit Price</label>
+                     <input type="text" class="form-control" id="unit_price" name="unit_price" placeholder="Unit Price">
                   </div>
                   </td>
                   <td>
                   <div class="form-group">
-                     <label for="vat_no">VAT No.</label>
-                     <input type="text" class="form-control" id="vat_no" name="vat_no" placeholder="VAT No.">
-                  </div>
+                                       <label for="vat">VAT</label>
+                                       <input type="text" class="form-control" id="vat" name="vat" placeholder="VAT">
+                                    </div>
+
                   </td>
                   <td>
                   <div class="form-group">
-                     <label for="exampleInputName2">Status</label>
-                     <input type="text" class="form-control" id="status" name="status" placeholder="Status">
+                     <label for="quantity">Quantity</label>
+                     <input type="text" class="form-control" id="quantity" name="quantity" placeholder="Quantity">
                   </div>
                   </td>
 
@@ -110,8 +116,8 @@ $(document).ready(function(){
             var addButtonId = "add-client-button";
             var statusId = "statusId";
             var formId = "clientForm";
-            var apiUrl = '<?php echo url("client/add");?>';
-            var listUrl = '<?php url("client/list"); ?>';
+            var apiUrl = '<?php echo url("particular/add");?>';
+            var listUrl = '<?php url("particular/list"); ?>';
             var isDisabled = false;
             var isMultMode = false;
 

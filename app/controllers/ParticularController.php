@@ -28,7 +28,7 @@ class ParticularController extends \BaseController {
     public function create()
     {
 
-        Return View::make('client.add');
+        Return View::make('particular.add');
     }
 
 
@@ -39,7 +39,19 @@ class ParticularController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+        $bincard = Particular::create(array(
+            "particular_code"   => Input::get("particular_code"),
+            "description"       => Input::get("description"),
+            "description"       => Input::get("description"),
+            "gross_weight"      => Input::get("gross_weight"),
+            "net_weight"        => Input::get("net_weight"),
+            "vat"               => Input::get("vat"),
+            "unit_price"        => Input::get("unit_price"),
+            "quantity"          => Input::get("quantity"),
+            "bincard_id"        => Input::get("bincard_id"),
+        ));
+
+        return "<h3 class='text-success'> Particular Registered Successful </h3>";
 	}
 
 
