@@ -15,8 +15,8 @@ class CreateBincardTable extends Migration {
 		Schema::create('bincards', function(Blueprint $table)
 		{
 			$table->increments('id');
+            $table->string('code');
 			$table->string('bincard_name');
-			$table->integer('particular_id');
 			$table->timestamps();
 		});
 	}
