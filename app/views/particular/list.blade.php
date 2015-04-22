@@ -10,14 +10,14 @@
       <div class="widget-content padded clearfix">
          <table class="table table-bordered table-striped" id="datatable-editable">
          <thead>
-         <th class="hidden-xs">Attention Name</th>
-         <th class="hidden-xs">Company Name</th>
-         <th class="hidden-xs">Address</th>
-         <th class="hidden-xs">Email</th>
-         <th class="hidden-xs">Phone</th>
-         <th class="hidden-xs">VAT no.</th>
-         <th class="hidden-xs">Country</th>
-         <th class="hidden-xs">Status</th>
+         <th class="hidden-xs">Code</th>
+         <th class="hidden-xs">Description/Name</th>
+         <th class="hidden-xs">Gross Weight</th>
+         <th class="hidden-xs">Net Weight</th>
+         <th class="hidden-xs">Unit Price</th>
+         <th class="hidden-xs">VAT</th>
+         <th class="hidden-xs">Bin Card</th>
+         <th class="hidden-xs">Quantity</th>
          <th class="hidden-xs"></th>
          <th class="hidden-xs"></th>
          <tbody id="listingTableBody">
@@ -31,7 +31,7 @@
              <td>{{$client->phone_no}}</td>
              <td>{{$client->tin_no}}</td>
              <td>{{$client->vat_no}}</td>
-             <td>{{$client->status}}</td>
+             <td>{{$client->vat_no}}</td>
              <td><a class='action_client' id="edit_{{ $client->id }}" href='#'>Edit</a></br></td>
              <td><a class='action_client' id="delete_{{ $client->id }}" href='#'>Delete</a></br></td>
 
@@ -50,7 +50,7 @@
        $(document).ready(function(){
         var ListContainer    = "listingTable";
         var urlList          = '<?php echo url("clients")?>';
-        var urlCreate        = '<?php echo url("client/create")?>';
+        var urlCreate        = '<?php echo url("particular/create")?>';
         $("#add-row").bind("click",function(){
             $("#listHere").load(urlCreate)
 

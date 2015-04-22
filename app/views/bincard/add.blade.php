@@ -41,53 +41,14 @@ border-top: 1px solid #ffffff;
                 <tr>
                   <td>
                   <div class="form-group">
-                     <label for="attention_name">Attention Name</label>
+                     <label for="attention_name">Code</label>
                      <input type="text" class="form-control" id="attention_name" name="attention_name" placeholder="Attention Name">
                   </div>
                   </td>
                   <td>
                   <div class="form-group">
-                     <label for="campany_name">Company Name</label>
+                     <label for="campany_name">Bincard Name</label>
                      <input type="text" class="form-control" id="campany_name" name="campany_name" placeholder="Company Name">
-                  </div>
-                  </td>
-                  <td>
-                  <div class="form-group">
-                     <label for="address">Address</label>
-                     <input type="text" class="form-control" id="address" name="address" placeholder="Address">
-                  </div>
-                  </td>
-                  <td>
-                  <div class="form-group">
-                     <label for="email">Email</label>
-                     <input type="text" class="form-control" id="email" name="email" placeholder="Email">
-                  </div>
-                  </td>
-
-                </tr>
-                 <tr>
-                  <td>
-                  <div class="form-group">
-                     <label for="phone_no">Phone</label>
-                     <input type="text" class="form-control" id="phone_no" name="phone_no" placeholder="Phone">
-                  </div>
-                  </td>
-                  <td>
-                  <div class="form-group">
-                     <label for="tin_no">TIN</label>
-                     <input type="text" class="form-control" id="tin_no" name="tin_no" placeholder="TIN">
-                  </div>
-                  </td>
-                  <td>
-                  <div class="form-group">
-                     <label for="vat_no">VAT No.</label>
-                     <input type="text" class="form-control" id="vat_no" name="vat_no" placeholder="VAT No.">
-                  </div>
-                  </td>
-                  <td>
-                  <div class="form-group">
-                     <label for="exampleInputName2">Status</label>
-                     <input type="text" class="form-control" id="status" name="status" placeholder="Status">
                   </div>
                   </td>
 

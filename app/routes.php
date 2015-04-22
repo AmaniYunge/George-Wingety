@@ -159,3 +159,15 @@ Route::get('particular/create', array('uses' => 'ParticularController@create'));
 Route::get('particular/edit/{id}', array('uses' => 'ParticularController@edit'));
 
 Route::any('particular/{id}', array('uses' => 'ParticularController@show'));
+
+
+//bincards routes
+
+Route::any('bincards', array('uses' => 'BincardController@index'));
+Route::post('bincard/add', array('uses' => 'BincardController@store'));
+Route::get('bincard/list', array('uses' => 'BincardController@lists'));
+Route::get('bincard/create', array('uses' => 'BincardController@create'));
+Route::get('bincard/edit/{id}', array('uses' => 'BincardController@edit'));
+
+Route::any('bincard/{id}', array('uses' => 'BincardController@show'));
+

@@ -7,10 +7,13 @@ class BincardController extends \BaseController {
      *
      * @return Response
      */
-    public function index()
+    public function index($id = null)
     {
+        if($id==null) {
+            $bincard = Bincard::all();
+            return $bincard->toJson();
 
-        return View::make('bincard.index');
+        }
     }
 
 
@@ -20,10 +23,10 @@ class BincardController extends \BaseController {
      * @param  int  $id
      * @return Response
      */
-    public function create($id)
+    public function create()
     {
-        $bincard1 = Bincard::find($id);
-        Return View::make('bincard.add',compact("bincard1"));
+//        $bincard1 = Bincard::find($id);
+        Return View::make('bincard.add');
     }
 
     /**
