@@ -30,7 +30,7 @@
              <td>{{$particular->net_weight}}</td>
              <td>{{$particular->unit_price}}</td>
              <td>{{$particular->vat}}</td>
-             <td>{{$particular->bincard_id}}</td>
+             <td>{{Bincard::find($particular->bincard_id)['bincard_name']}}</td>
              <td>{{$particular->quantity}}</td>
              <td><a class='action_client' id="edit_{{ $particular->id }}" href='#'>Edit</a></br></td>
              <td><a class='action_client' id="delete_{{ $particular->id }}" href='#'>Delete</a></br></td>
