@@ -12,7 +12,7 @@ class Bincard extends Eloquent {
     protected  $guarded = array('id');
 
     public function particulars(){
-        return $this->hasMany('Particular', 'bincard_id', 'id');
+        return $this->hasMany('Particular');
     }
 
 

@@ -68,8 +68,11 @@ $ProInPart = DB::select( DB::raw("SELECT * FROM particular_proforma_invoice WHER
                   <table class="table table-striped invoice-table table-condensed table-responsive table-hovered">
                     <thead>
                       <th width="40">#</th>
-                      <th>
+                      <th style="text-align: left;">
                         Product
+                      </th>
+                       <th style="text-align: left;">
+                        Code
                       </th>
                       <th width="70">
                         Qty
@@ -94,8 +97,12 @@ $ProInPart = DB::select( DB::raw("SELECT * FROM particular_proforma_invoice WHER
                         <td>
                           {{ ++$index }}
                         </td>
-                        <td>
+                        <td style="text-align: left;">
                           {{ Particular::find($prof->particular_id)->description }}
+
+                        </td>
+                        <td style="text-align: left;">
+                          {{ Particular::find($prof->particular_id)->particular_code }}
                         </td>
                         <td>
                           {{ $prof->quantity }}

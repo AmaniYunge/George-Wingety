@@ -71,6 +71,18 @@ class BincardController extends \BaseController {
 
 
     /**
+     * Display the specified resource.
+     *
+     *
+     * @return Response
+     */
+    public function particluars($id)
+    {
+        $particulars = DB::select( DB::raw("SELECT * FROM particulars WHERE bincard_id='$id'"));
+        return $particulars;
+    }
+
+    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id

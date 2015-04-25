@@ -112,7 +112,7 @@
                             modalContent +='<div class="panel-title">';
                             modalContent +='<a style="text-align:left;" class="accordion-toggle collapsed" data-parent="#accordion" data-toggle="collapse" href="components.html#'+valueData.id+'">';
                             modalContent +='<div class="caret pull-right"></div>';
-                            modalContent +=counter+'.&nbsp;'+valueData.description+'</a>';
+                            modalContent +=counter+'.&nbsp;'+valueData.description+' ('+valueData.particular_code+') </a>';
                             modalContent +='</div>';
                             modalContent +='</div>';
                             modalContent +='<div class="panel-collapse collapse" id="'+valueData.id+'">';
