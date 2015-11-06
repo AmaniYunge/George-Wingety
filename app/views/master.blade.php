@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <!--
-Wgety Data Management App
+George Wingety Data Management App
 Version: 1.0.0
 Author:  Amani Yunge
 -->
 
 <head>
     <title>
-        Wgety - Dashboard
+        Wingety - Dashboard
     </title>
     <link href="../stylesheets/css.css" media="all" rel="stylesheet" type="text/css" />
     <link href="../stylesheets/font-awesome.min.css" media="all" rel="stylesheet" type="text/css" />

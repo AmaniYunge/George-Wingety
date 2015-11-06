@@ -15,11 +15,61 @@ Route::get('/', function()
     return View::make('website');
 });
 
+Route::get('home1', function()
+{
+    return View::make('home1');
+});
 
 Route::get('home', function()
 {
     return View::make('home');
 });
+
+Route::get('home2', function()
+{
+    return View::make('home2');
+});
+
+Route::get('about', function()
+{
+    return View::make('about');
+});
+
+Route::get('testimonials', function()
+{
+    return View::make('testimonials');
+});
+
+Route::get('faq', function()
+{
+    return View::make('faq');
+});
+
+Route::get('services', function()
+{
+    return View::make('services');
+});
+
+Route::get('portifolio', function()
+{
+    return View::make('portifolio');
+});
+
+Route::get('projectdetail', function()
+{
+    return View::make('projectdetail');
+});
+
+Route::get('blog', function()
+{
+    return View::make('blog');
+});
+
+Route::get('contact', function()
+{
+    return View::make('contact');
+});
+
 
 //  User Management
 
