@@ -51,11 +51,11 @@
 	<nav class="navbar navbar-fixed-top wowmenu" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
-			<a class="navbar-brand logo-nav" href="{{url('home1')}}"><img src="../../public/img/logo.png" alt="logo"></a>
+			<a class="navbar-brand logo-nav" href="{{url('/')}}"><img src="../../public/img/logo.png" alt="logo"></a>
 		</div>
 		<ul id="nav" class="nav navbar-nav pull-right">
 			<li class="dropdown active">
-			<a href="{{url('home1')}}" class="dropdown-toggle" data-toggle="dropdown">Home<i class="fa fa-angle-down"></i></a>
+			<a href="{{url('/')}}" class="dropdown-toggle" data-toggle="dropdown">Home<i class="fa fa-angle-down"></i></a>
 			<ul class="dropdown-menu">
 				<li><a href="{{url('home2')}}">Home Alt</a></li>
 				<li><a href="{{url('about')}}">About Us</a></li>
