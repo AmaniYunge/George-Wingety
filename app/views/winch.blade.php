@@ -3,7 +3,7 @@
 
 <section class="pageheader-default text-center">
 	<div class="semitransparentbg">
-		<h1 class="animated fadeInLeftBig notransition">Soil Bricks Making Mchine</h1>
+		<h1 class="animated fadeInLeftBig notransition">Mining Winch</h1>
 		<p class="animated fadeInRightBig notransition container page-description">
 			 Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>
 			 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -25,13 +25,13 @@
 				</ol>
 				<div class="carousel-inner">
 					<div class="item active">
-						<img src="../../public/img/hydroform2.jpg" alt="">
+						<img src="../../public/img/winch.jpg" alt="">
 					</div>
 					<div class="item">
-						<img src="../../public/img/hydroform1.jpg" alt="">
+						<img src="../../public/img/winch1.jpg" alt="">
 					</div>
 					<div class="item">
-						<img src="../../public/img/hydroform.jpg" alt="">
+						<img src="../../public/img/winch3.jpg" alt="">
 					</div>
 				</div>
 				<!-- /.carousel-inner -->
@@ -46,7 +46,7 @@
 				<span>Project Description</span>
 				</h1>
 				<p>
-					<span class="drop-cap round">V</span>emo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.
+					<span class="drop-cap round">M</span>ining Winch voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.
 				</p>
 				<p>
 					 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident

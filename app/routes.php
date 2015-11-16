@@ -12,11 +12,6 @@
 */
 Route::get('/', function()
 {
-    return View::make('website');
-});
-
-Route::get('home1', function()
-{
     return View::make('home1');
 });
 
@@ -53,6 +48,21 @@ Route::get('services', function()
 Route::get('portifolio', function()
 {
     return View::make('portifolio');
+});
+
+Route::get('winch', function()
+{
+    return View::make('winch');
+});
+
+Route::get('mixer', function()
+{
+    return View::make('mixer');
+});
+
+Route::get('hydroform', function()
+{
+    return View::make('hydroform');
 });
 
 Route::get('projectdetail', function()

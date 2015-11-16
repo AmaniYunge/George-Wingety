@@ -36,7 +36,7 @@
 			<!-- col-md-4 -->
 			<div class="col-md-4">
 				<i class="icon-trophy"></i>
-				<h4>Industrials & Agricultural Plants and Equipments</h4>
+				<h4>Industrials services & Agricultural Plants and Equipments</h4>
 				<p>
 					There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
 				</p>
@@ -46,7 +46,7 @@
 		<div class="row text-center topspace30 animated fadeInDown notransition">
 			<div class="col-md-4">
 				<i class="icon-heart"></i>
-				<h4>Fabricating Mining Equipments</h4>
+				<h4>Abrasive Cleaning </h4>
 				<p>
 					There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
 				</p>
@@ -54,7 +54,7 @@
 			<!-- col-md-4 -->
 			<div class="col-md-4">
 				<i class="icon-shopping-cart"></i>
-				<h4>Industrials & Agricultural Plants and Equipments</h4>
+				<h4>Demolition Works</h4>
 				<p>
 					There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
 				</p>
@@ -62,7 +62,7 @@
 			<!-- col-md-4 -->
 			<div class="col-md-4">
 				<i class="icon-cloud"></i>
-				<h4>Fabricating Mining Equipments</h4>
+				<h4> Stationary Engines & Hydraulic Services</h4>
 				<p>
 					There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
 				</p>

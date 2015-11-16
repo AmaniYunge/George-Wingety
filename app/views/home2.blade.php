@@ -1,7 +1,6 @@
 @extends('website')
 @section('contents')
-================================================== -->
-<section class="pageheader-default" style="background:url(img/demo/7.jpg);">
+<section class="pageheader-default" style="background:url(../../public/img/7.jpg);">
 	<div class="bgarea-semitransparent">
 		<div class="container">
 			<div class="row">
@@ -13,7 +12,7 @@
 					</div>
 				</div>
 				<div class="col-md-6">
-					<img src="../img/demo/desktop3.png" class="img-responsive animated fadeInRightBig notransition" alt="">
+					<img src="../../public/img/desktop3.png" class="img-responsive animated fadeInRightBig notransition" alt="">
 				</div>
 			</div>
 		</div>
@@ -21,7 +20,7 @@
 	</section>
 	<div class="wrapsemibox">
 		<div class="semiboxshadow text-center">
-			<img src="img/shp.png" class="img-responsive" alt="">
+			<img src="../../public/img/shp.png" class="img-responsive" alt="">
 		</div>
 		<!-- INTRO NOTE
 ================================================== -->
@@ -49,7 +48,7 @@
 					<a href="#">
 					<div class="grey-box-icon">
 						<div class="icon-box-top grey-box-icon-pos">
-							<i class="fontawesome-icon medium circle-white center icon-cogs"></i>
+							<i class="fa fa-cogs fa-5x"></i>
 						</div>
 						<div class="ca-content">
 							<h2 class="ca-main">Responsive Design</h2>
@@ -62,7 +61,7 @@
 					<a href="#">
 					<div class="grey-box-icon">
 						<div class="icon-box-top grey-box-icon-pos">
-							<i class="fontawesome-icon medium circle-white center icon-pencil"></i>
+							<i class="fa fa-globe fa-5x"></i>
 						</div>
 						<div class="ca-content">
 							<h2 class="ca-main">Friendly Documentation</h2>
@@ -75,7 +74,7 @@
 					<a href="#">
 					<div class="grey-box-icon active">
 						<div class="icon-box-top grey-box-icon-pos">
-							<i class="fontawesome-icon medium circle-white center icon-magic"></i>
+							<i class="fa fa-users fa-5x"></i>
 						</div>
 						<div class="ca-content">
 							<h2 class="ca-main">MultiPurpose Use</h2>
@@ -88,7 +87,7 @@
 					<a href="#">
 					<div class="grey-box-icon">
 						<div class="icon-box-top grey-box-icon-pos">
-							<i class="fontawesome-icon medium circle-white center icon-trophy"></i>
+							<i class="fa fa-trophy fa-5x"></i>
 						</div>
 						<div class="ca-content">
 							<h2 class="ca-main">Winning Theme</h2>
@@ -109,24 +108,24 @@
 			<h1 class="small text-center animated fadeInLeftNow notransition">HAPPY CLIENTS</h1>
 			<div class="br-hr type_short">
 				<span class="br-hr-h animated fadeInRightNow">
-				<i class="icon-pencil"></i>
+				<i class="icon icon-pencil"></i>
 				</span>
 			</div>
 			<div id="cbp-qtrotator" class="cbp-qtrotator animated fadeInUpNow notransition">
 				<div class="cbp-qtcontent">
-					<img src="http://wowthemes.net/demo/biscaya/img/demo/avatar.jpg" alt="">
+					<img src="../../public/images/nature2.jpg" alt="">
 					<blockquote>
 						<p class="bigquote">
-							<i class="icon-quote-left colortext quoteicon"></i> Lorem ipsum dolor sit adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus. Lorem ipsum dolor sit adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus. Praesent dignissim sem sapien, a vulputate enim auctor vitae. Duis non lorem porta, adipiscing eros sit amet, tempor sem.
+							<i class="icon icon-quote colortext quoteicon"></i> Lorem ipsum dolor sit adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus. Lorem ipsum dolor sit adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus. Praesent dignissim sem sapien, a vulputate enim auctor vitae. Duis non lorem porta, adipiscing eros sit amet, tempor sem.
 						</p>
 						<footer>Pino Caruso</footer>
 					</blockquote>
 				</div>
 				<div class="cbp-qtcontent">
-					<img src="http://wowthemes.net/demo/biscaya/img/demo/avatar.jpg" alt="">
+					<img src="../../public/images/nature2.jpg" alt="">
 					<blockquote>
 						<p class="bigquote">
-							<i class="icon-quote-left colortext quoteicon"></i> Lorem ipsum dolor sit adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus. Lorem ipsum dolor sit adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus. Praesent dignissim sem sapien, a vulputate enim auctor vitae. Duis non lorem porta, adipiscing eros sit amet, tempor sem.
+							<i class="icon icon-quote colortext quoteicon colortext quoteicon"></i> Lorem ipsum dolor sit adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus. Lorem ipsum dolor sit adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus. Praesent dignissim sem sapien, a vulputate enim auctor vitae. Duis non lorem porta, adipiscing eros sit amet, tempor sem.
 						</p>
 						<footer>Pino Caruso / Director of <a href="#">example.com</a></footer>
 					</blockquote>
@@ -150,7 +149,7 @@
 						<div class="tab-content">
 							<div class="tab-pane active" id="aboutUs">
 								<p>
-									<img src="http://www.wowthemes.net/demo-biscaya/wp-content/uploads/sites/8/2013/08/Untitled-1-150x150.png" class="round-image" style="width:80px;height:80px;" alt=""> Lorem ipsum dolor sit adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus. Lorem ipsum dolor sit adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus. Praesent dignissim sem sapien, a vulputate enim auctor vitae.
+									<img src="../../public/images/nature2.jpg" class="round-image" style="width:80px;height:80px;" alt=""> Lorem ipsum dolor sit adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus. Lorem ipsum dolor sit adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus. Praesent dignissim sem sapien, a vulputate enim auctor vitae.
 								</p>
 							</div>
 							<div class="tab-pane" id="special">
@@ -220,14 +219,14 @@
 							<!--featured-projects 1-->
 							<li>
 							<div class="boxcontainer">
-								<img src="img/demo/showcase1.jpg" alt="">
+								<img src="../../public/img/demo/showcase1.jpg" alt="">
 								<div class="roll">
 									<div class="wrapcaption">
-										<a href="projectdetail.html"><i class="icon-link captionicons"></i></a>
-										<a data-gal="prettyPhoto[gallery1]" href="img/demo/showcase1.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
+										<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
+										<a data-gal="prettyPhoto[gallery1]" href="../../public/img/demo/showcase1.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
 									</div>
 								</div>
-								<h1><a href="projectdetail.html">Trains</a></h1>
+								<h1><a href="{{url('projectdetail')}}">Trains</a></h1>
 								<p>
 									 Lore ipsum
 								</p>
@@ -236,14 +235,14 @@
 							<!--featured-projects 2-->
 							<li>
 							<div class="boxcontainer">
-								<img src="img/demo/showcase2.jpg" alt="">
+								<img src="../../public/img/demo/showcase2.jpg" alt="">
 								<div class="roll">
 									<div class="wrapcaption">
-										<a href="projectdetail.html"><i class="icon-link captionicons"></i></a>
-										<a data-gal="prettyPhoto[gallery1]" href="img/demo/showcase2.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
+										<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
+										<a data-gal="prettyPhoto[gallery1]" href="../../public/img/demo/showcase2.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
 									</div>
 								</div>
-								<h1><a href="projectdetail.html">Automobiles</a></h1>
+								<h1><a href="{{url('projectdetail')}}">Automobiles</a></h1>
 								<p>
 									 Jura mountains
 								</p>
@@ -252,14 +251,14 @@
 							<!--featured-projects 3-->
 							<li>
 							<div class="boxcontainer">
-								<img src="img/demo/showcase3.jpg" alt="">
+								<img src="../../public/img/demo/showcase3.jpg" alt="">
 								<div class="roll">
 									<div class="wrapcaption">
-										<a href="projectdetail.html"><i class="icon-link captionicons"></i></a>
-										<a data-gal="prettyPhoto[gallery1]" href="img/demo/showcase3.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
+										<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
+										<a data-gal="prettyPhoto[gallery1]" href="../../public/img/demo/showcase3.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
 									</div>
 								</div>
-								<h1><a href="projectdetail.html">Biscaya</a></h1>
+								<h1><a href="{{url('projectdetail')}}">Biscaya</a></h1>
 								<p>
 									 Clio sorevins
 								</p>
@@ -268,14 +267,14 @@
 							<!--featured-projects 4-->
 							<li>
 							<div class="boxcontainer">
-								<img src="img/demo/showcase4.jpg" alt="">
+								<img src="../../public/img/demo/showcase4.jpg" alt="">
 								<div class="roll">
 									<div class="wrapcaption">
-										<a href="projectdetail.html"><i class="icon-link captionicons"></i></a>
-										<a data-gal="prettyPhoto[gallery1]" href="img/demo/showcase4.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
+										<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
+										<a data-gal="prettyPhoto[gallery1]" href="../../public/img/demo/showcase4.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
 									</div>
 								</div>
-								<h1><a href="projectdetail.html">Serenity</a></h1>
+								<h1><a href="{{url('projectdetail')}}">Serenity</a></h1>
 								<p>
 									 Tabiscum rocens
 								</p>
@@ -284,14 +283,14 @@
 							<!--featured-projects 5-->
 							<li>
 							<div class="boxcontainer">
-								<img src="img/demo/showcase1.jpg" alt="">
+								<img src="../../public/img/demo/showcase1.jpg" alt="">
 								<div class="roll">
 									<div class="wrapcaption">
-										<a href="projectdetail.html"><i class="icon-link captionicons"></i></a>
-										<a data-gal="prettyPhoto[gallery1]" href="img/demo/showcase1.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
+										<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
+										<a data-gal="prettyPhoto[gallery1]" href="../../public/img/demo/showcase1.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
 									</div>
 								</div>
-								<h1><a href="projectdetail.html">BizLeaders</a></h1>
+								<h1><a href="{{url('projectdetail')}}">BizLeaders</a></h1>
 								<p>
 									 Larius trano
 								</p>
@@ -300,14 +299,14 @@
 							<!--featured-projects 6-->
 							<li>
 							<div class="boxcontainer">
-								<img src="img/demo/showcase2.jpg" alt="">
+								<img src="../../public/img/demo/showcase2.jpg" alt="">
 								<div class="roll">
 									<div class="wrapcaption">
-										<a href="projectdetail.html"><i class="icon-link captionicons"></i></a>
-										<a data-gal="prettyPhoto[gallery1]" href="img/demo/showcase2.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
+										<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
+										<a data-gal="prettyPhoto[gallery1]" href="../../public/img/demo/showcase2.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
 									</div>
 								</div>
-								<h1><a href="projectdetail.html">Salma</a></h1>
+								<h1><a href="{{url('projectdetail')}}">Salma</a></h1>
 								<p>
 									 Vobiscum atens
 								</p>
@@ -316,14 +315,14 @@
 							<!--featured-projects 7-->
 							<li>
 							<div class="boxcontainer">
-								<img src="img/demo/showcase3.jpg" alt="">
+								<img src="../../public/img/demo/showcase3.jpg" alt="">
 								<div class="roll">
 									<div class="wrapcaption">
-										<a href="projectdetail.html"><i class="icon-link captionicons"></i></a>
-										<a data-gal="prettyPhoto[gallery1]" href="img/demo/showcase3.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
+										<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
+										<a data-gal="prettyPhoto[gallery1]" href="../../public/img/demo/showcase3.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
 									</div>
 								</div>
-								<h1><a href="projectdetail.html">RetroDoe</a></h1>
+								<h1><a href="{{url('projectdetail')}}">RetroDoe</a></h1>
 								<p>
 									 Oliya verder
 								</p>
@@ -332,14 +331,14 @@
 							<!--featured-projects 8-->
 							<li>
 							<div class="boxcontainer">
-								<img src="img/demo/showcase4.jpg" alt="">
+								<img src="../../public/img/demo/showcase4.jpg" alt="">
 								<div class="roll">
 									<div class="wrapcaption">
-										<a href="projectdetail.html"><i class="icon-link captionicons"></i></a>
-										<a data-gal="prettyPhoto[gallery1]" href="img/demo/showcase4.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
+										<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
+										<a data-gal="prettyPhoto[gallery1]" href="../../public/img/demo/showcase4.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
 									</div>
 								</div>
-								<h1><a href="projectdetail.html">Chaux Fonds</a></h1>
+								<h1><a href="{{url('projectdetail')}}">Chaux Fonds</a></h1>
 								<p>
 									 Diva menthol
 								</p>

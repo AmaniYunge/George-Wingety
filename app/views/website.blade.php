@@ -9,6 +9,7 @@
 <!-- Style -->
  {{ HTML::style("css/bootstrap.css") }}
  {{ HTML::style("css/style.css") }}
+ {{ HTML::style("font-awesome/css/font-awesome.css") }}
  {{ HTML::style("css/responsive.css") }}
  {{ HTML::style("css/layout-semiboxed.css") }}
  {{ HTML::style("css/skin-red.css") }}
@@ -34,21 +35,19 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 top-text pull-left animated fadeInLeft">
-				<i class="fa-phone"></i> Phone: (316) 444 8529 <span class="separator"></span><i class="fa fa-envelope"></i> Email: <a href="#">georgewingetyltd@gmail.com</a>
+				<i class="fa fa-phone"></i> Phone: +255 22 348599 <span class="separator"></span><i class="fa fa-envelope"></i> Email: <a href="#">georgewingetyltd@gmail.com</a>
 			</div>
 			<div class="col-md-6 text-right animated fadeInRight">
 				<div class="social-icons">
 					<a class="icon" href="#"><i class=" fa fa-facebook"></i></a>
 					<a class="icon" href="#"><i class=" fa fa-google-plus"></i></a>
-					<a class="fa fa-google-plus" href="#"></a>
 				</div>
 			</div>
 		</div>
 	</div>
 	</section>
 	<!-- /.toparea end-->
-	<!-- NAV
-================================================== -->
+	<!-- NAV-->
 	<nav class="navbar navbar-fixed-top wowmenu" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
@@ -72,11 +71,11 @@
 	</div>	
 	</nav>
 	<!-- /nav end-->
-	<!-- CAROUSEL
+	<!-- CAROUSEL-->
 
 
 @yield('contents')
-================================================== -->
+
 		<section class="container animated fadeInDownNow notransition topspace40">
 		<div class="row">
 			<div class="col-md-12">
@@ -89,8 +88,7 @@
 					</p>
 				</div>
 				<div class="text-center topspace20">
-					<a href="{{url('contact')}}" class="buttonblack"><i class="fa fa
-					-shopping-cart"></i>&nbsp; Get in Touch</a>
+					<a href="{{url('contact')}}" class="buttonblack"><i class="fa fa-phone"></i>&nbsp; Get in Touch</a>
 					<a href="#" class="buttoncolor"><i class="icon-link"></i>&nbsp; learn more</a>
 				</div>
 			</div>
@@ -143,13 +141,13 @@
 					<div id="quotes">
 						<div class="textItem">
 							<div class="avatar">
-								<img src="http://wowthemes.net/demo/biscaya/img/demo/avatar.jpg" alt="avatar">
+								<img src="../../public/images/nature2.jpg" alt="avatar">
 							</div>
 							 "Before turning to those moral and mental aspects of the matter which present the greatest difficulties, let the inquirer begin by mastering more elementary problems.<span style="font-family:arial;">"</span><br/><b> Jesse T, Los Angeles </b>
 						</div>
 						<div class="textItem">
 							<div class="avatar">
-								<img src="http://wowthemes.net/demo/biscaya/img/demo/avatar.jpg" alt="avatar">
+								<img src="../../public/images/nature2.jpg" alt="avatar">
 							</div>
 							 "How often have I said to you that when you have eliminated the impossible, whatever remains, however improbable, must be the truth?<span style="font-family:arial;">"</span><br/><b>Ralph G. Flowers </b>
 						</div>
@@ -210,6 +208,7 @@
   {{ HTML::script("js/bootstrap.js") }}
   {{ HTML::script("js/plugins.js") }}
   {{ HTML::script("js/common.js") }}
+  
   /* ---------------------------------------------------------------------- */
 	/*	Carousel
 	/* ---------------------------------------------------------------------- */
