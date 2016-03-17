@@ -60,6 +60,11 @@ Route::get('mixer', function()
     return View::make('mixer');
 });
 
+Route::get('bollmill', function()
+{
+    return View::make('bollmill');
+});
+
 Route::get('hydroform', function()
 {
     return View::make('hydroform');

@@ -3,16 +3,16 @@
 
 <section class="pageheader-default text-center">
 	<div class="semitransparentbg">
-		<h1 class="animated fadeInLeftBig notransition">Soil Bricks Making Mchine</h1>
+		<h1 class="animated fadeInLeftBig notransition">Ball Mill</h1>
 		<p class="animated fadeInRightBig notransition container page-description">
-			 Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>
-			 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			 A ball mill works on the principle of impact and attrition: <br>
+			size reduction is done by impact as the balls drop from near the top of the shell.
 		</p>
 	</div>
 	</section>
 	<div class="wrapsemibox">
 		<div class="semiboxshadow text-center">
-			<img src="../../public/img/shp.png" class="img-responsive" alt="">
+			<img src="{{asset('img/shp.png')}}" class="img-responsive" alt="">
 		</div>
 		<!-- PROJECT SLIDER
 ================================================== -->
@@ -25,13 +25,13 @@
 				</ol>
 				<div class="carousel-inner">
 					<div class="item active">
-						<img src="../../public/img/hydroform2.jpg" alt="">
+						<img src="{{asset('img/bollmill.jpg')}}" alt="">
 					</div>
 					<div class="item">
-						<img src="../../public/img/hydroform1.jpg" alt="">
+						<img src="{{asset('img/bollmill2.jpg')}}" alt="">
 					</div>
 					<div class="item">
-						<img src="../../public/img/hydroform.jpg" alt="">
+						<img src="{{asset('img/bollmill3.jpg')}}" alt="">
 					</div>
 				</div>
 				<!-- /.carousel-inner -->
@@ -46,20 +46,18 @@
 				<span>Project Description</span>
 				</h1>
 				<p>
-					<span class="drop-cap round">V</span>emo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.
-				</p>
+					<span class="drop-cap round">A</span> ball mill is a type of grinding mill, purposed similarly to the sag mill or other mining crushers. These machines are used to grind or mix metals or raw materials for further processing. 
+					Various materials are placed into the mill drum and rotated with the mined materials that are to be crushed. The ball mill contains materials meant for crushing and grinding, such as balls of ceramic, small rocks, or balls made from stainless steel.
+					 The internal device of the ball mill grinds material into powder-like substances, and can rotate continuously for optimal grinding and refinery production.
+                     High Definition of a Mine Ball-Mill Picture</p>
+
+                   <p>A ball mill can also be helpful in the process of cold welding, and produces alloys from powders when used in capacity for chemical processing. The ball mill technology is one that is designed for optimal cold refinery,
+                    subjecting the machinery to a great deal of distress during use. Materials, parts, and mining equipment components must be in top working condition.  Mining equipments manufacturers entrust their high end and large mining equipment machinery to the best in the field.
+                    </p>
 				<p>
-					 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
-				</p>
-				<p>
-					Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-				<p>
-					<b>Year Creation</b>&nbsp;: 2014 <br/>
+					<b>Year Creation</b>&nbsp;: 2015 <br/>
 					<b>Client's Name</b>&nbsp;: John Doe <br/>
-					<b>Web Category</b>&nbsp;: Shop Online <br/>
-					<b>Our Contribution</b>&nbsp;: Script &amp; SEO <br/>
-					<b>Completion Time</b>&nbsp;: 35 Days
+					<b>Completion Time</b>&nbsp;: 14 Days
 				</p>
 			</div>
 			<div class="col-md-4 animated fadeInRight notransition">

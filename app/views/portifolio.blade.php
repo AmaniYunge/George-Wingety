@@ -5,15 +5,11 @@
 	<div class="semitransparentbg">
 		<h1 class="animated fadeInDown">Portfolio </h1>
 		<p class="animated fadeInUp container page-description">
-			 Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>
-			 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			 We undertake the business of making, fabricating and assembling concrete machines, construction equipments, <br>
+			 any type of machines and equipment, plants, devices of all descriptions using modern and appopriate technology.
 		</p>
 	</div>
 	</section>
-	<div class="wrapsemibox">
-		<div class="semiboxshadow text-center">
-			<img src="img/shp.png" class="img-responsive" alt="">
-		</div>
 		<!-- PORTFOLIO
 ================================================== -->
 		<section class="container">
@@ -25,10 +21,10 @@
 			<div class="col-md-12 text-center">
 				<div id="filter"class="animated fadeInRight">
 					<ul>
-						<li><a href="" data-filter="*" class="selected"><i class="icon icon-reorder"></i> All Items</a></li>
-						<li><a href="" data-filter=".cat1"><i class="icon icon-th-large"></i> Landscape</a></li>
-						<li><a href="" data-filter=".cat2"><i class="icon icon-th-list"></i> Overview</a></li>
-						<li><a href="" data-filter=".cat3"><i class="icon icon-th"></i> Green Nature</a></li>
+						<li><a href="" data-filter="*" class="selected"><i class="icon icon-reorder"></i> All Machines</a></li>
+						<li><a href="" data-filter=".cat1"><i class="icon icon-th-large"></i> Construction Machines</a></li>
+						<li><a href="" data-filter=".cat2"><i class="icon icon-th-list"></i> Mining Machines</a></li>
+						<li><a href="" data-filter=".cat3"><i class="icon icon-th"></i> Drilling Machines</a></li>
 					</ul>
 				</div>
 			</div>
@@ -38,246 +34,181 @@
 			<!-- box 1 -->
 			<div class="boxportfolio3 item cat2 cat3">
 				<div class="boxcontainer">
-					<img src="http://www.wowthemes.net/demo/serenity/img/temp/masonry/1.jpg" alt="">
+					<img src="{{asset('img/19.jpg')}}" alt="">
 					<div class="roll">
 						<div class="wrapcaption">
 							<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-							<a data-gal="prettyPhoto[gallery1]" href="http://www.wowthemes.net/demo/serenity/img/temp/masonry/1.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
+							<a data-gal="prettyPhoto[gallery1]" href="img/19.jpg" title="George Wingety ltd"><i class="icon-zoom-in captionicons"></i></a>
 						</div>
 					</div>
-					<h1><a href="projectdetail.html">La Chaux De Fonds</a></h1>
+					<h1><a href="{{url('projectdetail')}}">Poker Vibrator</a></h1>
 					<p>
-						 Swiss city in Jura mountains
+						 George Wingety ltd
 					</p>
 				</div>
 			</div>
 			<!-- box 2 -->
 			<div class="boxportfolio3 item cat1">
 				<div class="boxcontainer">
-					<img src="http://www.wowthemes.net/demo/serenity/img/temp/masonry/2.jpg" alt="">
+					<img src="{{asset('img/22.png')}}" alt="">
 					<div class="roll">
 						<div class="wrapcaption">
 							<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-							<a data-gal="prettyPhoto[gallery1]" href="http://www.wowthemes.net/demo/serenity/img/temp/masonry/2.jpg" title="Taj Mahal"><i class="icon-zoom-in captionicons"></i></a>
+							<a data-gal="prettyPhoto[gallery1]" href="img/22.png" title="George Wingety ltd"><i class="icon-zoom-in captionicons"></i></a>
 						</div>
 					</div>
-					<h1><a href="{{url('projectdetail')}}">Taj Mahal</a></h1>
+					<h1><a href="{{url('projectdetail')}}">Plate Compactor</a></h1>
 					<p>
-						 one of the eight wonders
+						  George Wingety ltd
 					</p>
 				</div>
 			</div>
 			<!-- box 3 -->
 			<div class="boxportfolio3 item cat2 cat3">
 				<div class="boxcontainer">
-					<img src="http://www.wowthemes.net/demo/serenity/img/temp/masonry/3.jpg" alt="">
+					<img src="{{asset('img/8.png')}}" alt="">
 					<div class="roll">
 						<div class="wrapcaption">
 							<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-							<a data-gal="prettyPhoto[gallery1]" href="http://www.wowthemes.net/demo/serenity/img/temp/masonry/3.jpg" title="Title Here"><i class="icon-zoom-in captionicons"></i></a>
+							<a data-gal="prettyPhoto[gallery1]" href="img/8.png" title="George Wingety ltd"><i class="icon-zoom-in captionicons"></i></a>
 						</div>
 					</div>
-					<h1><a href="{{url('projectdetail')}}">Versailles, France</a></h1>
+					<h1><a href="{{url('projectdetail')}}">Jack Harmmer</a></h1>
 					<p>
-						 Cotelle Gallery
+						 George Wingety ltd
 					</p>
 				</div>
 			</div>
 			<!-- box 4 -->
 			<div class="boxportfolio3 item cat1">
 				<div class="boxcontainer">
-					<img src="http://www.wowthemes.net/demo/serenity/img/temp/masonry/4.jpg" alt="">
+					<img src="{{asset('img/13.png')}}" alt="">
 					<div class="roll">
 						<div class="wrapcaption">
 							<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-							<a data-gal="prettyPhoto[gallery1]" href="http://www.wowthemes.net/demo/serenity/img/temp/masonry/4.jpg" title="Title Here"><i class="icon-zoom-in captionicons"></i></a>
+							<a data-gal="prettyPhoto[gallery1]" href="img/13.png" title="George Wingety ltd"><i class="icon-zoom-in captionicons"></i></a>
 						</div>
 					</div>
-					<h1><a href="{{url('projectdetail')}}">St Petersburg, Russia</a></h1>
+					<h1><a href="{{url('projectdetail')}}">Pressure Compressor</a></h1>
 					<p>
-						 water fountain
+						  George Wingety ltd
 					</p>
 				</div>
 			</div>
 			<!-- box 5 -->
 			<div class="boxportfolio3 item cat2">
 				<div class="boxcontainer">
-					<img src="http://www.wowthemes.net/demo/serenity/img/temp/masonry/5.jpg" alt="">
+					<img src="{{asset('img/bollmill.jpg')}}" alt="">
 					<div class="roll">
 						<div class="wrapcaption">
 							<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-							<a data-gal="prettyPhoto[gallery1]" href="http://www.wowthemes.net/demo/serenity/img/temp/masonry/5.jpg" title="Title Here"><i class="icon-zoom-in captionicons"></i></a>
+							<a data-gal="prettyPhoto[gallery1]" href="img/bollmill.jpg" title="George Wingety ltd"><i class="icon-zoom-in captionicons"></i></a>
 						</div>
 					</div>
-					<h1><a href="{{url('projectdetail')}}">Grunge Architecture</a></h1>
+					<h1><a href="{{url('projectdetail')}}">Ball Mill</a></h1>
 					<p>
-						 ancient style Europe
+						  George Wingety ltd
 					</p>
 				</div>
 			</div>
 			<!-- box 6 -->
 			<div class="boxportfolio3 item cat2">
 				<div class="boxcontainer">
-					<img src="http://www.wowthemes.net/demo/serenity/img/temp/masonry/6.jpg" alt="">
+					<img src="{{asset('img/mixer1.jpg')}}" alt="">
 					<div class="roll">
 						<div class="wrapcaption">
 							<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-							<a data-gal="prettyPhoto[gallery1]" href="http://www.wowthemes.net/demo/serenity/img/temp/masonry/6.jpg" title="Title Here"><i class="icon-zoom-in captionicons"></i></a>
+							<a data-gal="prettyPhoto[gallery1]" href="img/mixer1.jpg" title="George Wingety ltd"><i class="icon-zoom-in captionicons"></i></a>
 						</div>
 					</div>
-					<h1><a href="{{url('projectdetail')}}">France Building</a></h1>
+					<h1><a href="{{url('projectdetail')}}">Concrete Mixer</a></h1>
 					<p>
-						 old towers architecture
+						  George Wingety ltd
 					</p>
 				</div>
 			</div>
 			<!-- box 7 -->
 			<div class="boxportfolio3 item cat2 cat3">
 				<div class="boxcontainer">
-					<img src="http://www.wowthemes.net/demo/serenity/img/temp/masonry/7.jpg" alt="">
+					<img src="{{asset('img/pat.jpg')}}" alt="">
 					<div class="roll">
 						<div class="wrapcaption">
 							<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-							<a data-gal="prettyPhoto[gallery1]" href="http://www.wowthemes.net/demo/serenity/img/temp/masonry/7.jpg" title="Title Here"><i class="icon-zoom-in captionicons"></i></a>
+							<a data-gal="prettyPhoto[gallery1]" href="img/pat.jpg" title="George Wingety ltd"><i class="icon-zoom-in captionicons"></i></a>
 						</div>
 					</div>
-					<h1><a href="{{url('projectdetail')}}">Hall in Tirol</a></h1>
+					<h1><a href="{{url('projectdetail')}}">Bore Hole</a></h1>
 					<p>
-						 town in Tyrol, Austria
+						  George Wingety ltd
 					</p>
 				</div>
 			</div>
 			<!-- box 8 -->
 			<div class="boxportfolio3 item cat1">
 				<div class="boxcontainer">
-					<img src="http://www.wowthemes.net/demo/serenity/img/temp/masonry/8.jpg" alt="">
+					<img src="{{asset('img/win.jpg')}}" alt="">
 					<div class="roll">
 						<div class="wrapcaption">
 							<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-							<a data-gal="prettyPhoto[gallery1]" href="http://www.wowthemes.net/demo/serenity/img/temp/masonry/8.jpg" title="Title Here"><i class="icon-zoom-in captionicons"></i></a>
+							<a data-gal="prettyPhoto[gallery1]" href="img/win.jpg" title="George Wingety ltd"><i class="icon-zoom-in captionicons"></i></a>
 						</div>
 					</div>
-					<h1><a href="{{url('projectdetail')}}">Opéra-Théatre de Metz</a></h1>
+					<h1><a href="{{url('projectdetail')}}">Small Scale Mining Winch</a></h1>
 					<p>
-						 opera house in France
+						  George Wingety ltd
 					</p>
 				</div>
 			</div>
 			<!-- box 9 -->
 			<div class="boxportfolio3 item cat2 cat3">
 				<div class="boxcontainer">
-					<img src="http://www.wowthemes.net/demo/serenity/img/temp/masonry/9.jpg" alt="">
+					<img src="{{asset('img/c.jpg')}}" alt="">
 					<div class="roll">
 						<div class="wrapcaption">
 							<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-							<a data-gal="prettyPhoto[gallery1]" href="http://www.wowthemes.net/demo/serenity/img/temp/masonry/9.jpg" title="Title Here"><i class="icon-zoom-in captionicons"></i></a>
+							<a data-gal="prettyPhoto[gallery1]" href="img/c.jpg" title="George Wingety ltd"><i class="icon-zoom-in captionicons"></i></a>
 						</div>
 					</div>
-					<h1><a href="{{url('projectdetail')}}">The Palace of Charles V</a></h1>
+					<h1><a href="{{url('projectdetail')}}">Compressor</a></h1>
 					<p>
-						 construction in Granada, Spain
+						  George Wingety ltd
 					</p>
 				</div>
 			</div>
 			<!-- box 10 -->
 			<div class="boxportfolio3 item cat2 cat3">
 				<div class="boxcontainer">
-					<img src="http://www.wowthemes.net/demo/serenity/img/temp/masonry/10.jpg" alt="">
+					<img src="{{asset('img/20.jpg')}}" alt="">
 					<div class="roll">
 						<div class="wrapcaption">
 							<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-							<a data-gal="prettyPhoto[gallery1]" href="http://www.wowthemes.net/demo/serenity/img/temp/masonry/10.jpg" title="Title Here"><i class="icon-zoom-in captionicons"></i></a>
+							<a data-gal="prettyPhoto[gallery1]" href="img/20.jpg" title="George Wingety ltd"><i class="icon-zoom-in captionicons"></i></a>
 						</div>
 					</div>
-					<h1><a href="{{url('projectdetail')}}">Hamburg, Germany</a></h1>
+					<h1><a href="{{url('projectdetail')}}">Concrete Mixer</a></h1>
 					<p>
-						 City Hall
+						 George Wingety ltd
 					</p>
 				</div>
 			</div>
 			<!-- box 11 -->
 			<div class="boxportfolio3 item cat2 cat3">
 				<div class="boxcontainer">
-					<img src="http://www.wowthemes.net/demo/serenity/img/temp/masonry/11.jpg" alt="">
+					<img src="{{asset('img/0.jpg')}}" alt="">
 					<div class="roll">
 						<div class="wrapcaption">
 							<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-							<a data-gal="prettyPhoto[gallery1]" href="http://www.wowthemes.net/demo/serenity/img/temp/masonry/11.jpg" title="Title Here"><i class="icon-zoom-in captionicons"></i></a>
+							<a data-gal="prettyPhoto[gallery1]" href="img/0.jpg" title="George Wingety ltd"><i class="icon-zoom-in captionicons"></i></a>
 						</div>
 					</div>
-					<h1><a href="{{url('projectdetail')}}">Washington Dc</a></h1>
+					<h1><a href="{{url('projectdetail')}}">Small Scale Mining Winch</a></h1>
 					<p>
-						 water fountain
+						 George Wingety ltd
 					</p>
 				</div>
 			</div>
-			<!-- box 12 -->
-			<div class="boxportfolio3 item cat2 cat3">
-				<div class="boxcontainer">
-					<img src="http://www.wowthemes.net/demo/serenity/img/temp/masonry/12.jpg" alt="">
-					<div class="roll">
-						<div class="wrapcaption">
-							<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-							<a data-gal="prettyPhoto[gallery1]" href="http://www.wowthemes.net/demo/serenity/img/temp/masonry/12.jpg" title="Title Here"><i class="icon-zoom-in captionicons"></i></a>
-						</div>
-					</div>
-					<h1><a href="{{url('projectdetail')}}">Bas-Rhin</a></h1>
-					<p>
-						 department of France
-					</p>
-				</div>
-			</div>
-			<!-- box 13 -->
-			<div class="boxportfolio3 item cat2 cat1">
-				<div class="boxcontainer">
-					<img src="http://www.wowthemes.net/demo/serenity/img/temp/masonry/13.jpg" alt="">
-					<div class="roll">
-						<div class="wrapcaption">
-							<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-							<a data-gal="prettyPhoto[gallery1]" href="http://www.wowthemes.net/demo/serenity/img/temp/masonry/13.jpg" title="Title Here"><i class="icon-zoom-in captionicons"></i></a>
-						</div>
-					</div>
-					<h1><a href="{{url('projectdetail')}}">Rome, Italy</a></h1>
-					<p>
-						 Fontana di Trevi
-					</p>
-				</div>
-			</div>
-			<!-- box 14 -->
-			<div class="boxportfolio3 item cat1 cat2">
-				<div class="boxcontainer">
-					<img src="http://www.wowthemes.net/demo/serenity/img/temp/masonry/14.jpg" alt="">
-					<div class="roll">
-						<div class="wrapcaption">
-							<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-							<a data-gal="prettyPhoto[gallery1]" href="http://www.wowthemes.net/demo/serenity/img/temp/masonry/14.jpg" title="Title Here"><i class="icon-zoom-in captionicons"></i></a>
-						</div>
-					</div>
-					<h1><a href="{{url('projectdetail')}}">Sacramento, California</a></h1>
-					<p>
-						 tower bridge
-					</p>
-				</div>
-			</div>
-			<!-- box 15 -->
-			<div class="boxportfolio3 item cat2 cat3">
-				<div class="boxcontainer">
-					<img src="http://www.wowthemes.net/demo/serenity/img/temp/masonry/15.jpg" alt="">
-					<div class="roll">
-						<div class="wrapcaption">
-							<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-							<a data-gal="prettyPhoto[gallery1]" href="http://www.wowthemes.net/demo/serenity/img/temp/masonry/15.jpg" title="Title Here"><i class="icon-zoom-in captionicons"></i></a>
-						</div>
-					</div>
-					<h1><a href="{{url('projectdetail')}}">Haikou, China</a></h1>
-					<p>
-						 Haikou city statue
-					</p>
-				</div>
-			</div>
-			<!-- next box etc -->
+			
 			<!-- MASONRY ITEMS END -->
 		</div>
 		</section>
-		<!--CALL TO ACTION PANEL
 @stop

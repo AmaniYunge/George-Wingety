@@ -5,8 +5,7 @@
 	<div class="semitransparentbg">
 		<h1 class="animated fadeInLeftBig notransition">Mining Winch</h1>
 		<p class="animated fadeInRightBig notransition container page-description">
-			 Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>
-			 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			For smaller volume works portable concrete mixers are often used so that the concrete can be made at the construction site
 		</p>
 	</div>
 	</section>
@@ -25,13 +24,13 @@
 				</ol>
 				<div class="carousel-inner">
 					<div class="item active">
-						<img src="../../public/img/winch.jpg" alt="">
+						<img src="{{asset('img/winch.jpg')}}" alt="">
 					</div>
 					<div class="item">
-						<img src="../../public/img/winch1.jpg" alt="">
+						<img src="{{asset('img/winch1.jpg')}}" alt="">
 					</div>
 					<div class="item">
-						<img src="../../public/img/winch3.jpg" alt="">
+						<img src="{{asset('img/winch3.jpg')}}" alt="">
 					</div>
 				</div>
 				<!-- /.carousel-inner -->

@@ -3,10 +3,9 @@
 
 <section class="pageheader-default text-center">
 	<div class="semitransparentbg">
-		<h1 class="animated fadeInLeftBig notransition">Soil Bricks Making Mchine</h1>
+		<h1 class="animated fadeInLeftBig notransition">Concrete Mixer</h1>
 		<p class="animated fadeInRightBig notransition container page-description">
-			 Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>
-			 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			For smaller volume works portable concrete mixers are often used so that the concrete can be made at the construction site
 		</p>
 	</div>
 	</section>
@@ -25,13 +24,13 @@
 				</ol>
 				<div class="carousel-inner">
 					<div class="item active">
-						<img src="../../public/img/hydroform2.jpg" alt="">
+						<img src="{{asset('img/mixer.jpg')}}" alt="">
 					</div>
 					<div class="item">
-						<img src="../../public/img/hydroform1.jpg" alt="">
+						<img src="{{asset('img/mixer.jpg')}}" alt="">
 					</div>
 					<div class="item">
-						<img src="../../public/img/hydroform.jpg" alt="">
+						<img src="{{asset('img/mixer.jpg')}}" alt="">
 					</div>
 				</div>
 				<!-- /.carousel-inner -->
@@ -46,19 +45,15 @@
 				<span>Project Description</span>
 				</h1>
 				<p>
-					<span class="drop-cap round">V</span>emo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.
-				</p>
-				<p>
-					 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
-				</p>
-				<p>
-					Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
+					<span class="drop-cap round">A</span>concrete mixer (also commonly called a cement mixer) is a device that homogeneously combines cement, 
+					aggregate such as sand or gravel, and water to form concrete. A typical concrete mixer uses a revolving drum to mix the components. 
+					For smaller volume works portable concrete mixers are often used so that the concrete can be made at the construction site, 
+					giving the workers ample time to use the concrete before it hardens. An alternative to a machine is mixing concrete by hand. 
+					This is usually done in a wheelbarrow; however, several companies have recently begun to sell modified tarps for this purpose.
+					</p>
 				<p>
 					<b>Year Creation</b>&nbsp;: 2014 <br/>
 					<b>Client's Name</b>&nbsp;: John Doe <br/>
-					<b>Web Category</b>&nbsp;: Shop Online <br/>
-					<b>Our Contribution</b>&nbsp;: Script &amp; SEO <br/>
 					<b>Completion Time</b>&nbsp;: 35 Days
 				</p>
 			</div>

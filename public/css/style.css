@@ -35,7 +35,7 @@ a:hover {
 }
 ::selection{background:#063B7D; color:#fff;}
 h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
-	color:#7D0610;
+	color:#1A1870;
 	font-family:Open Sans,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-weight: 700;
 }
@@ -998,7 +998,7 @@ h1.small {
 	z-index:100;
 }
 .bgarea-semitransparent {
-	background:rgba(245,72,40,0.80) !important;
+	background-color:#1A1870;
 	padding:30px 0;
 }
 .bgarea h1,.bgarea h2,.bgarea h3,.bgarea h4,.bgarea h5,.bgarea,.bgarea a,.bgarea p {
@@ -2357,7 +2357,7 @@ ul#skill {
 	background:#f9f9f9;
 }
 a.prev,a.next {
-	background:url(../img/carousel_arrows.png) no-repeat #F98D36;
+	background:url(../img/carousel_arrows.png) no-repeat #1A1870;
 	width:24px;
 	height:24px;
 	display:block;

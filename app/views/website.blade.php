@@ -34,8 +34,8 @@
 	<section class="toparea">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 top-text pull-left animated fadeInLeft">
-				<i class="fa fa-phone"></i> Phone: +255 22 348599 <span class="separator"></span><i class="fa fa-envelope"></i> Email: <a href="#">georgewingetyltd@gmail.com</a>
+			<div class="col-md-6 top-text pull-left animated fadeInLeft" style="color:#05397B">
+				<i class="fa fa-phone"></i> Phone: <strong>+255 22 246 0155</strong> <span class="separator"></span><i class="fa fa-envelope"></i> Email: <a href="#"><strong>georgewingetyltd@gmail.com</strong></a>
 			</div>
 			<div class="col-md-6 text-right animated fadeInRight">
 				<div class="social-icons">
@@ -51,7 +51,7 @@
 	<nav class="navbar navbar-fixed-top wowmenu" role="navigation">
 	<div class="container">
 		<div class="navbar-header">
-			<a class="navbar-brand logo-nav" href="{{url('/')}}"><img src="../../public/img/logo.png" alt="logo"></a>
+			<a class="navbar-brand logo-nav" href="{{url('/')}}"><img src="{{asset('img/logo.png')}}" alt="logo"></a>
 		</div>
 		<ul id="nav" class="nav navbar-nav pull-right">
 			<li class="dropdown active">
@@ -59,13 +59,13 @@
 			<ul class="dropdown-menu">
 				<li><a href="{{url('home2')}}">Home Alt</a></li>
 				<li><a href="{{url('about')}}">About Us</a></li>
-				<li><a href="{{url('testimonials')}}">Testimonials</a></li>
-				<li><a href="{{url('faq')}}">F.A.Q.</a></li>
+				<!---<li><a href="{{url('testimonials')}}">Testimonials</a></li>-->
+				<!---<li><a href="{{url('faq')}}">F.A.Q.</a></li>-->
 			</ul>
 			</li>
 			<li><a href="{{url('services')}}">Services</a></li>
 			<li><a href="{{url('portifolio')}}">Portifolio</a></li>
-			<li><a href="{{url('blog')}}">Blog</a></li>
+			<!---<li><a href="{{url('blog')}}">Blog</a></li>-->
 			<li><a href="{{url('contact')}}">Contact</a></li>
 		</ul>		
 	</div>	
@@ -81,15 +81,13 @@
 			<div class="col-md-12">
 				<div class="text-center">
 					<p class="bigtext">
-						 Praesent <span class="fontpacifico colortext">WowThemes</span> sapien, a vulputate enim auctor vitae
-					</p>
+						 Be part of <span class="fontpacifico colortext">George Wingety Ltd</span> to bring technology to the doors of our clients. 
 					<p>
-						 Duis non lorem porta, adipiscing eros sit amet, tempor sem. Donec nunc arcu, semper a tempus et, consequat
+						 If you're not failing every now and again, it's a sign you're not doing anything very innovative.
 					</p>
 				</div>
 				<div class="text-center topspace20">
 					<a href="{{url('contact')}}" class="buttonblack"><i class="fa fa-phone"></i>&nbsp; Get in Touch</a>
-					<a href="#" class="buttoncolor"><i class="icon-link"></i>&nbsp; learn more</a>
 				</div>
 			</div>
 		</div>
@@ -106,26 +104,22 @@
 				<div class="col-md-3">
 					<h1 class="footerbrand">George Wingety Ltd</h1>
 					<p>
-						 Introducing a premium HTML5 & CSS3 template for multipurpose use.
-					</p>
-					<p>
-						 Three awesome layouts, beautiful modern design, lots of features and skins.
-					</p>
-					<p>
-						 Made with &nbsp;<i class="icon-heart"></i>&nbsp; by dotphics.com.
-					</p>
+						 We undertake the business of making, fabricating and assembling concrete machines, construction equipments, <br>
+						 any type of machines and equipment, plants, devices of all descriptions using modern and appopriate technology.
+						 </p>
+					<img src="{{asset('img/wingety.png')}}" alt="" style="height:90px; width:60px">
 				</div>
 				<div class="col-md-3">
 					<h1 class="title"><span class="colortext">F</span>ind <span class="font100">Us</span></h1>
 					<div class="footermap">
 						<p>
-							<strong>Address: </strong> B.O BOX 31468 - Sum-Nujoma Rd,Sinza "C", Dar es salaam
+							<strong>Address: </strong> P.O BOX 31468 - Sum-Nujoma Rd,Sinza "C", Dar es salaam
 						</p>
 						<p>
-							<strong>Phone: </strong> + 1 (280) 482 9537
+							<strong>Phone: </strong> +255 784 771 675<br><strong>Phone2: </strong> +255 714 881 391
 						</p>
 						<p>
-							<strong>Fax: </strong> + 1 (372) 742 9532
+							<strong>Tel: </strong> +255 22 246 0155
 						</p>
 						<p>
 							<strong>Email: </strong> georgewingetyltd@gmail.com
@@ -141,15 +135,20 @@
 					<div id="quotes">
 						<div class="textItem">
 							<div class="avatar">
-								<img src="../../public/images/nature2.jpg" alt="avatar">
+								<img src="{{asset('img/22.png')}}" alt="avatar">
 							</div>
-							 "Before turning to those moral and mental aspects of the matter which present the greatest difficulties, let the inquirer begin by mastering more elementary problems.<span style="font-family:arial;">"</span><br/><b> Jesse T, Los Angeles </b>
+							 I am grateful to have found George at George Wingety Ltd. He provided excellent designs and work product. 
+							His level of responsiveness and client service was exceptional. And he was a pleasure to work with.
+							 I am incredibly happy with the designs and strongly recommend George Wingety Ltd to others.
+							  <span style="font-family:arial;"></span><br/><b> Shadrack Emmanuel </b>
 						</div>
 						<div class="textItem">
 							<div class="avatar">
-								<img src="../../public/images/nature2.jpg" alt="avatar">
+								<img src="{{asset('img/3.png')}}" alt="avatar">
 							</div>
-							 "How often have I said to you that when you have eliminated the impossible, whatever remains, however improbable, must be the truth?<span style="font-family:arial;">"</span><br/><b>Ralph G. Flowers </b>
+							  Quick and responsive to our companies needs, George Wingety Ltd. Has proven to be a 
+							 consummate professional whom we've come to rely on.
+							 <span style="font-family:arial;"></span><br/><b>John Kiiza </b>
 						</div>
 					</div>
 					<div class="clearfix">
@@ -189,10 +188,10 @@
 				<div class="col-md-8">
 					<ul class="footermenu pull-right">
 						<li><a href="{{url('/')}}">>Home</a></li>
-						<li><a href="{{url('/')}}">Work</a></li>
-						<li><a href="{{url('/')}}">Pages</a></li>
-						<li><a href="{{url('/')}}">Blog</a></li>
-						<li><a href="{{url('/')}}">Contact</a></li>
+						<li><a href="{{url('services')}}">Services</a></li>
+						<li><a href="{{url('portifolio')}}">Portifolio</a></li>
+						<!--<li><a href="{{url('/')}}">Blog</a></li>-->
+						<li><a href="{{url('contact')}}">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -209,9 +208,6 @@
   {{ HTML::script("js/plugins.js") }}
   {{ HTML::script("js/common.js") }}
   
-  /* ---------------------------------------------------------------------- */
-	/*	Carousel
-	/* ---------------------------------------------------------------------- */
 	<script>
 	$(window).load(function(){			
 		$('#carousel-projects').carouFredSel({

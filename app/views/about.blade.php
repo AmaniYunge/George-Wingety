@@ -4,44 +4,58 @@
 	<div class="semitransparentbg">
 		<h1 class="animated fadeInLeftBig notransition">About Us</h1>
 		<p class="animated fadeInRightBig  notransition container page-description">
-			 Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>
-			 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		 We undertake the business of making, fabricating and assembling concrete machines, construction equipments, <br>
+			 any type of machines and equipment, plants, devices of all descriptions using modern and appopriate technology.
 		</p>
 	</div>
 	</section>
-	<div class="wrapsemibox">
-		<div class="semiboxshadow text-center">
-			<img src="img/shp.png" class="img-responsive" alt="">
-		</div>
 		<!-- ABOUT
 ================================================== -->
 		<section class="container">
 		<div class="row">
 			<div class="col-md-6 animated anim-slide notransition">
-				<div id="accordion">
-					<div class="active">
-						<h4>Easy to customize</h4>
-						<p>
-							This template is built with twitter bootstrap and coming with awesome fixed navigation, css animations effects, and AJAX contact forms. The item documentation is extensive and the source code is properly commented and formatted, so you shouldn’t have any problem working with this item. If you need support, please send us an email via WowThemes.net.
-						</p>
-					</div>
-					<div>
-						<h4>Working Contact Forms</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
-						</p>
-					</div>
-					<div>
-						<h4>CSS3 Animations</h4>
-						<p>
-							An animation is an effect that lets an element gradually change from one style to another. You can change as many styles you want, as many times you want.
-						</p>
-					</div>
-				</div>
-			</div>
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Our Mission</a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <p>HTML stands for HyperText Markup Language. HTML is the main markup language for describing the structure of Web pages. <a href="http://www.tutorialrepublic.com/html-tutorial/" target="_blank">Learn more.</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Our Vision</a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>Bootstrap is a powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions. <a href="http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Our Goals</a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc. <a href="http://www.tutorialrepublic.com/css-tutorial/" target="_blank">Learn more.</a></p>
+                </div>
+            </div>
+            </div>
+            </div>
+    </div>
 			<div class="col-md-6 animated anim-fade notransition">
 				<div class="about-article">
-					<img alt="" src="img/demo/3.jpg" class="img-responsive">
+					<img alt="" src="{{asset('img/pass.jpg')}}" class="img-responsive" style="Width:350px; height:400px">
 				</div>
 			</div>
 		</div>
@@ -56,31 +70,27 @@
 			</h1>
 			<div class="col-md-4">
 				<div class="thumbnail">
-					<img src="img/demo/team1.jpg" alt="">
+					<img src="{{asset('img/34.jpg')}}" alt="">
 					<div class="caption">
-						<h4>Ralph P. Peters</h4>
-						<span class="primarycol">- Manager at Company -</span>
+						<h4>George C. Mtey</h4>
+						<span class="primarycol">- C.E.O at Company -</span>
 						<p>
-							 Praesent id metus ante, ut condimentum magna. Nam bibendum, felis eget.<br>
 						</p>
 						<ul class="social-icons">
 							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
 							<li><a href="#"><i class="icon-linkedin"></i></a></li>
 							<li><a href="#"><i class="icon-google-plus"></i></a></li>
-							<li><a href="#"><i class="icon-pinterest"></i></a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 				<div class="thumbnail">
-					<img src="img/demo/team2.jpg" alt="">
+					<img src="{{asset('img/34.jpg')}}" alt="">
 					<div class="caption">
-						<h4>Emma M. Coffey</h4>
-						<span class="primarycol">- Lawyer at Construct Inc -</span>
+						<h4>Baraka Mbega</h4>
+						<span class="primarycol">- Director & Architecturer at Company -</span>
 						<p>
-							 Praesent id metus ante, ut condimentum magna. Nam bibendum, felis eget.<br>
 						</p>
 						<ul class="social-icons">
 							<li><a href="#"><i class="icon-facebook"></i></a></li>
@@ -91,15 +101,15 @@
 			</div>
 			<div class="col-md-4">
 				<div class="thumbnail">
-					<img src="img/demo/team3.jpg" alt="">
+					<img src="{{asset('img/34.jpg')}}" alt="">
 					<div class="caption">
-						<h4>Eugene B. Bedwell</h4>
-						<span class="primarycol">- Owner of Biscaya -</span>
+						<h4>Amani Y. Yunge</h4>
+						<span class="primarycol">- PIT Director at Company -</span>
 						<p>
-							 Praesent id metus ante, ut condimentum magna. Nam bibendum, felis eget.<br>
 						</p>
 						<ul class="social-icons">
 							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
 							<li><a href="#"><i class="icon-google-plus"></i></a></li>
 						</ul>
 					</div>

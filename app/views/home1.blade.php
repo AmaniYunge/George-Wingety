@@ -8,7 +8,7 @@
 		<li data-target="#c-slide" data-slide-to="2" class=""></li>
 	</ol>
 	<div class="carousel-inner">
-		<div class="item active" style="background: url(../img/demo/slide3.jpg);">
+		<div class="item active" style="background: url(img/weld.jpg)">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 text-center">
@@ -32,7 +32,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="item" style="background: url(../img/demo/bg.jpg);">
+		<div class="item" style="background: url(img/slide4.jpg)">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 fadein scaleInv anim_1">
@@ -41,37 +41,37 @@
 						</div>
 						
 						<div class="fadein scaleInv anim_2">
-							<p class="carouselText3">
+							<p class="carouselText3" style="color:black">
 								<i class="icon-ok"></i> Concrete Mixer
 							</p>
 						</div>
 						<div class="fadein scaleInv anim_3">
-							<p class="carouselText3">
+							<p class="carouselText3"  style="color:yellow">
 								<i class="icon-ok"></i> Poker drive unit
 							</p>
 						</div>
 						<div class="fadein scaleInv anim_4">
-							<p class="carouselText3">
+							<p class="carouselText3"  style="color:black">
 								<i class="icon-ok"></i> Block making machine
 							</p>
 						</div>
 						<div class="fadein scaleInv anim_5">
-							<p class="carouselText3">
+							<p class="carouselText3"  style="color:darkblue">
 								<i class="icon-ok"></i> Pan Mixer
 							</p>
 						</div>
 						<div class="fadein scaleInv anim_6">
-							<p class="carouselText3">
+							<p class="carouselText3"  style="color:orange">
 								<i class="icon-ok"></i> Borehole Machines
 							</p>
 						</div>
 						<div class="fadein scaleInv anim_7">
-							<p class="carouselText3">
+							<p class="carouselText3" style="color:darkblue">
 								<i class="icon-ok"></i> Concrete & bricks building winch
 							</p>
 						</div>
 						<div class="fadein scaleInv anim_8">
-							<p class="carouselText3">
+							<p class="carouselText3"  style="color:black">
 								<i class="icon-ok"></i> Cubes
 							</p>
 						</div>
@@ -79,24 +79,24 @@
 					<div class="col-md-6 text-center fadein scaleInv anim_2">
 						<div class="text-center">
 							<div class="fadein scaleInv anim_3">
-								<img src="{{asset('img/demo/slide1-3.png')}}" alt="" class="slide1-3 animated rollIn">
+								<img src="{{asset('img/slide1-3.png')}}" alt="" class="slide1-3 animated rollIn">
 							</div>
 							<div class="fadein scaleInv anim_8">
-								<img src="{{asset('img/demo/slide1-1.png')}}" alt="" class="slide1-1 animated rollIn">
+								<img src="{{asset('img/slide1-1.png')}}" alt="" class="slide1-1 animated rollIn">
 							</div>
 							<div class="fadein scaleInv anim_5">
-								<img src="{{asset('img/demo/slide1-2.png')}}" alt="" class="slide1-2 animated rollIn">
+								<img src="{{asset('img/slide1-2.png')}}" alt="" class="slide1-2 animated rollIn">
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="item" style="background: url(../img/demo/slide1.jpg);">
+		<div class="item" style="background: url(img/slide1.jpg)">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6 animated fadeInUp notransition">
-						<img src="{{asset('img/demo/desktop3.png')}}" alt="" style="width:90%;">
+						<img src="{{asset('img/desktop3.png')}}" alt="" style="width:90%;">
 					</div>
 					<div class="col-md-6 animated fadeInDown  notransition topspace30 text-right">
 						<div class="fadein scaleInv anim_2">
@@ -107,11 +107,11 @@
 						</div>
 						<br>
 						<div class="car-highlight2 animated fadeInRightBig notransition">
-							 Local bollmill
+							 Local Ball Mill
 						</div>
 						<br>
 						<div class="car-highlight3 animated fadeInUpBig notransition">
-							 Assembling of jawcrusher
+							 Assembling of Jawcrusher
 						</div>
 						<br>
 						<div class="car-highlight4 animated flipInX notransition">
@@ -136,7 +136,7 @@
 	<!-- /.wrapsemibox start-->
 	<div class="wrapsemibox">
 		<div class="semiboxshadow text-center">
-			<img src="../../public/img/shp.png" class="img-responsive" alt="">
+			<img src="{{asset('img/shp.png')}}" class="img-responsive" alt="">
 		</div>
 		<!-- INTRO NOTE-->
 		<section class="intro-note topspace10">
@@ -158,11 +158,12 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-3 text-center animated fadeInLeftNow notransition">
-					<div class="icon-box-top active">
+					<div class="icon-box-top">
 						<i class="fontawesome-icon medium circle-white center icon-rocket"></i>
 						<h1>Conrete Mixer</h1>
 						<p>
-							 Lorem ipsum dolor sit adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus.
+							 Concrete Mixers are ruggedly built and take the punishment of this demanding application. 
+							 Heavy-duty frame, drum yoke and drum assemblies are long-wearing and matched to anticipated stresses and loads
 						</p>
 						<p class="fontupper">
 							<a href="{{url('mixer')}}" class="readmore">Read More <i class="icon-double-angle-right"></i></a>
@@ -172,9 +173,10 @@
 				<div class="col-md-3 text-center animated fadeInLeftNow notransition">
 					<div class="icon-box-top">
 						<i class="fontawesome-icon medium circle-white center icon-cogs"></i>
-						<h1>Minig Winch</h1>
+						<h1>Mining Winch</h1>
 						<p>
-							 Lorem ipsum dolor sit adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus.
+							Our equipment is well suited to miners producing 0.5 Tonnes per hour to 5 Tonnes per hour. We offer free advice to our broade range 
+							customers on the most efficient manner in which to mine their reserve they be precious or Base Metals
 						</p>
 						<p class="fontupper">
 							<a href="{{url('winch')}}" class="readmore">Read More <i class="icon-double-angle-right"></i></a>
@@ -184,9 +186,9 @@
 				<div class="col-md-3 text-center animated fadeInRightNow notransition">
 					<div class="icon-box-top ">
 						<i class="fontawesome-icon medium circle-white center icon-microphone"></i>
-						<h1>Bollmill</h1>
+						<h1>Ball Mill</h1>
 						<p>
-							 Lorem ipsum dolor sit adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus.
+							 A  ball mill is a type of grinder used to grind and blend materials for use in mineral dressing processes, paints, pyrotechnics, ceramics and selective laser sintering.
 						</p>
 						<p class="fontupper">
 							<a href="{{url('bollmill')}}" class="readmore">Read More <i class="icon-double-angle-right"></i></a>
@@ -198,7 +200,7 @@
 						<i class="fontawesome-icon medium circle-white center icon-trophy"></i>
 						<h1>Soil bricks making machine</h1>
 						<p>
-							 Lorem ipsum dolor sit adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus.
+							Stabilised soil bricks technology offers a cost effective, environmentally sound masonry system.
 						</p>
 						<p class="fontupper">
 							<a href="{{url('hydroform')}}" class="readmore">Read More <i class="icon-double-angle-right"></i></a>
@@ -214,9 +216,8 @@
 		<div class="bgarea-semitransparent">
 			<div class="container">
 				<h1 class="small text-center animated fadeInLeftNow notransition">FEATURED WORK</h1>
-				<p class="animated fadeInRightNow notransition text-center topspace20">
-					 Calypso offers multiple layouts and ways of displaying your content in a manner that best suits for you and <br>
-					 your customer. Make beautiful and eye catching site with Calypso today!
+				<p class="animated fadeInRightNow notransition text-center topspace20" style="font-size:17px; font-weight:500; color:#F54828">
+					 George Wingety Ltd offers different types of machines for construction and mining activities. Make beautiful and eye catching site with George Wingety Ltd today!
 				</p>
 				<br/>
 				<div class="row">
@@ -226,16 +227,20 @@
 								<li data-target="#carousel-featuredwork" data-slide-to="0" class="active"></li>
 								<li data-target="#carousel-featuredwork" data-slide-to="1" class=""></li>
 								<li data-target="#carousel-featuredwork" data-slide-to="2" class=""></li>
+								<li data-target="#carousel-featuredwork" data-slide-to="3" class=""></li>
 							</ol>
 							<div class="carousel-inner" style="margin-top:-20px;">
 								<div class="item active">
-									<img src="../../public/img/demo/desktop3.png" alt="">
+									<img src="{{asset('img/slide1-1.png')}}" alt="">
 								</div>
 								<div class="item">
-									<img src="../../public/img/demo/slide1-1.png" alt="">
+									<img src="{{asset('img/desktop3.png')}}" alt="">
 								</div>
 								<div class="item">
-									<img src="../../public/img/demo/desktop2.png" alt="">
+									<img src="{{asset('img/desktop2.png')}}" alt="">
+								</div>
+								<div class="item">
+									<img src="{{asset('img/desktop4.png')}}" alt="">
 								</div>
 							</div>
 							<!-- /.carousel-inner -->
@@ -244,33 +249,41 @@
 					<div class="col-md-6 animated fadeInRightNow notransition">
 						<ul class="icons">
 							<li>
-							<h4><i class="icon icon-magic"></i>Winning Template Awards</h4>
+							<h4><i class="icon icon-cog"></i>Hand Fed Concrete Mixer</h4>
 							<p>
-								 Suspendisse nisl sapien, mattis ut libero ut, placerat eleifend urna. Quisque commodo.
+								  Concrete Mixers are ruggedly built and take the punishment of this demanding application. 
 							</p>
 							</li>
 							<li>
-							<h4><i class="icon icon-heart"></i>Love at first sight with App</h4>
+							<h4><i class="icon icon-cog"></i>Borehole Machines</h4>
 							<p>
-								 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis consectetur venenatis ante in adipiscing.
+								 Designed to be tough, durable and highly reliable, providing safe,
+								  clean water in some of the world’s most difficult environments, where inferior rigs will simply not
+								   cope. Its hydraulic rotary and cable percussion water well rigs to a diverse range of organisations.
+								    </p>
+							</li>
+							<li>
+							<h4><i class="icon icon-cog"></i>Building Winch</h4>
+							<p>
+								Need to do some heavy lifting? Don't lay out big bucks for a winch. Our  winch will more than hold its own against commercials rigs.
 							</p>
 							</li>
 							<li>
-							<h4><i class="icon icon-twitter"></i>Top Social Media</h4>
+							<h4><i class="icon icon-cog"></i>Block making machine</h4>
 							<p>
-								 Maecenas tempus purus vitae magna posuere tempor. Aliquam sed augue justo. Etiam pellentesque purus sed tincidunt dignissim.
+								 Stabilised soil bricks technology offers a cost effective, environmentally sound masonry system.
 							</p>
 							</li>
 							<li>
-							<h4><i class="icon icon-leaf"></i>Professional modern Theme</h4>
+							<h4><i class="icon icon-cog"></i>Poker drive unit</h4>
 							<p>
-								 Donec commodo euismod sem, eu vehicula dui malesuada rutrum. Cras lobortis.
+								This drive unit is mainly used in conjunction vibrating poker needles, or a mechanical submersible pump.
 							</p>
 							</li>
 							<li>
-							<h4><i class="icon icon-cog"></i>Best choice for your Web</h4>
+							<h4><i class="icon icon-cog"></i>Ballmilling Machine</h4>
 							<p>
-								 Quisque tempor convallis est ac viverra. Cras dictum arcu leo, commodo rhoncus turpis convallis ac. Praesent sapien nulla lobortis quis sapien eu.
+								A  ball mill is a type of grinder used to grind and blend materials for use in mineral dressing processes.
 							</p>
 							</li>
 						</ul>
@@ -280,88 +293,13 @@
 		</div>
 		</section>
 		<!-- /.recent-work end-->
-		<!-- FEATURES-->
-		<section class="home-features topspace30">
-		<div class="container animated fadeInUpNow notransition">
-			<h1 class="small text-center">WHAT THEY SAY</h1>
-			<div class="br-hr type_short">
-				<span class="br-hr-h">
-				<i class="icon-pencil"></i>
-				</span>
-			</div>
-			<div id="cbp-qtrotator" class="cbp-qtrotator">
-				<div class="cbp-qtcontent">
-					<img src="../../public/img/demo/showcase1.jpg" alt="">
-					<blockquote>
-						<p class="bigquote">
-							<i class="icon-quote-left colortext quoteicon"></i> Lorem ipsum dolor sit adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus. Lorem ipsum dolor sit adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus. Praesent dignissim sem sapien, a vulputate enim auctor vitae. Duis non lorem porta, adipiscing eros sit amet, tempor sem.
-						</p>
-						<footer>John Doe / Owner of <a href="#">calypso.com</a></footer>
-					</blockquote>
-				</div>
-				<div class="cbp-qtcontent">
-					<img src="../../public/img/demo/showcase1.jpg" alt="">
-					<blockquote>
-						<p class="bigquote">
-							<i class="icon-quote-left colortext quoteicon"></i> Lorem ipsum dolor sit adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus. Lorem ipsum dolor sit adipiscing elit. Praesent tempus eleifend risus ut congue eset nec lacus. Praesent dignissim sem sapien, a vulputate enim auctor vitae. Duis non lorem porta, adipiscing eros sit amet, tempor sem.
-						</p>
-						<footer>Pino Caruso / Director of <a href="#">hisweb.com</a></footer>
-					</blockquote>
-				</div>
-			</div>
-			<br/>
-			<div class="col-md-10 col-md-offset-1 animated slidea notransition">
-				<div class="row">
-					<div class="col-md-4">
-						<h4><i class="icon icon-microphone">
-						</i> A Playground for Web</h4>
-						<div class="bottomspace30">
-							 Trigger ideas: quickly experiment with site colors &amp; patterns, try out web typography and much more.
-						</div>
-					</div>
-					<div class="col-md-4">
-						<h4><i class="icon icon-anchor">
-						</i> Great Project for Clients</h4>
-						<div class="bottomspace30">
-							 Trigger ideas: quickly experiment with site colors &amp; patterns, try out web typography and much more.
-						</div>
-					</div>
-					<div class="col-md-4">
-						<h4><i class="icon icon-user">
-						</i> Ready to Use Template</h4>
-						 Trigger ideas: quickly experiment with site colors &amp; patterns, try out web typography and much more. <br>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<h4><i class="icon icon-pushpin">
-						</i> New Modern Functions</h4>
-						 Trigger ideas: quickly experiment with site colors &amp; patterns, try out web typography and much more. <br>
-					</div>
-					<div class="col-md-4">
-						<h4><i class="icon icon-cogs">
-						</i> Top Notch Support</h4>
-						 Trigger ideas: quickly experiment with site colors &amp; patterns, try out web typography and much more. <br>
-					</div>
-					<div class="col-md-4">
-						<h4><i class="icon icon-leaf">
-						</i> Awesome Animations</h4>
-						<div class="bottomspace30">
-							 Trigger ideas: quickly experiment with site colors &amp; patterns, try out web typography and much more.
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		</section>
-		<!-- /.home-features end-->
+		
 		<section class="grayarea recent-projects-home topspace30 animated fadeInUpNow notransition">
 		<div class="container">
 			<div class="row">
-				<h1 class="small text-center topspace0">LATEST PROJECTS</h1>
-				<p class="animated fadeInRightNow notransition text-center topspace20">
-					 Calypso offers multiple layouts and ways of displaying your content in a manner that best suits for you and <br>
-					 your customer. Make beautiful and eye catching site with Calypso today!
+				<h1 class="small text-center topspace0">OUR MACHINES</h1>
+				<p class="animated fadeInRightNow notransition text-center topspace20" style="font-size:17px; font-weight:500; color:#F54828">
+					 George Wingety Ltd offers different types of machines for construction and mining activities. Make beautiful and eye catching site with George Wingety Ltd today!
 				</p>
 				<div class="text-center smalltitle">
 				</div>
@@ -377,128 +315,128 @@
 							<!--featured-projects 1-->
 							<li>
 							<div class="boxcontainer">
-								<img src="../../public/img/demo/showcase1.jpg" alt="">
+								<img src="{{asset('img/19.jpg')}}" alt="">
 								<div class="roll">
 									<div class="wrapcaption">
 										<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-										<a data-gal="prettyPhoto[gallery1]" href="../../public/img/demo/showcase1.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
+										<a data-gal="prettyPhoto[gallery1]" href="img/19.jpg" title="George Wingety Ltd"><i class="icon-zoom-in captionicons"></i></a>
 									</div>
 								</div>
-								<h1><a href="{{url('projectdetail')}}">Trains</a></h1>
+								<h1><a href="{{url('projectdetail')}}">Poker Vibrator</a></h1>
 								<p>
-									 Lore ipsum
+									George Wingety Ltd
 								</p>
 							</div>
 							</li>
 							<!--featured-projects 2-->
 							<li>
 							<div class="boxcontainer">
-								<img src="../../public/img/demo/showcase2.jpg" alt="">
+								<img src="{{asset('img/22.png')}}" alt="">
 								<div class="roll">
 									<div class="wrapcaption">
 										<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-										<a data-gal="prettyPhoto[gallery1]" href="img/demo/showcase2.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
+										<a data-gal="prettyPhoto[gallery1]" href="img/22.png" title="George Wingety Ltd"><i class="icon-zoom-in captionicons"></i></a>
 									</div>
 								</div>
-								<h1><a href="{{url('projectdetail')}}">Automobiles</a></h1>
+								<h1><a href="{{url('projectdetail')}}">Plate Compactor</a></h1>
 								<p>
-									 Jura mountains
+									 George Wingety Ltd
 								</p>
 							</div>
 							</li>
 							<!--featured-projects 3-->
 							<li>
 							<div class="boxcontainer">
-								<img src="../../public/img/demo/showcase3.jpg" alt="">
+								<img src="{{asset('img/8.png')}}" alt="">
 								<div class="roll">
 									<div class="wrapcaption">
 										<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-										<a data-gal="prettyPhoto[gallery1]" href="../../public/img/demo/showcase3.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
+										<a data-gal="prettyPhoto[gallery1]" href="img/8.png" title="George Wingety Ltd"><i class="icon-zoom-in captionicons"></i></a>
 									</div>
 								</div>
-								<h1><a href="{{url('projectdetail')}}">Biscaya</a></h1>
+								<h1><a href="{{url('projectdetail')}}">Jack Harmmer</a></h1>
 								<p>
-									 Clio sorevins
+									 George Wingety Ltd
 								</p>
 							</div>
 							</li>
 							<!--featured-projects 4-->
 							<li>
 							<div class="boxcontainer">
-								<img src="../../public/img/demo/showcase4.jpg" alt="">
+								<img src="{{asset('img/13.png')}}" alt="">
 								<div class="roll">
 									<div class="wrapcaption">
 										<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-										<a data-gal="prettyPhoto[gallery1]" href="../../public/img/demo/showcase4.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
+										<a data-gal="prettyPhoto[gallery1]" href="img/13.png" title="George Wingety Ltd"><i class="icon-zoom-in captionicons"></i></a>
 									</div>
 								</div>
-								<h1><a href="{{url('projectdetail')}}">Serenity</a></h1>
+								<h1><a href="{{url('projectdetail')}}">Pressure Compressor</a></h1>
 								<p>
-									 Tabiscum rocens
+									 George Wingety Ltd
 								</p>
 							</div>
 							</li>
 							<!--featured-projects 5-->
 							<li>
 							<div class="boxcontainer">
-								<img src="../../public/img/demo/showcase1.jpg" alt="">
+								<img src="{{asset('img/bollmill.jpg')}}" alt="">
 								<div class="roll">
 									<div class="wrapcaption">
 										<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-										<a data-gal="prettyPhoto[gallery1]" href="../../public/img/demo/showcase1.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
+										<a data-gal="prettyPhoto[gallery1]" href="img/bollmill.jpg" title="George Wingety Ltd"><i class="icon-zoom-in captionicons"></i></a>
 									</div>
 								</div>
-								<h1><a href="{{url('projectdetail')}}">BizLeaders</a></h1>
+								<h1><a href="{{url('projectdetail')}}">Ballmill</a></h1>
 								<p>
-									 Larius trano
+									 George Wingety Ltd
 								</p>
 							</div>
 							</li>
 							<!--featured-projects 6-->
 							<li>
 							<div class="boxcontainer">
-								<img src="../../public/img/demo/showcase2.jpg" alt="">
+								<img src="{{asset('img/mixer1.jpg')}}" alt="">
 								<div class="roll">
 									<div class="wrapcaption">
 										<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-										<a data-gal="prettyPhoto[gallery1]" href="../../public/img/demo/showcase2.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
+										<a data-gal="prettyPhoto[gallery1]" href="img/mixer1.jpg" title="George Wingety Ltd"><i class="icon-zoom-in captionicons"></i></a>
 									</div>
 								</div>
-								<h1><a href="{{url('projectdetail')}}">Salma</a></h1>
+								<h1><a href="{{url('projectdetail')}}">Concrete Mixer</a></h1>
 								<p>
-									 Vobiscum atens
+									 George Wingety Ltd
 								</p>
 							</div>
 							</li>
 							<!--featured-projects 7-->
 							<li>
 							<div class="boxcontainer">
-								<img src="../../public/img/demo/showcase3.jpg" alt="">
+								<img src="{{asset('img/pat.jpg')}}" alt="">
 								<div class="roll">
 									<div class="wrapcaption">
 										<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-										<a data-gal="prettyPhoto[gallery1]" href="../../public/img/demo/showcase3.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
+										<a data-gal="prettyPhoto[gallery1]" href="img/pat.jpg" title="George Wingety Ltd"><i class="icon-zoom-in captionicons"></i></a>
 									</div>
 								</div>
-								<h1><a href="{{url('projectdetail')}}">RetroDoe</a></h1>
+								<h1><a href="{{url('projectdetail')}}">Borehole Machine</a></h1>
 								<p>
-									 Oliya verder
+									 George Wingety Ltd
 								</p>
 							</div>
 							</li>
 							<!--featured-projects 8-->
 							<li>
 							<div class="boxcontainer">
-								<img src="../../public/img/demo/showcase4.jpg" alt="">
+								<img src="{{asset('img/win.jpg')}}" alt="">
 								<div class="roll">
 									<div class="wrapcaption">
 										<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-										<a data-gal="prettyPhoto[gallery1]" href="../../public/img/demo/showcase4.jpg" title="La Chaux De Fonds"><i class="icon-zoom-in captionicons"></i></a>
+										<a data-gal="prettyPhoto[gallery1]" href="img/win.jpg" title="George Wingety Ltd"><i class="icon-zoom-in captionicons"></i></a>
 									</div>
 								</div>
-								<h1><a href="{{url('projectdetail')}}">Chaux Fonds</a></h1>
+								<h1><a href="{{url('projectdetail')}}">Mining Winch</a></h1>
 								<p>
-									 Diva menthol
+									 George Wingety Ltd
 								</p>
 							</div>
 							</li>
