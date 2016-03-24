@@ -1,6 +1,6 @@
 @extends('website')
 @section('contents')
-<section class="pageheader-default" style="background:url(../../public/img/7.jpg);">
+<section class="pageheader-default" style="background:url(img/7.jpg);">
 	<div class="bgarea-semitransparent">
 		<div class="container">
 			<div class="row">
@@ -12,7 +12,7 @@
 					</div>
 				</div>
 				<div class="col-md-6">
-					<img src="../../public/img/desktop3.png" class="img-responsive animated fadeInRightBig notransition" alt="">
+					<img src="{{asset('img/desktop3.png')}}" class="img-responsive animated fadeInRightBig notransition" alt="">
 				</div>
 			</div>
 		</div>
@@ -20,7 +20,7 @@
 	</section>
 	<div class="wrapsemibox">
 		<div class="semiboxshadow text-center">
-			<img src="../../public/img/shp.png" class="img-responsive" alt="">
+			<img src="{{asset('img/shp.png')}}" class="img-responsive" alt="">
 		</div>
 		<!-- INTRO NOTE
 ================================================== -->

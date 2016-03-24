@@ -64,7 +64,7 @@
 			</ul>
 			</li>
 			<li><a href="{{url('services')}}">Services</a></li>
-			<li><a href="{{url('portifolio')}}">Portifolio</a></li>
+			<li><a href="{{url('portifolio')}}">Machines</a></li>
 			<!---<li><a href="{{url('blog')}}">Blog</a></li>-->
 			<li><a href="{{url('contact')}}">Contact</a></li>
 		</ul>		
@@ -101,7 +101,7 @@
 	<div class="footer">
 		<div class="container animated fadeInUpNow notransition">
 			<div class="row">
-				<div class="col-md-3">
+				<div class="col-md-4">
 					<h1 class="footerbrand">George Wingety Ltd</h1>
 					<p>
 						 We undertake the business of making, fabricating and assembling concrete machines, construction equipments, <br>
@@ -109,7 +109,7 @@
 						 </p>
 					<img src="{{asset('img/wingety.png')}}" alt="" style="height:90px; width:60px">
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-5">
 					<h1 class="title"><span class="colortext">F</span>ind <span class="font100">Us</span></h1>
 					<div class="footermap">
 						<p>
@@ -154,7 +154,7 @@
 					<div class="clearfix">
 					</div>
 				</div>
-				<div class="col-md-3">
+				<!--<div class="col-md-3">
 					<h1 class="title"><span class="colortext">Q</span>uick <span class="font100">Message</span></h1>
 					<div class="done">
 						<div class="alert alert-success">
@@ -170,7 +170,7 @@
 							<input type="submit" id="submit" class="btn" value="Send">
 						</div>
 					</form>
-				</div>
+				</div>-->
 			</div>
 		</div>
 	</div>
@@ -189,7 +189,7 @@
 					<ul class="footermenu pull-right">
 						<li><a href="{{url('/')}}">>Home</a></li>
 						<li><a href="{{url('services')}}">Services</a></li>
-						<li><a href="{{url('portifolio')}}">Portifolio</a></li>
+						<li><a href="{{url('portifolio')}}">Machines</a></li>
 						<!--<li><a href="{{url('/')}}">Blog</a></li>-->
 						<li><a href="{{url('contact')}}">Contact</a></li>
 					</ul>

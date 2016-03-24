@@ -347,14 +347,14 @@
 							<!--featured-projects 3-->
 							<li>
 							<div class="boxcontainer">
-								<img src="{{asset('img/8.png')}}" alt="">
+								<img src="{{asset('img/roller.jpg')}}" alt="">
 								<div class="roll">
 									<div class="wrapcaption">
 										<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-										<a data-gal="prettyPhoto[gallery1]" href="img/8.png" title="George Wingety Ltd"><i class="icon-zoom-in captionicons"></i></a>
+										<a data-gal="prettyPhoto[gallery1]" href="img/roller.jpg" title="George Wingety Ltd"><i class="icon-zoom-in captionicons"></i></a>
 									</div>
 								</div>
-								<h1><a href="{{url('projectdetail')}}">Jack Harmmer</a></h1>
+								<h1><a href="{{url('projectdetail')}}">Hand roller</a></h1>
 								<p>
 									 George Wingety Ltd
 								</p>
@@ -363,11 +363,11 @@
 							<!--featured-projects 4-->
 							<li>
 							<div class="boxcontainer">
-								<img src="{{asset('img/13.png')}}" alt="">
+								<img src="{{asset('img/compressor.jpg')}}" alt="">
 								<div class="roll">
 									<div class="wrapcaption">
 										<a href="{{url('projectdetail')}}"><i class="icon-link captionicons"></i></a>
-										<a data-gal="prettyPhoto[gallery1]" href="img/13.png" title="George Wingety Ltd"><i class="icon-zoom-in captionicons"></i></a>
+										<a data-gal="prettyPhoto[gallery1]" href="img/compressor.jpg" title="George Wingety Ltd"><i class="icon-zoom-in captionicons"></i></a>
 									</div>
 								</div>
 								<h1><a href="{{url('projectdetail')}}">Pressure Compressor</a></h1>
@@ -376,7 +376,7 @@
 								</p>
 							</div>
 							</li>
-							<!--featured-projects 5-->
+							<!--featured-projects 4-->
 							<li>
 							<div class="boxcontainer">
 								<img src="{{asset('img/bollmill.jpg')}}" alt="">
