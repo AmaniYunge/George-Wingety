@@ -11,7 +11,7 @@
 		<div class="item active" style="background: url(img/weld.jpg)">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-12 text-center">
+					<div class="col-md-8 text-center">
 						<br>
 						<br>
 						<div class="animated fadeInDownBig notransition">
@@ -28,6 +28,29 @@
 						<div class="car-smallcircle animated fadeInRightBig notransition">
 							<span>World</span>
 						</div>
+						
+					</div>
+					</br>
+					</br>
+					</br>
+					</br>
+					</br>
+					</br>
+					<div class="col-md-4 animated fadeInDown  notransition topspace30 text-right">
+						
+						<div class="car-highlight1 animated fadeInLeftBig">
+							 Industrial Machines Servicing
+						</div>
+						<br>
+						<div class="car-highlight2 animated fadeInRightBig notransition">
+							 Sandblasting
+						</div>
+						<br>
+						<div class="car-highlight3 animated fadeInUpBig notransition">
+							 Metal Fabrication
+						</div>
+						<br>
+						
 					</div>
 				</div>
 			</div>
@@ -111,15 +134,15 @@
 						</div>
 						<br>
 						<div class="car-highlight3 animated fadeInUpBig notransition">
-							 Assembling of Jawcrusher
+							 Hand Fed Concrete Mixer
 						</div>
 						<br>
 						<div class="car-highlight4 animated flipInX notransition">
-							 Assembling of Generators
+							Assembling of Jawcrusher
 						</div>
 						<br>
 						<!--<div class="car-highlight5 animated rollIn notransition">
-							 Slider with <span class="font100">Total Control</span><br>
+							 Slider with <span class="font100">Total Control    </span><br>
 							<span class="font100" style="font-size:20px;">Embed Practically</span> Anything<br>
 						</div>-->
 					</div>
