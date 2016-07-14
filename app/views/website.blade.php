@@ -140,7 +140,7 @@
 							 I am grateful to have found George at George Wingety Ltd. He provided excellent designs and work product. 
 							His level of responsiveness and client service was exceptional. And he was a pleasure to work with.
 							 I am incredibly happy with the designs and strongly recommend George Wingety Ltd to others.
-							  <span style="font-family:arial;"></span><br/><b> Shadrack Emmanuel </b>
+							  <span style="font-family:arial;"></span><br/><b>Yusuph Eliah </b>
 						</div>
 						<div class="textItem">
 							<div class="avatar">

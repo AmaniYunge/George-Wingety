@@ -45,20 +45,16 @@
 				<span>Project Description</span>
 				</h1>
 				<p>
-					<span class="drop-cap round">M</span>ining Winch voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.
-				</p>
-				<p>
-					 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident
-				</p>
-				<p>
-					Irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					<span class="drop-cap round">T</span>he key to any successful operation is having the right tools.
+					This guide will walk you through basic mining equipment that a small scale miner will need.
+					Fortunately most of the tools used today are cheaper and more effective than the tools used during the
+					late 1800s and early 1900s. Our equipment is well suited to miners producing 0.5 Tonnes per hour to 5 Tonnes per hour. We offer free advice to our broade range
+					customers on the most efficient manner in which to mine their reserve they be precious or Base Metals.
 				</p>
 				<p>
 					<b>Year Creation</b>&nbsp;: 2014 <br/>
-					<b>Client's Name</b>&nbsp;: John Doe <br/>
-					<b>Web Category</b>&nbsp;: Shop Online <br/>
-					<b>Our Contribution</b>&nbsp;: Script &amp; SEO <br/>
-					<b>Completion Time</b>&nbsp;: 35 Days
+					<b>Client's Name</b>&nbsp;: Yusuph Eliah <br/>
+					<b>Completion Time</b>&nbsp;: 2 Weeks
 				</p>
 			</div>
 			<div class="col-md-4 animated fadeInRight notransition">
@@ -66,17 +62,17 @@
 				<span>Testimonial</span>
 				</h1>
 				<blockquote>
-					<p>
+					<p style="color: #F44828">
 						This is what the client of the project said
 					</p>
 					<p>
-						If you're not failing every now and again, it's a sign you're not doing anything very innovative. If my films don't show a profit, I know I'm doing something right.
-					</p>
+						We had been looking for small scale mining winch for several months, but the few ones I got in touch with never
+						seemed able to meet our taste. Finally, when I discovered George Wingety Ltd through a my friends, it appeared likely
+						that such a passionate manufacturer would be the partner we had been looking for — which became obvious as soon
+						as we started working together.
+						</p>
 					<p>
-						Praesent WowThemes Sapien, A Vulputate Enim Auctor Vitae Duis non lorem porta, adipiscing eros sit amet, tempor sem. Donec nunc arcu, semper a tempus et, consequat
-					</p>
-					<p>
-						<small>Mark Zolinger , Client of Project</small>
+						<small>Yusuph Eliah , Client of Project</small>
 					</p>
 				</blockquote>
 			</div>

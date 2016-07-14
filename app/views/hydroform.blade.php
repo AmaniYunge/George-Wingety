@@ -72,8 +72,8 @@
                          The bricks have an appealing aesthetic with an elegant profile and uniform size that doesn’t require plastering</p>
 				<p>
 					<b>Year Creation</b>&nbsp;: 2015 <br/>
-					<b>Client's Name</b>&nbsp;: John Doe <br/>
-					<b>Completion Time</b>&nbsp;: 35 Days
+					<b>Client's Name</b>&nbsp;: Mr. Albert Temu <br/>
+					<b>Completion Time</b>&nbsp;: 3 Weeks
 				</p>
 			</div>
 			<div class="col-md-4 animated fadeInRight notransition">
@@ -81,17 +81,17 @@
 				<span>Testimonial</span>
 				</h1>
 				<blockquote>
-					<p>
+					<p style="color: #F44828">
 						This is what the client of the project said
 					</p>
 					<p>
-						If you're not failing every now and again, it's a sign you're not doing anything very innovative. If my films don't show a profit, I know I'm doing something right.
+						This is a quick, effective team that really cares for their clients success.
 					</p>
 					<p>
-						Praesent WowThemes Sapien, A Vulputate Enim Auctor Vitae Duis non lorem porta, adipiscing eros sit amet, tempor sem. Donec nunc arcu, semper a tempus et, consequat
+						We were really under the gun with the minimal time we had. When George Wingety Ltd responded instantly with a full range of services – without balking at the time line – we knew we’d found our partner.
 					</p>
 					<p>
-						<small>Mark Zolinger , Client of Project</small>
+						<small>Mr. Albert Temu , Client of Project</small>
 					</p>
 				</blockquote>
 			</div>

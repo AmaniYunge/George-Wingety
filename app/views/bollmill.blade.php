@@ -56,8 +56,8 @@
                     </p>
 				<p>
 					<b>Year Creation</b>&nbsp;: 2015 <br/>
-					<b>Client's Name</b>&nbsp;: John Doe <br/>
-					<b>Completion Time</b>&nbsp;: 14 Days
+					<b>Client's Name</b>&nbsp;: Mr Nchimbi <br/>
+					<b>Completion Time</b>&nbsp;: 2 Weeks
 				</p>
 			</div>
 			<div class="col-md-4 animated fadeInRight notransition">
@@ -65,17 +65,16 @@
 				<span>Testimonial</span>
 				</h1>
 				<blockquote>
-					<p>
+					<p style="color: #F44828">
 						This is what the client of the project said
 					</p>
 					<p>
-						If you're not failing every now and again, it's a sign you're not doing anything very innovative. If my films don't show a profit, I know I'm doing something right.
+						I am grateful to have found George at George Wingety Ltd. He provided excellent designs and work product.
+						His level of responsiveness and client service was exceptional. And he was a pleasure to work with.
+						I am incredibly happy with the designs and strongly recommend George Wingety Ltd to others.
 					</p>
 					<p>
-						Praesent WowThemes Sapien, A Vulputate Enim Auctor Vitae Duis non lorem porta, adipiscing eros sit amet, tempor sem. Donec nunc arcu, semper a tempus et, consequat
-					</p>
-					<p>
-						<small>Mark Zolinger , Client of Project</small>
+						<small>Mr Nchimbi , Client of Project</small>
 					</p>
 				</blockquote>
 			</div>

@@ -53,8 +53,8 @@
 					</p>
 				<p>
 					<b>Year Creation</b>&nbsp;: 2014 <br/>
-					<b>Client's Name</b>&nbsp;: John Doe <br/>
-					<b>Completion Time</b>&nbsp;: 35 Days
+					<b>Client's Name</b>&nbsp;: Caspian (T) Ltd<br/>
+					<b>Completion Time</b>&nbsp;: 2 Weeks
 				</p>
 			</div>
 			<div class="col-md-4 animated fadeInRight notransition">
@@ -62,17 +62,13 @@
 				<span>Testimonial</span>
 				</h1>
 				<blockquote>
-					<p>
+					<p style="color: #F44828">
 						This is what the client of the project said
 					</p>
+					<p>Quick and responsive to our companies needs, George Wingety Ltd. Has proven to be a
+					consummate professional whom we've come to rely on.</p>
 					<p>
-						If you're not failing every now and again, it's a sign you're not doing anything very innovative. If my films don't show a profit, I know I'm doing something right.
-					</p>
-					<p>
-						Praesent WowThemes Sapien, A Vulputate Enim Auctor Vitae Duis non lorem porta, adipiscing eros sit amet, tempor sem. Donec nunc arcu, semper a tempus et, consequat
-					</p>
-					<p>
-						<small>Mark Zolinger , Client of Project</small>
+						<small>John Kiiza , Client of Project</small>
 					</p>
 				</blockquote>
 			</div>
