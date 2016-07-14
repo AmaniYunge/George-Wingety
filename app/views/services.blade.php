@@ -18,23 +18,28 @@
 				<i class="icon-cogs"></i>
 				<h4>Fabricating & Assembling Construction Machines</h4>
 				<p>
-					There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+					We believe that long-lasting quality tools are not only the best value in the end,
+					but something you can enjoy using that will help you take your metal fabrication to the next level.
+					We fabricate mostly construction equipments, small scale mining equipments, machine spares etc.
 				</p>
 			</div>
 			<!-- col-md-4 -->
 			<div class="col-md-4">
 				<i class="icon-cogs"></i>
-				<h4>Fabricating Mining Equipments</h4>
+				<h4>Selling & Hiring Construction Equipments</h4>
 				<p>
-					There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+					We sell and Hire several construction equipments. We offer free advice to our broade range
+					customers on the most efficient manner in which  the customer can be  precious with what he/she is going to do.
 				</p>
 			</div>
 			<!-- col-md-4 -->
 			<div class="col-md-4">
 				<i class="icon-cogs"></i>
-				<h4>Industrials services & Agricultural Plants and Equipments</h4>
+				<h4>Industrials services </h4>
 				<p>
-					There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+					Team Industrial Services is the  leader in minimizing equipment and asset downtime,
+					providing on-line maintenance, inspection and repair. We provide critical services to our customers
+					that enable them to maintain and operate their facilities and equipment in a safe and productive manner.
 				</p>
 			</div>
 			<!-- col-md-4 -->
@@ -42,9 +47,13 @@
 		<div class="row text-center topspace30 animated fadeInDown notransition">
 			<div class="col-md-4">
 				<i class="icon-cogs"></i>
-				<h4>Abrasive Cleaning </h4>
+				<h4>Corrosion Treatment </h4>
 				<p>
-					There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.
+					This protection
+					can be the introduction of certain elements into the
+					base metal, creating a corrosion resistant alloy, or the
+					addition of a surface coating of a chemical conver-
+					sion coating, metal or paint.
 				</p>
 			</div>
 			<!-- col-md-4 -->
