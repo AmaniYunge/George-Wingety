@@ -185,36 +185,43 @@
 						<i class="fontawesome-icon medium circle-white center icon-building"></i>
 						<h1>Metal Fabrication</h1>
 						<p>
-							 Concrete Mixers are ruggedly built and take the punishment of this demanding application.
-							 Heavy-duty frame, drum yoke and drum assemblies are long-wearing and matched to anticipated stresses and loads
+							We believe that long-lasting quality tools are not only the best value in the end,
+							but something you can enjoy using that will help you take your metal fabrication to the next level.
+							We fabricate mostly construction equipments, small scale mining equipments, machine spares etc.
 						</p>
 						<p class="fontupper">
-							<a href="{{url('mixer')}}" class="readmore">Read More <i class="icon-double-angle-right"></i></a>
+							<a href="{{url('fabrication')}}" class="readmore">Read More <i class="icon-double-angle-right"></i></a>
 						</p>
 					</div>
 				</div>
 				<div class="col-md-3 text-center animated fadeInLeftNow notransition">
 					<div class="icon-box-top">
 						<i class="fontawesome-icon medium circle-white center icon-cogs"></i>
-						<h1>Construction Equipments</h1>
+						<h1>Selling & Hiring Construction Equipments</h1>
 						<p>
-							Our equipment is well suited to miners producing 0.5 Tonnes per hour to 5 Tonnes per hour. We offer free advice to our broade range
-							customers on the most efficient manner in which to mine their reserve they be precious or Base Metals
+							We sell and Hire several construction equipments. We offer free advice to our broade range
+							customers on the most efficient manner in which  the customer can be  precious with what he/she is going to do.
 						</p>
 						<p class="fontupper">
-							<a href="{{url('winch')}}" class="readmore">Read More <i class="icon-double-angle-right"></i></a>
+							<a href="{{url('sellHiring')}}" class="readmore">Read More <i class="icon-double-angle-right"></i></a>
 						</p>
 					</div>
 				</div>
 				<div class="col-md-3 text-center animated fadeInRightNow notransition">
 					<div class="icon-box-top ">
 						<i class="fontawesome-icon medium circle-white center icon-circle"></i>
-						<h1>Protective Coating</h1>
+						<h1>Corrosion Treatment</h1>
 						<p>
-							 A  ball mill is a type of grinder used to grind and blend materials for use in mineral dressing processes, paints, pyrotechnics, ceramics and selective laser sintering.
+							This protection
+							can be the introduction of certain elements into the
+							base metal, creating a corrosion resistant alloy, or the
+							addition of a surface coating of a chemical conver-
+							sion coating, metal or paint.
+							Much has been done to improve the corrosion resis-
+							tance;
 						</p>
 						<p class="fontupper">
-							<a href="{{url('bollmill')}}" class="readmore">Read More <i class="icon-double-angle-right"></i></a>
+							<a href="{{url('corrosion')}}" class="readmore">Read More <i class="icon-double-angle-right"></i></a>
 						</p>
 					</div>
 				</div>
@@ -223,10 +230,13 @@
 						<i class="fontawesome-icon medium circle-white center icon-gear"></i>
 						<h1>Industrial Servicing</h1>
 						<p>
-							Stabilised soil bricks technology offers a cost effective, environmentally sound masonry system.
+							Team Industrial Services is the  leader in minimizing equipment and asset downtime,
+							providing on-line maintenance, inspection and repair. We provide critical services to our customers
+							that enable them to maintain and operate their facilities and equipment in a safe and productive manner.
+
 						</p>
 						<p class="fontupper">
-							<a href="{{url('hydroform')}}" class="readmore">Read More <i class="icon-double-angle-right"></i></a>
+							<a href="{{url('Indservicing')}}" class="readmore">Read More <i class="icon-double-angle-right"></i></a>
 						</p>
 					</div>
 				</div>

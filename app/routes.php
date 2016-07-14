@@ -50,6 +50,26 @@ Route::get('portifolio', function()
     return View::make('portifolio');
 });
 
+Route::get('corrosion', function()
+{
+    return View::make('corrosion');
+});
+
+Route::get('Indservicing', function()
+{
+    return View::make('Indservicing');
+});
+
+Route::get('sellHiring', function()
+{
+    return View::make('sellHiring');
+});
+
+Route::get('fabrication', function()
+{
+    return View::make('fabrication');
+});
+
 Route::get('winch', function()
 {
     return View::make('winch');
